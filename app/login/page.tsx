@@ -129,9 +129,8 @@ export default function LoginPage() {
                 </motion.div>
               )}
 
-              {/* Dev Bypass - Only in dev mode */}
-              {isDev && (
-                <div className="mb-4">
+              {/* Dev Bypass - Always visible for testing */}
+              <div className="mb-4">
                   <button
                     onClick={handleDevBypass}
                     disabled={submitting}
@@ -147,7 +146,6 @@ export default function LoginPage() {
                     Development only
                   </p>
                 </div>
-              )}
 
               {/* SSO Login - Primary AlTi teal */}
               <div className="mb-3">
