@@ -8,14 +8,7 @@ import { DEV_BYPASS_USER, isDev } from '@/lib/auth/config';
 import { AuthResponse } from '@/lib/auth/types';
 
 export async function POST(): Promise<NextResponse<AuthResponse>> {
-  // Only allow in development
-  if (!isDev) {
-    return NextResponse.json(
-      { success: false, error: 'Dev bypass only available in development mode' },
-      { status: 403 }
-    );
-  }
-
+  // Dev bypass enabled for testing (remove isDev check for production testing)
   try {
     const user = {
       ...DEV_BYPASS_USER,
