@@ -1,0 +1,776 @@
+Security,Currency,Tier1,Tier2,Tier3,Tier4,PCC Building Blocks ,Proxy,Index
+30% ACWI - 70% AGG,US Dollar,-,-,-,-,-,-,-
+30% ACWI - 70% AGGU,US Dollar,-,-,-,-,-,-,-
+30% ACWI - 70% MUB,US Dollar,-,-,-,-,-,-,-
+3i Infrastructure Ord,Pound Sterling,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,-,-
+50% ACWI - 50% AGG,US Dollar,-,-,-,-,-,-,-
+50% ACWI - 50% AGGU,US Dollar,-,-,-,-,-,-,-
+50% ACWI - 50% MUB,US Dollar,-,-,-,-,-,-,-
+60% ACWI - 40% AGG,US Dollar,-,-,-,-,-,-,-
+60% ACWI - 40% AGGU,US Dollar,-,-,-,-,-,-,-
+60% ACWI - 40% MUB,US Dollar,-,-,-,-,-,-,-
+70% ACWI - 30% AGG,US Dollar,-,-,-,-,-,-,-
+70% ACWI - 30% AGGU,US Dollar,-,-,-,-,-,-,-
+70% ACWI - 30% MUB,US Dollar,-,-,-,-,-,-,-
+80% ACWI - 20% AGG,US Dollar,-,-,-,-,-,-,-
+80% ACWI - 20% AGGU,US Dollar,-,-,-,-,-,-,-
+80% ACWI - 20% MUB,US Dollar,-,-,-,-,-,-,-
+abrdn-Emerg Mrkt Corp Bond I Acc HCHF,Swiss Franc,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,-,-
+abrdn-Emerg Mrkt Corp Bond I Acc HEUR,Euro,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_EUR,-
+abrdn-Emerg Mrkt Corp Bond I Acc USD,US Dollar,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_EM Debt,-
+abrdn-Emerg Mrkt Corp Bond I M Inc HGBP,Pound Sterling,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_GBP,-
+Acasta Global Fund Class D,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+ACF FX&Futures Overlay,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_US Cash,-
+AIA Hedge Fund Strategies - Absolute Return,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+AIA Hedge Fund Strategies - Absolute Return CHF,Swiss Franc,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,-,-
+AIA Hedge Fund Strategies - Absolute Return EUR,Euro,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return_EUR,-
+AIA Hedge Fund Strategies - Absolute Return GBP,Pound Sterling,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return_GBP,-
+AIA Hedge Fund Strategies - Absolute Return USD,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+AIA Hedge Fund Strategies - Absolute Return USD Class C,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+AIA Hedge Fund Strategies - Equity Hedge,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AIA Hedge Fund Strategies - Equity Hedge CHF,Swiss Franc,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,-,-
+AIA Hedge Fund Strategies - Equity Hedge EUR,Euro,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Alternative Growth_EUR,-
+AIA Hedge Fund Strategies - Equity Hedge GBP,Pound Sterling,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Alternative Growth_GBP,-
+AIA Hedge Fund Strategies - Equity Hedge USD,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AIA Hedge Fund Strategies - Equity Hedge USD Class C,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AIA ICAV Absolute Return Composite (CHF),Swiss Franc,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,-,-
+AIA ICAV Absolute Return Composite (EUR),Euro,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return_EUR,-
+AIA ICAV Absolute Return Composite (GBP),Pound Sterling,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return_GBP,-
+AIA ICAV Absolute Return Composite (USD Class C),US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+AIA ICAV Absolute Return Composite (USD),US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+AIA ICAV Alternative Credit Composite (CHF A1 Acc),Swiss Franc,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,-,-
+AIA ICAV Alternative Credit Composite (EUR A1 Acc),Euro,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Alternative Credit_EUR,-
+AIA ICAV Alternative Credit Composite (GBP A1 Acc),Pound Sterling,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Alternative Credit_GBP,-
+AIA ICAV Alternative Credit Composite (USD A1 Acc),US Dollar,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Credit Direc HF,-
+AIA ICAV Equity Hedge Composite (CHF),Swiss Franc,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,-,-
+AIA ICAV Equity Hedge Composite (GBP),Pound Sterling,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Alternative Growth_GBP,-
+AIA ICAV Equity Hedge Composite (USD),US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AIA ICAV Hedged Equity Composite (EUR),Euro,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Alternative Growth_EUR,-
+AKO European Long Only Fund A1,US Dollar,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Pan Europe,-
+AKO European Long-Only Fund,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AKO Fund Ltd,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AKO Fund Ltd A2,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AKO Global Fund Limited,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+AKO Global Fund ProForma,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Akre Focus Instl,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Alerian MLP ETF,US Dollar,-,-,-,-,-,-,-
+Algebris Financial Credit I EUR Acc,Euro,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_EUR,-
+Algebris Financial Credit R USD Acc,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+Alta Park Fund Ltd,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+AlTi HK Private Debt,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+AlTi HK Private Equity,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+AlTi HK Real Estate,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+AlTi International - Impact PE Composite,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+AlTi International - Impact Real Estate Composite,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+AlTi International - PE Composite,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+AlTi International - Private Credit Composite,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+AlTi International - Real Estate Composite,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+AlTi Onshore - Buyout Composite,US Dollar,Growth,Growth Strategies,Private Equity,Buyout,PE,P_Buyout,-
+AlTi Onshore - Impact PE Composite,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+AlTi Onshore - PE Composite,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+AlTi Onshore - Private Credit Composite,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+AlTi Onshore - Real Estate Composite,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+AlTi Onshore - Venture Composite,US Dollar,Growth,Growth Strategies,Private Equity,Venture Capital,PE,P_Venture,-
+AlTi Tax-Advantaged Real Estate Fund LP,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+AlTi-Allianz Private Debt Composite,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+AlTi-Allianz Private Debt EUR Composite,Euro,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt_EUR,-
+Apollo Debt Solutions Class I,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+Apollo Debt Solutions ProForma,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+Arcus Japan A Acc JPY,Yen,Growth,Growth Strategies,Equity,Japan,Japan,-,-
+Arcus Japan A Acc USD H,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,P_Japan,-
+Arcus Japan Value Fund - Relative,Yen,Growth,Growth Strategies,Equity,Japan,Japan,-,-
+Artisan International Value Advisor,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Avanath Affordable Housing Renaissance Fund LP,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+AXAWF US High Yield Bonds I Cap CHF H,Swiss Franc,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,-,-
+AXAWF US High Yield Bonds I Cap GBP H,Pound Sterling,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_GBP,-
+AXAWF US High Yield Bonds I Cap USD,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+BA Beutel Goodman US Val SI USD Acc UnH,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Beutel Goodman Large Cap Value Proforma,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+BGF Continental Eurp Flex D2,US Dollar,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Pan Europe,-
+BGF Continental Eurp Flex D2 EUR,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+BH Macro GBP Ord,Pound Sterling,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return_GBP,-
+Bin Yuan Greater China (Composite),US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+BlackRock European Dynamic A Acc,Pound Sterling,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_GBP,-
+BlackRock European Dynamic FD Acc,Pound Sterling,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_GBP,-
+BlackRock ICS Euro Liq Prem (Acc T0) EUR,Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_Cash & Cash Equivalents_EUR,-
+BlackRock ICS Euro Liq Prem Acc EUR,Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_Cash & Cash Equivalents_EUR,-
+BlackRock ICS Sterling Liq Premier Acc,Pound Sterling,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_Cash & Cash Equivalents_GBP,-
+BlackRock ICS USD Liquidity Prem Acc,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_US Cash,-
+BlackRock ICS USD Liquidity Prem T0 Acc,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_US Cash,-
+Blackstone Infrastructure Partners LP,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+Blackstone Infrastructure Strategies (BXINFRA),US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+Bloomberg Commodity TR USD,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,P_Commodity,-
+Bloomberg EM Hard Currency Agg TR HEUR,Euro,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_EUR,-
+Bloomberg EM Hard Currency Agg TR HGBP,Pound Sterling,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_GBP,-
+Bloomberg EM Hard Currency Agg TR USD,US Dollar,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_EM Debt,-
+Bloomberg EM Hard Currency TR HCHF,Swiss Franc,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,-,-
+Bloomberg Euro Agg Bond TR EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Bloomberg Euro Agg Corps TR Hdg CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+Bloomberg Euro Agg Credit TR EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Bloomberg Gbl Agg Corp 0901 TR Hdg EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Bloomberg Gbl Agg Corp 0901 TR Hdg USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Bloomberg Gbl Agg Corp 1229 TR Hdg GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_GBP,-
+Bloomberg Gbl Agg Corp TR Hdg CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+Bloomberg Gbl Agg Corp TR USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Bloomberg Global Aggregate TR Hdg CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+Bloomberg Global Aggregate TR Hdg GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_GBP,-
+Bloomberg Global High Yield TR Hdg CHF,Swiss Franc,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,-,-
+Bloomberg Global High Yield TR Hdg EUR,Euro,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_EUR,-
+Bloomberg Global High Yield TR Hdg GBP,Pound Sterling,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_GBP,-
+Bloomberg Global High Yield TR Hdg USD,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+Bloomberg Global Treasury TR Hdg CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+Bloomberg Global Treasury TR Hdg EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+Bloomberg Global Treasury TR Hdg GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+Bloomberg Global Treasury TR Hdg USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Bloomberg US Agg Bond Hdg TR GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_GBP,-
+Bloomberg US Corp Bond TR Hdg CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+Bloomberg US Corp Bond TR Hdg GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_GBP,-
+Bloomberg US Corp Bond TR USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Bloomberg US Govt Infl Lkd TR USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Bloomberg US Treasury TR USD(1987),US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Bloomberg US Treasury US TIPS TR HGBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+BlueBox Funds Global Technology I Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+BNY Mellon Global Credit EUR I Acc H,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Investment Grade Bonds_EUR,-
+BNY Mellon Global Credit EUR W Acc H,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Investment Grade Bonds_EUR,-
+BNY Mellon Global Credit GBP W Acc H,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Investment Grade Bonds_GBP,-
+BNY Mellon Global Credit GBP W Inc H,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Investment Grade Bonds_GBP,-
+BNY Mellon Global Credit USD W Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Global Corporate,-
+Brevan Howard Alpha Strategies Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Brevan Howard Alpha Strategies Fund (MSF),US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Brevan Howard Alpha Strategies U4,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Bronte Capital - Callisto Fund LP,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Brookfield Infrastructure Income Fund Inc.,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+BTG Timber OEF Proforma,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+C.W. Henderson Intermediate,US Dollar,-,-,-,-,-,-,-
+Calvert Emerging Markets Equity I,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Cameco Corp,Canadian Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,-,-
+CFM Discus Feeder,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+CFM Stratus,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+CG Dollar Fund (CHF Hedged),Swiss Franc,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,-,-
+CG Dollar Fund (EUR Hedged),Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_Cash & Cash Equivalents_EUR,-
+CG Dollar Fund GBP D,Pound Sterling,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_Cash & Cash Equivalents_GBP,-
+CG Dollar Fund GBP Hgd,Pound Sterling,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_Cash & Cash Equivalents_GBP,-
+CIFC Senior Secured Corporate Loan Fund,US Dollar,Diversified,Income Strategies,Credit,Senior Loans,Other Credit,P_Loans,-
+CIFC Senior Secured Corporate Loan Fund EUR,Euro,Diversified,Income Strategies,Credit,Senior Loans,Other Credit,P_Credit_EUR,-
+CM-AM Cash ISR IC,Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_Cash & Cash Equivalents_EUR,-
+Coatue Long Only,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Coatue Long-Short Fund (Class A),US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Comgest Growth Europe EUR Acc,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+Comgest Growth Europe EUR I Acc,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+Comgest Growth Europe EUR I Inc,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+Comgest Growth Europe USD I Acc,US Dollar,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Pan Europe,-
+Cornwall Side Pocket,US Dollar,-,-,-,-,-,-,-
+Davidson Kempner Partners,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+DE Shaw Composite International Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+DE Shaw Lithic Fund Series A,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+DE Shaw Oculus International Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Default Cash,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_US Cash,-
+Dimensional Emerg Mkt Trgtd Val USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Dimensional Emerging Mkts Val A USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Dimensional US High Profitability ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Diversified - Absolute Return HFs,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Diversified - Credit Directional HFs,US Dollar,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Credit Direc HF,-
+Diversified - EM Debt,US Dollar,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_EM Debt,-
+Diversified - General Commodities,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,P_Commodity,-
+Diversified - Global Infrastructure,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,P_Listed Infrastructure,-
+Diversified - Gold,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+Diversified - High Yield Bonds,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+Diversified - HY Municipal Bonds,US Dollar,Diversified,Income Strategies,Credit,High Yield Municipal Bonds,High Yield,P_HY Muni Bond,-
+Diversified - Intl Private Credit,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+Diversified - Intl Real Estate,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+Diversified - Multi Sector Credit,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+Diversified - Onshore Private Credit,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+Diversified - Onshore Real Estate,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+Diversified - Total Return Funds,US Dollar,Diversified,Blended Strategies,Mixed Allocation,Conservative Allocation Funds,Multi Asset,-,-
+Diversified - US Infrastructure,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,P_Listed Infrastructure,-
+Dodge & Cox Worldwide Global Stk EUR Acc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Dodge & Cox Worldwide Global Stk GBP Inc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Dodge & Cox Worldwide Global Stk USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Doubleline Opportunistic Credit,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+DoubleLine Total Return Bond I,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Asset Backed Securities,US IG / Gbl IG,P_MBS,-
+DoubleLine Yield Opportunities Fund,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+Drawbridge Special Opportunities Fund,US Dollar,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Credit Direc HF,-
+Eagle Capital US Equity Founder,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Eagle Capital US Equity R USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Eagle Capital US Equity R USD Dis,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Eagle Capital US Equity Value (Composite) (ASP),US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Egerton Capital Equity Fund,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+EIPX Proxy,US Dollar,-,-,-,-,-,-,-
+Eisler Capital Multi Strategy Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+EIU QP Holdings,US Dollar,-,-,-,-,-,-,-
+Elliott Associates LP,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Elliott Co-Investment,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Elliott International Ltd,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Energy Infrastructure & Utility Fund QP Perf,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+FengHe Asia Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Fidelity Index US P Acc,Pound Sterling,Growth,Growth Strategies,Equity,North America,North America Equities,P_Equity_GBP,-
+Fidelity Inv MM Treasury I,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Fidelity Inv MM Treasury Instl,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Fiera Municipal Composite,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+First Trust North Amer Engy InfrasETF,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,P_Listed Infrastructure,-
+First Trust Value Line® Dividend ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Forefront Impact Resilience Strategy (net 60bps live results),US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Fortress Net Lease REIT,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+FT Energy Income Partners Strategy ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+FTSE 100 NR GBP,Pound Sterling,Growth,Growth Strategies,Equity,UK,Pan Europe,P_Equity_GBP,-
+FTSE CHF EuroDep 3 Mon CHF,Swiss Franc,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,-,-
+FTSE EPRA Nareit Developed NR EUR,Euro,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Alternative Growth_EUR,-
+FTSE EPRA Nareit Developed TR USD,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+FTSE EPRA Nareit Global REITs NR USD,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+FTSE EUR EuroDep 3 Mon EUR,Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_Cash & Cash Equivalents_EUR,-
+FTSE GBP EuroDep 3 Mon GBP,Pound Sterling,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_Cash & Cash Equivalents_GBP,-
+FTSE USD EuroDep 3 Mon USD,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_US Cash,-
+Fundsmith Equity I Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Fundsmith Equity I CHF Acc,Swiss Franc,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+Fundsmith Equity I EUR Acc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Fundsmith Equity I EUR Inc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Fundsmith Equity I GBP Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Fundsmith Equity I GBP Inc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Fundsmith Equity I USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Fundsmith Equity R EUR Acc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Fundsmith Equity T USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Fundsmith Stewardship Fund I Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Fundsmith Sustainable Equity Fund (IWEF),US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+GAMCO Intl SICAV Merger Arbtrg I (USD),US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Generation Global Equity (IWEF),US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Global Alpha Fund LP Holdings,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Global Alpha Fund Perf,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Global Evolution Frontier Mkts R CL EUR,Euro,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_EUR,-
+Global Long Short Fund Performance,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+GMO Climate Change III,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+GoldenTree Select Partners LP,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+GQG Partners Concentrated Global Equity Comp,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+GQG Partners Emerging Markets EquityInst,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+GQG Partners Emerging Mkts Eq I EUR Acc,Euro,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_EUR,-
+GQG Partners Emerging Mkts Eq I USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+GQG Partners Global Equity I GBP Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+GQG Partners Global Equity I USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+GQG Partners Global Quality Equity Instl,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Graham Institutional Partners LP,US Dollar,-,-,-,-,-,-,-
+Grayscale Bitcoin Trust ETF,US Dollar,Growth,Growth Strategies,Alternative Growth,Digital Assets,Digital Assets,-,-
+Greenbacker GREC Proforma,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+Greenbacker GREC-1,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+Greenbacker GREC-2,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+Groupama Entreprises IC,Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_Cash & Cash Equivalents_EUR,-
+Growth - Asia Ex Japan Equities,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Asia Pacific ex Japan,-
+Growth - Digital Assets,US Dollar,Growth,Growth Strategies,Alternative Growth,Digital Assets,Digital Assets,-,-
+Growth - EM Equities,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Growth - Global Equities,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Growth - Global ex US Equities,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Growth - Global REITs,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+Growth - Growth Directional HFs,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Growth - Intl Private Equity,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+Growth - Japan Equities,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,P_Japan,-
+Growth - Onshore Private Equity,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,P_Private Equity,-
+Growth - Pan Europe Equities,US Dollar,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Pan Europe,-
+Growth - US Equities,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Guggenheim GFI (CHF Hedged),Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+Guggenheim GFI A USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Guggenheim GFI Z GBP Inc,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_GBP,-
+Guggenheim GFI Z USD,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Guggenheim GFI Z USD Inc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Hereford Fds Bin Yuan Grter China AI USD,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Hereford Fds Bin Yuan Grter China L2 USD,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+HFRI Credit (CHF Hedged),Swiss Franc,-,-,-,-,-,-,-
+HFRI Credit (EUR Hedged),Euro,-,-,-,-,-,-,-
+HFRI Credit (GBP Hedged),Pound Sterling,-,-,-,-,-,-,-
+HFRI Credit (USD),US Dollar,-,-,-,-,-,-,-
+HFRI Credit Index,US Dollar,-,-,-,-,-,-,-
+HFRI ED: Distressed/Restructuring Index,US Dollar,-,-,-,-,-,-,-
+HFRI ED: Merger Arbitrage Index,US Dollar,-,-,-,-,-,-,-
+HFRI Equity Hedge,US Dollar,-,-,-,-,-,-,-
+HFRI Equity Hedge Total Asset Weighted Index,US Dollar,-,-,-,-,-,-,-
+HFRI Equity Hedge Total Asset Weighted Index - CHF Hedged,Swiss Franc,-,-,-,-,-,-,-
+HFRI Equity Hedge Total Asset Weighted Index - EUR Hedged,Euro,-,-,-,-,-,-,-
+HFRI Equity Hedge Total Asset Weighted Index - GBP Hedged,Pound Sterling,-,-,-,-,-,-,-
+HFRI Equity Hedge Total Index Asset Weighted Index,US Dollar,-,-,-,-,-,-,-
+HFRI Event-Driven (Total),US Dollar,-,-,-,-,-,-,-
+HFRI Fund of Funds Composite Index,US Dollar,-,-,-,-,-,-,-
+HFRI Fund Weighted Composite Index,US Dollar,-,-,-,-,-,-,-
+HFRI Fund Weighted Composite Index - CHF Hedged,Swiss Franc,-,-,-,-,-,-,-
+HFRI Fund Weighted Composite Index - EUR Hedged,Euro,-,-,-,-,-,-,-
+HFRI Fund Weighted Composite Index - GBP Hedged,Pound Sterling,-,-,-,-,-,-,-
+HFRI Fund Weighted Composite Index - USD,US Dollar,-,-,-,-,-,-,-
+HFRI Macro (Total) Index,US Dollar,-,-,-,-,-,-,-
+HFRI Macro Index,US Dollar,-,-,-,-,-,-,-
+HFRI RV Multi-Strategy,US Dollar,-,-,-,-,-,-,-
+Horizon Trade Finance - European A3,US Dollar,Diversified,Income Strategies,Alternative Credit,Specialist Finance,Other Credit,P_Private Debt,-
+Horizon Trade Finance - North American A1,US Dollar,Diversified,Income Strategies,Alternative Credit,Specialist Finance,Other Credit,P_Private Debt,-
+Hudson Bay International Fund Ltd,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Hybrid Equity Fund Composite,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+ICE BofA Gbl HY Constnd TR HEUR,Euro,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_EUR,-
+ICE BofA Gbl HY Constnd TR HGBP,Pound Sterling,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_GBP,-
+ICE BofA US High Yield TR USD,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+Impact World Equity Fund Holdings,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Impact World Equity Fund Perf,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Impactive Capital Class D (IWEF),US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+International Public Partnerships Ord,Pound Sterling,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,-,-
+Invesco EQQQ NASDAQ-100 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Invesco IG Govt-Credit Int Impact,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Invesco IG Taxable Int Impact,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Invesco NASDAQ 100 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Invesco Physical Gold ETC,Euro,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Commodities_EUR,-
+Invesco QQQ Trust,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Invesco RAFI Developed Mkts ex-US S-METF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Invesco S&P 500® Equal Weight ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Invesco Senior Loan ETF,US Dollar,Diversified,Income Strategies,Credit,Senior Loans,Other Credit,P_Loans,-
+Invesco Tax-Free Ltd Term Impact,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+iPath® Bloomberg Cmdty TR ETN,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,P_Commodity,-
+iShares $ TIPS ETF GBP H Dist,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+iShares $ Treasury Bd 3-7y ETF USD Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares $ Treasury Bd 3-7yr ETF GBPHDist,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+iShares $ Trs Bd 7-10yr ETF EUR H Dist,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+iShares $ Ultrashort Bond ETF USD Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares € Govt Bond 20y TgtDur ETF € Acc,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+iShares 0-5 Year TIPS Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares 10-20 Year Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares 1-3 Year Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares 1-5 Year invmt Grd Corp Bd ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares 20+ Year Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares 3-7 Year Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares 5-10 Year invmt Grd Corp Bd ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares 7-10 Year Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares Agency Bond ETF,US Dollar,-,-,-,-,-,-,-
+iShares Bitcoin Trust ETF,US Dollar,Growth,Growth Strategies,Alternative Growth,Digital Assets,Digital Assets,-,-
+iShares Broad USD Invm Grd Corp Bd ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares China Government Bond ETF RMB,Hong Kong Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+iShares China Large-Cap ETF,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares CMBS ETF,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+iShares Cor MSCI Eurp UCITS ETF EUR Dist,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+iShares Core 30/70 Cnsrv Allc ETF,US Dollar,Diversified,Blended Strategies,Mixed Allocation,Conservative Allocation Funds,Multi Asset,-,-
+iShares Core 40/60 Moderate Allc ETF,US Dollar,Diversified,Blended Strategies,Mixed Allocation,Balanced Allocation Funds,Multi Asset,-,-
+iShares Core Global Aggt Bd ETF EUR HAcc,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+iShares Core Global Aggt Bd ETF USD Dist,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares Core Global Aggt Bd ETF USD HAcc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares Core MSCI China ETF,Hong Kong Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,-,-
+iShares Core MSCI EMU UCITS ETF EUR Acc,Euro,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_EUR,-
+iShares Core MSCI Europe ETF EUR Acc,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+iShares Core MSCI Pac ex-Jpn ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares Core MSCI World ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares Core S&P 500 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P 500 ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P 500 ETF USD Dist,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P Mid-Cap ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P Small-Cap ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P Total US Stock Mkt ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P US Growth ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core S&P US Value ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Core US Aggregate Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares Dev Mkts Prpty Yld ETF USD Dist,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+iShares ESG Aware MSCI EAFE ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares ESG Aware MSCI EM ETF,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares ESG Aware MSCI USA ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares ESG MSCI KLD 400 ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares ESG Optimized MSCI USA ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Europe ETF,US Dollar,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Pan Europe,-
+iShares European Prpty Yld ETF EUR Dist,Euro,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Alternative Growth_EUR,-
+iShares Global Aggt Bd ESG SRIETFUSDHAcc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares Global Comm Services ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares Global Energy ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares Global Financials ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares Global Govt Bond ETF USD Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares Global Healthcare ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares Global Infl Lnkd GovBd ETF $ Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares Global Infrastructure ETF,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,P_Listed Infrastructure,-
+iShares Global REIT ETF,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+iShares Global Tech ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares GNMA Bond ETF,US Dollar,-,-,-,-,-,-,-
+iShares Gold Trust,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+iShares Government/Credit Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares iBoxx $ High Yield Corp Bd ETF,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+iShares iBoxx $ Invmt Grade Corp Bd ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares Intermediate Govt/Crdt Bd ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares JP Morgan $ EM Bd ETF CHF H Acc,Swiss Franc,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,-,-
+iShares JP Morgan $ EM Bd ETF EUR H Acc,Euro,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_EUR,-
+iShares JP Morgan $ EM Bd ETF GBP H Dist,Pound Sterling,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_GBP,-
+iShares JP Morgan $ EM Bd ETF HCHF Acc,Swiss Franc,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,-,-
+iShares JP Morgan $ EM Bd ETF HEUR Acc,Euro,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_EUR,-
+iShares JP Morgan $ EM Bd ETF HGBP Acc,Pound Sterling,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_Credit_GBP,-
+iShares JP Morgan $ EM Bd ETF USD Acc,Swiss Franc,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,-,-
+iShares JP Morgan EM Local Ccy Bd ETF,US Dollar,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_EM Debt,-
+iShares JP Morgan USD Em Mkts Bd ETF,US Dollar,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,P_EM Debt,-
+iShares JPX-Nikkei 400 ETF,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,P_Japan,-
+iShares Latin America 40 ETF,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares Micro-Cap ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares MSCI ACWI ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI ACWI ex US ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI All Country Asia ex Jpn ETF,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Asia Pacific ex Japan,-
+iShares MSCI EAFE ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI EAFE Growth ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI EAFE Value ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI EM Asia ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares MSCI Emerging Markets ETF,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares MSCI Japan ETF,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,P_Japan,-
+iShares MSCI Pacific ex Japan ETF,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+iShares MSCI USA ESG Enh CTB ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares MSCI USA ESG Enh CTB ETF USDDist,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares MSCI USA Quality Factor ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares MSCI Wld ESG Enh CTB ETF USD Acc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+iShares MSCI Wld ESG Enh CTB ETF USDDist,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI World ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI World ETF USD Dist,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+iShares MSCI World EUR Hedged ETF Acc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+iShares National Muni Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+iShares Paris-Algnd Clmt Optd MSCIUSAETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Physical Gold ETC,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+iShares Physical Silver ETC,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Commodity,-
+iShares Preferred&Income Securities ETF,US Dollar,Diversified,Income Strategies,Hybrid Credit,Preferred Securities,Other Credit,-,-
+iShares Russell 1000 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 1000 Growth ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 1000 Value ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 2000 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 2000 Growth ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 2000 Value ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 2500 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell 3000 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Russell Small/Mid-Cap Idx Instl,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P 500 Growth ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P 500 Paris-Algnd Clmt ETF$Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P 500 Value ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P Mid-Cap 400 Growth ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P Mid-Cap 400 Value ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P Small-Cap 600 Growth ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares S&P Small-Cap 600 Value ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Select Dividend ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares Short Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares TIPS Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares UK Gilts 0-5yr ETF GBP Acc,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+iShares US Aggregate Bond ETF USD Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+iShares US Basic Materials ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Consumer Discretionary ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Consumer Staples ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Energy ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Financial Services ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Financials ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Healthcare ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Industrials ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Infrastructure ETF,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,P_Listed Infrastructure,-
+iShares US Real Estate ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Technology ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Telecommunications ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares US Treasury Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+iShares US Utilities ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+iShares® Gold Trust Micro,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+iSharesParis-AlgndClmOptdMSCIWldexUSAETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+ITE Rail Fund LP,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+Jain Global Onshore Fund LP,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Janus Henderson Global Sust Eq I,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Janus Henderson Global Sust Eq I Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Janus Henderson Hrzn Glb HY Bd H2 EURH,Euro,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_EUR,-
+Janus Henderson Hrzn Glb HY Bd H2 GBPH,Pound Sterling,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_GBP,-
+Janus Henderson Hrzn Glb HY Bd H2 HCHF,Swiss Franc,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,-,-
+Janus Henderson Hrzn Glb HY Bd H3q EURH,Euro,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_EUR,-
+Janus Henderson Hrzn Glb HY Bd I2 HEUR,Euro,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_EUR,-
+Janus Henderson Hrzn Glb HY Bd I2 USD,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+Jupiter Dynamic Bd D $ Hsc Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Jupiter Dynamic Bd I $ Hsc Acc,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+King Street Side Pocket,US Dollar,-,-,-,-,-,-,-
+Kirkoswald Glbl Mac UCITS USD Instl Fdr,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Kirkoswald Global Macro Class F,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Kirkoswald Global Macro Fund,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+L&G Multi-Strategy Enhanced Cmdts ETF,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+LBMA Gold Price AM USD,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+Leadenhall UCITS ILS A USD Acc,US Dollar,Diversified,Income Strategies,Alternative Credit,Specialist Finance,Other Credit,P_Private Debt,-
+Leadenhall UCITS ILS Fund EUR,Euro,Diversified,Income Strategies,Alternative Credit,Specialist Finance,Other Credit,P_Alternative Credit_EUR,-
+LibreMax Value Partners LP,US Dollar,-,-,-,-,-,-,-
+Life Cycle Global Share (P Rutter Track Record),US Dollar,-,-,-,-,-,-,-
+Marcho Long Fund,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Markit iBoxx ALBI TR USD,US Dollar,-,-,-,-,-,-,-
+Marshall Wace Global Opportunities Class B USD,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Matthews Emerging Markets Sust Fut Inst,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Montanaro Better World GBP Dis,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Morningstar US HY Bd TR Hdg CHF,Swiss Franc,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,-,-
+Morningstar US TIPS TR Hdg CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+Morningstar US TIPS TR Hdg EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+Morningstar USD 1M Cash TR USD,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,P_US Cash,-
+MSCI AC Asia Ex Japan NR USD,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+MSCI AC Asia Pac Ex JPN NR EUR,Euro,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_EUR,-
+MSCI ACWI NR USD,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+MSCI EM NR USD,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+MSCI Europe NR EUR,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+MSCI Japan NR USD,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,P_Japan,-
+MSCI World NR EUR,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+MSCI World Small Cap NR USD,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Multi-Strategy Fund Perf,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Multi-Strategy Fund QP LP Holdings,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Municipal High Income Fund,US Dollar,Diversified,Income Strategies,Credit,High Yield Municipal Bonds,High Yield,P_HY Muni Bond,-
+Municipal High Income Fund Proforma,US Dollar,Diversified,Income Strategies,Credit,High Yield Municipal Bonds,High Yield,P_HY Muni Bond,-
+Neuberger Berman GlSr FlRt Inc USD I Acc,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_High Yield,-
+Nordea 1 - European Covered Bond AI EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Nordea 1 - European Covered Bond BC EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Nordea 1 - European Covered Bond BP EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Nordea 1 - Low Dur Eurp Cov Bd BI EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Investment Grade Bonds_EUR,-
+Nordea 1 - Low Dur Eurp Cov Bd HBI CHF,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,-,-
+Nuveen Core Impact Bond R6,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Nuveen Municipal Value,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+Olympus Peak,US Dollar,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Credit Direc HF,-
+Olympus Peak Trade Claims,US Dollar,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,P_Credit Direc HF,-
+OrbiMed Partners Ltd Class D,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Ownership Capital (IWEF),US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Pac Nrth of Sth Glb EM Eq Z EUR Acc,Euro,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_EUR,-
+Pac Nrth of Sth Glb EM Eq Z GBP Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_GBP,-
+Pac Nrth of Sth Glb EM Eq Z USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Pacer US Cash Cows 100 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Pacific North of South EM All Cp EqI$Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Pacific NoS EM & GAM composite,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Parametric TL Harvesting - S&P 1500,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Parametric TL U.S. 1500 ESG Screened,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+PIMCO GIS Income Institutional USD Acc,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+PIMCO GIS Income Institutional USD Inc,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+PIMCO GIS Income Instl CHFH Acc,Swiss Franc,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,-,-
+PIMCO GIS Income Instl EURH Acc,Euro,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_EUR,-
+PIMCO GIS Income Instl EURH Inc,Euro,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_EUR,-
+PIMCO GIS Income Instl GBP H Acc,Pound Sterling,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_GBP,-
+PIMCO GIS Income Instl GBPH Inc,Pound Sterling,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_GBP,-
+PIMCO GIS Income Investor EUR Hedged Acc,Euro,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_EUR,-
+PIMCO Income Instl,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+PIMCO Municipal Ladder Composite,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+PIMCO Municipal Social Advancement,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+PIMCO Municipal Value Composite,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+PitchBook -  Growth (Benchmark),US Dollar,-,-,-,-,-,-,-
+PitchBook - Buyout (Benchmark),US Dollar,-,-,-,-,-,-,-
+PitchBook - Distressed Debt (Benchmark),US Dollar,-,-,-,-,-,-,-
+PitchBook - Infrastructure (Benchmark),US Dollar,-,-,-,-,-,-,-
+PitchBook - Infrastructure (Benchmark) (w vehicle cost),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) (Composite),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) (Monthly),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) (Monthly) - CHF,Swiss Franc,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) (Monthly) - EUR,Euro,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) (Monthly) - GBP,Pound Sterling,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) (w vehicle cost),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) H CHF,Swiss Franc,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) H EUR,Euro,-,-,-,-,-,-,-
+PitchBook - Private Debt (Benchmark) H GBP,Pound Sterling,-,-,-,-,-,-,-
+PitchBook - Private Equity (Benchmark),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Equity (Benchmark) (w vehicle cost),US Dollar,-,-,-,-,-,-,-
+PitchBook - Private Equity Index (Composite with MSCI),US Dollar,-,-,-,-,-,-,-
+PitchBook - Real Estate (Benchmark),US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,P_Real Estate,-
+PitchBook - Venture Capital (Benchmark),US Dollar,-,-,-,-,-,-,-
+Plurima Apuano Flexible Bond A Instl Pre,Euro,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_EUR,-
+Point72 Capital International,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Point72 Capital International Ltd,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Polen Capital Focus US Gr EUR D InstlUnH,Euro,Growth,Growth Strategies,Equity,North America,North America Equities,P_Equity_EUR,-
+Polen Capital Focus US Gr GBP,Pound Sterling,Growth,Growth Strategies,Equity,North America,North America Equities,P_Equity_GBP,-
+Polen Capital Focus US Gr GBP Instlunhdg,Pound Sterling,Growth,Growth Strategies,Equity,North America,North America Equities,P_Equity_GBP,-
+Polen Capital Focus US Gr USD D InstlUnH,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Polen Capital Focus US Gr USD Instl,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Positive Engagement - Holdings Analysis,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Positive Engagement ICAV,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Positive Engagement Strategy,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Positive Engagement Strategy & ICAV Composite,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Premia China Treasury and Policy Bank Bond Long Duration ETF USD Hedged,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+PRIMECAP Odyssey Aggressive Growth,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+RA Capital Healthcare,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Robeco Credit Income D3 USD Dist,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Global Corporate,-
+Robeco Credit Income I USD Cap,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Global Corporate,-
+Rubrics Global Credit UCITS B EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Ruffer Total Return Intl C USD Cap,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Total Return Funds,Absolute Return Funds,P_Growth Directional HF,-
+S&P 500 NR USD,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Schonfeld Fundamental Equity Fund Class B Eligible,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Schonfeld Strategic Partners Fund (SSPF) Class E Eligible,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Schroder GAIA WellingtonPagosa C AccEURH,Euro,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return_EUR,-
+Schroder ISF EURO Corp Bd C Acc CHF H,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,-,-
+Schroder ISF EURO Corp Bd C Acc EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Corporate Bonds,US IG / Gbl IG,P_Investment Grade Bonds_EUR,-
+SHILLER US SECTOR INDEX SC E USD ACC,US Dollar,-,-,-,-,-,-,-
+Smithson,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Soroban Opportunities Master Fund LP,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+SPDR S&P 400 US Mid Cap ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+SPDR® Blmbg Convert Secs ETF,US Dollar,Diversified,Income Strategies,Hybrid Credit,Contingent Convertibles,Other Credit,-,-
+SPDR® Dow Jones® Global Real Estate ETF,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Real Estate,Real Estate,P_Global REITs,-
+SPDR® Global Dow ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+SPDR® Gold Shares,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+SPDR® MSCI Europe Consumer Staples ETF,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+SPDR® MSCI World Small Cap ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+SPDR® Portfolio Mortgage Backed Bond ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Asset Backed Securities,US IG / Gbl IG,P_MBS,-
+SPDR® S&P 500® ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+SPDR® S&P MIDCAP 400 ETF Trust,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Sprott Physical Uranium Trust Units,Canadian Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,-,-
+Stability - Global Aggregate Bonds,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Stability - Global Government Bonds,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Stability - IG Municipal Bonds,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+Stability - Investment Grade Bonds,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Stability - Money Market,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Stability - Short term Debt,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Stability - US Aggregate Bonds,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Stability - US Government Bonds,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Starwood REIT Class I,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,P_Global REITs,-
+Stewart Inv Glbl Em Mkts All Cap IUSDAcc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Stewart Inv Glbl EmMktsAllCapnbyVIUSDAcc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+StoneCastle,US Dollar,-,-,-,-,-,-,-
+Stt Strt Glb Trs 1-10 Yr Bd Idx IEURAccH,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+Stt Strt Glbl Trs Bd Idx I CHF Acc Hdg,Swiss Franc,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+Stt Strt Glbl Trs Bd Idx I EUR Acc Hdg,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+Stt Strt Glbl Trs Bd Idx I EUR Inc Hdg,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_EUR,-
+Stt Strt Glbl Trs Bd Idx I GBP Acc Hdg,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+Stt Strt Glbl Trs Bd Idx I GBP Inc Hdg,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_Investment Grade Bonds_GBP,-
+Stt Strt Glbl Trs Bd Idx I USD Acc Hdg,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+The Children's Investment Fund,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+The Children's Investment Fund - Holdings,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+The Children's Investment Fund Class G (P.E. Fund),US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+The Children's Investment Fund G - WEF,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+The Children's Investment Fund G1,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+The Energy Select Sector SPDR® ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+The Health Care Select Sector SPDR® ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Tiger Global Long Opp,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Tiger Global LP,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+TPG Public Equity Partners,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,P_Growth Directional HF,-
+Tracker Fund of Hong Kong ETF,Hong Kong Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,-,-
+Trojan (Ireland) O USD Acc,US Dollar,Diversified,Blended Strategies,Mixed Allocation,Conservative Allocation Funds,Multi Asset,-,-
+Trojan (Ireland) X USD Acc,US Dollar,Diversified,Blended Strategies,Mixed Allocation,Conservative Allocation Funds,Multi Asset,-,-
+Trojan Exclusions X USD Acc,US Dollar,Diversified,Blended Strategies,Mixed Allocation,Conservative Allocation Funds,Multi Asset,-,-
+TwentyFour Income Ord,Pound Sterling,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_GBP,-
+Two Sigma Absolue Return Enhanced Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+UBAM Global High Yield Solution IHC EUR,Euro,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,P_Credit_EUR,-
+UBS BBG Commodity CMCI SF ETF USD acc,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,P_Commodity,-
+UBS BBG Commodity Index SF ETF USD acc,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,P_Commodity,-
+UBS CMCI Composite SF ETF USD acc,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,P_Commodity,-
+Unconstrained Credit,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+US Treasury Note 4.5% due Nov 15 2033,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Valiant India Opportunities Fund LP,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+ValueAct Capital Partners II LP,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+VanEck High Yield Muni ETF,US Dollar,Diversified,Income Strategies,Credit,High Yield Municipal Bonds,High Yield,P_HY Muni Bond,-
+Vanguard Em Mkts Stk Idx $ Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Vanguard Em Mkts Stk Idx £ Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_GBP,-
+Vanguard Em Mkts Stk Idx £ Dist,Pound Sterling,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_GBP,-
+Vanguard Em Mkts Stk Idx € Acc,Euro,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_EUR,-
+Vanguard Em Mkts Stk Idx Ins Pl $ Acc,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Vanguard ESG International Stock ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Vanguard FTSE Dev Eurp UCITS ETF,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Vanguard FTSE Dev World ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Vanguard FTSE Emerg Markets ETF $Dis,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_EM,-
+Vanguard Glb S/T Bd Idx € H Acc,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Vanguard Glb Small-Cp Idx € Acc,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Vanguard Global ESG Select Stk Admiral,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Vanguard Global Small-Cap Idx USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Vanguard Inflation-Protected Secs Adm,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Vanguard Interm-Term Treasury Adm,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,P_US Government,-
+Vanguard Interm-Term Tx-Ex Adm,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,P_US Municipal,-
+Vanguard Mortgage-Backed Secs ETF,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Asset Backed Securities,US IG / Gbl IG,P_MBS,-
+Vanguard Real Estate ETF,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Real Estate,Real Estate,P_Global REITs,-
+Vanguard S&P 500 ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Vanguard S&P 500 ETF USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Vanguard S&P 500 UCITS ETF,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Vanguard Total Bond Market Index I,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Vanguard Total Stock Market ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Veritas Asian A EUR,Euro,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Equity_EUR,-
+Veritas Asian A USD,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Asia Pacific ex Japan,-
+Veritas Asian A USD Acc,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Asia Pacific ex Japan,-
+Veritas Asian C EUR,Euro,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Equity_EUR,-
+Veritas Asian C GBP,Pound Sterling,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Equity_GBP,-
+Veritas Asian C USD,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Asia Pacific ex Japan,-
+Veritas Asian D EUR,Euro,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Equity_EUR,-
+Veritas Asian D GBP,Pound Sterling,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Equity_GBP,-
+Veritas Asian D USD,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,P_Asia Pacific ex Japan,-
+VH Global Energy Infrastructure Ord,Pound Sterling,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,-,-
+Viking Global Equities,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Viking Long Fund - Class J,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Vontobel Global Envir Change C1 USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Vontobel Global Envir Change I EUR,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_EUR,-
+Vontobel TwentyFour StratInc AHI Hdg EUR,Euro,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_EUR,-
+Vontobel TwentyFour StratInc G GBP,Pound Sterling,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Credit_GBP,-
+Vontobel TwentyFour StratInc HG Hdg USD,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+Vontobel TwentyFour StratInc HI Hdg USD,US Dollar,Diversified,Income Strategies,Credit,Unconstrained,Other Credit,P_Global Aggregate,-
+Wellington Durable Companies Fund,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Wellington Durable Companies ProForma,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Wellington Glbl Impact Bond EUR S AcH,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Wellington Glbl Impact Bond USD S Ac,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_IG Corporate,-
+Wellington Global Stewards USD S Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+William Blair US SMID Growth A USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+William Blair US SMID Growth I USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+William Blair US SMID Growth J EUR Acc,Euro,Growth,Growth Strategies,Equity,North America,North America Equities,P_Equity_EUR,-
+William Blair US SMID Growth J GBP,Pound Sterling,Growth,Growth Strategies,Equity,North America,North America Equities,P_Equity_GBP,-
+William Blair US SMID Growth J USD Acc,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+WisdomTree Japan Hedged Equity ETF,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,P_Japan,-
+WisdomTree Physical Gold,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,P_Gold,-
+Xtrackers MSCI EMU ETF 2C GBP,Pound Sterling,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,P_Equity_GBP,-
+Xtrackers S&P 500 EW ETF 1C,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+Xtrackers S&P Global Infra Swap ETF 1C,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,P_Listed Infrastructure,-
+Yotta Absolute Fund,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,P_Absolute Return Hs,-
+Yotta Value Fund,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,P_US,-
+AlTi-Allianz Private Debt,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt,-
+AlTi-Allianz Private Debt (EUR),Euro,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt_EUR,-
+Global Thematic Equity ICAV,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Pictet-Sovereign Short-Term MM USD I,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Money Market Funds,Money Market Funds,P_US Cash,-
+Pinnacle ICAV Glb Eq Select C USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+UBS Core MSCI Europe UCITS ETF EUR dis,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+Arcus Japan A Acc EUR H,Euro,Growth,Growth Strategies,Equity,Japan,Japan,P_Equity_EUR,-
+SCSL Energy Transition Fund,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Private Infrastructure,-
+P_US Cash,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,-,-
+P_Global Cash,US Dollar,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,-,-
+P_US Government,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+P_Global Government,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+P_US Municipal,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Municipal Bonds,US Munis,-,-
+P_US Inflation-Linked,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+P_Global Inflation-Linked,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Government / Supranational Bonds,US Govt / Gbl Govt,-,-
+P_US Aggregate,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+P_Global Aggregate,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+P_IG Corporate,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,-
+P_MBS,US Dollar,Stability,Capital Preservation Strategies,Investment Grade Bonds,Asset Backed Securities,US IG / Gbl IG,-,-
+P_High Yield,US Dollar,Diversified,Income Strategies,Credit,Developed High Yield,High Yield,-,-
+P_HY Muni Bond,US Dollar,Diversified,Income Strategies,Credit,High Yield Municipal Bonds,High Yield,-,-
+P_EM Debt,US Dollar,Diversified,Income Strategies,Credit,Emerging Market Bonds,EM Debt,-,-
+P_Loans,US Dollar,Diversified,Income Strategies,Credit,Senior Loans,Other Credit,-,-
+P_Private Debt,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,-,-
+P_Credit Direc HF,US Dollar,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,-,-
+P_Absolute Return Hs,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,-,-
+P_Gold,US Dollar,Diversified,Income Strategies,Commodities,Gold & Precious Metals,Gold,-,-
+P_Commodity,US Dollar,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,-,-
+P_Private Infrastructure,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,-,-
+P_Listed Infrastructure,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Listed Infrastructure,Global Equities,-,-
+P_Private Alternatives,US Dollar,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,-,-
+P_Senior,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,-,-
+P_Distressed,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,-,-
+P_CLO,US Dollar,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,-,-
+P_Real Estate,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,-,-
+P_Development,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,-,-
+P_Property,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,-,-
+P_Growth Directional HF,US Dollar,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,-,-
+P_US REITs,US Dollar,Diversified,Inflation Protection Strategies,Real Assets,Private Real Estate,Real Estate,-,-
+P_Global REITs,US Dollar,Growth,Growth Strategies,Alternative Growth,REITs,Global REITs,-,-
+P_Private Equity,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,-,-
+P_Buyout,US Dollar,Growth,Growth Strategies,Private Equity,Buyout,PE,-,-
+P_Growth,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,-,-
+P_Special Sits,US Dollar,Growth,Growth Strategies,Private Equity,Diversified PE,PE,-,-
+P_Venture,US Dollar,Growth,Growth Strategies,Private Equity,Venture Capital,PE,-,-
+P_Global,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+P_Global Dev,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+P_Global EAFE,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+P_Global Dev EAFE,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+P_US,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,-,-
+P_Pan Europe,US Dollar,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,-,-
+P_Japan,US Dollar,Growth,Growth Strategies,Equity,Japan,Japan,-,-
+P_Asia Pacific ex Japan,US Dollar,Growth,Growth Strategies,Equity,Asia Pacific ex Japan,Asia Pacific Ex Japan,-,-
+P_EM,US Dollar,Growth,Growth Strategies,Equity,Global Emerging Markets,EM Equities,-,-
+P_US SMID,US Dollar,Growth,Growth Strategies,Equity,North America,North America Equities,-,-
+P_Global SMID,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+iShares iBonds Dec 2028Trm€CorpETFEURAcc,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+iShares iBonds Dec 2030Term€CorpETF€Acc,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,P_Investment Grade Bonds_EUR,-
+Janus Henderson EUR AAA CLO ActvCrETF£H,Pound Sterling,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt_GBP,-
+Pinnacle ICAV Glb Eq Select C GBP Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+P_Absolute Return_EUR,Euro,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,-,AIA ICAV Absolute Return Composite (EUR)
+P_Alternative Credit_EUR,Euro,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,-,AIA ICAV Alternative Credit Composite (EUR A1 Acc)
+P_Alternative Growth_EUR,Euro,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,-,AIA ICAV Hedged Equity Composite (EUR)
+P_Cash & Cash Equivalents_EUR,Euro,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,-,BlackRock ICS Euro Liq Prem Acc EUR
+P_Commodities_EUR,Euro,Diversified,Inflation Protection Strategies,Commodities,General Commodities,Commodities,-,Invesco Physical Gold ETC
+P_Credit_EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,Bloomberg Euro Agg Credit TR EUR
+P_Equity_EUR,Euro,Growth,Growth Strategies,Equity,Global,Global Equities,-,iShares MSCI World EUR Hedged ETF Acc
+P_Investment Grade Bonds_EUR,Euro,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,iShares Core Global Aggt Bd ETF EUR HAcc
+P_Private Debt_EUR,Euro,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,-,AIA ICAV Alternative Credit Composite (EUR A1 Acc)
+P_Absolute Return_GBP,Pound Sterling,Diversified,Absolute Return Strategies,Absolute Return,Absolute Return Hedge Funds,Absolute Return Funds,-,AIA ICAV Absolute Return Composite (GBP)
+P_Alternative Credit_GBP,Pound Sterling,Diversified,Income Strategies,Alternative Credit,Credit Directional Hedge Funds,Credit Directional HFs,-,AIA ICAV Alternative Credit Composite (GBP A1 Acc)
+P_Alternative Growth_GBP,Pound Sterling,Growth,Growth Strategies,Alternative Growth,Growth Directional Hedge Funds,Growth Directional HFs,-,AIA ICAV Equity Hedge Composite (GBP)
+P_Cash & Cash Equivalents_GBP,Pound Sterling,Stability,Capital Preservation Strategies,Cash & Cash Equivalents,Cash,Cash,-,BlackRock ICS Sterling Liq Premier Acc
+P_Credit_GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,Bloomberg US Corp Bond TR Hdg GBP
+P_Equity_GBP,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,-,SPDR MSCI All Cntry Wld ETF
+P_Investment Grade Bonds_GBP,Pound Sterling,Stability,Capital Preservation Strategies,Investment Grade Bonds,Aggregate IG Bonds,Aggregate IG,-,Bloomberg Global Aggregate TR Hdg GBP
+P_Private Debt_GBP,Pound Sterling,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,-,AIA ICAV Alternative Credit Composite (GBP A1 Acc)
+SPDR MSCI All Cntry Wld ETF,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,-,-
+BGF Continental Eurp Flex D4,Pound Sterling,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_GBP,-
+Comgest Growth Europe EUR I Dis,Euro,Growth,Growth Strategies,Equity,Europe ex UK,Pan Europe,P_Equity_EUR,-
+Janus Henderson EUR AAA CLOActvCrETF€Acc,Euro,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Private Debt_EUR,-
+Life Cycle Global Equity UCITS C USD Acc,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Global,-
+Life Cycle Global Select UCITS C GBP Acc,Pound Sterling,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity_GBP,-
+Vanguard FTSE Europe ETF,US Dollar,Growth,Growth Strategies,Equity,Global,Global Equities,P_Equity,-
+Brookfield Infrastructure Income Fund Inc. EUR,Euro,Diversified,Inflation Protection Strategies,Real Assets,Unlisted Infrastructure,Real Estate,P_Alternative Credit_EUR,-
+AlTi-Allianz Private Debt GBP Composite,Pound Sterling,Diversified,Income Strategies,Private Debt,Diversified Debt,Private Debt,P_Alternative Credit_GBP,-

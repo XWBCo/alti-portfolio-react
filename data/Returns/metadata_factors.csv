@@ -1,0 +1,51 @@
+Factor,Asset Class,Region,Group,Ticker
+US_Equity,Equity,US,Global Markets,SPY US Equity
+EU_Equity,Equity,Europe,Global Markets,IEV US Equity
+Intl_Developed,Equity,Developed Markets,Global Markets,VEA US Equity
+EM_Equity,Equity,Emerging Markets,Global Markets,EEM US Equity
+Global_Tech,Equity,Global,Sectors,IXN US Equity
+Global_Healthcare,Equity,Global,Sectors,IXJ US Equity
+Global_Financials,Equity,Global,Sectors,IXG US Equity
+Global_Infrastructure,Equity,Global,Sectors,IGF US Equity
+Global Energy,Equity,Global,Sectors,IXC US Equity
+Global Industrials,Equity,Global,Sectors,EXI US Equity
+Global Consumer Staples,Equity,Global,Sectors,KXI US Equity
+Global Consumer Discretionary,Equity,Global,Sectors,RXI US Equity
+Global Comm Services,Equity,Global,Sectors,IXP US Equity
+Global Materials,Equity,Global,Sectors,MXI US Equity
+Global Utilities,Equity,Global,Sectors,JXI US Equity
+Style_Value,Equity,Global,Styles,VLUE US Equity
+Style_Momentum,Equity,Global,Styles,MTUM US Equity
+Style_Quality,Equity,Global,Styles,QUAL US Equity
+Style_MinVol,Equity,US,Styles,USMV US Equity
+Rates_US_Long,Fixed Income,US,Rates,TLT US Equity
+Rates_Developed,Fixed Income,Developed Markets,Rates,BWX US Equity
+Rates_EM,Fixed Income,EM,Rates,EMLC US Equity
+Credit_US_IG,Fixed Income,US,Credit,LQD US Equity
+Credit_US_HY,Fixed Income,US,Credit,HYG US Equity
+Credit_EU_IG,Fixed Income,Europe,Credit,IBGL LN Equity
+Credit_EU_HY,Fixed Income,Europe,Credit,IHYG LN Equity
+Credit_EM,Fixed Income,EM,Credit,EMB US Equity
+FX_USD,Currency,US,FX,UUP US Equity
+FX_EUR,Currency,Europe,FX,FXE US Equity
+FX_JPY,Currency,Asia,FX,FXY US Equity
+FX_EM,Currency,EM,FX,CEW US Equity
+Commodities_Broad,Commodities,Global,Commodities,DBC US Equity
+Commodities_Gold,Commodities,Global,Commodities,GLD US Equity
+Commodities_Oil,Commodities,Global,Commodities,USO US Equity
+Inflation_Expectations,Macro,US,Macro,TIP US Equity
+Global_Real_Estate,Real Assets,Global,Real Assets,REET US Equity
+Volatility,Equity,US,Styles,PVOLAUS Index
+Trade Activity,Equity,US,Styles,PTRADEUS Index
+Variability,Equity,US,Styles,PEARNVUS Index
+Value,Equity,US,Styles,PVALUEUS Index
+Dividends,Equity,US,Styles,PDIVYUS Index
+Growth,Equity,US,Styles,PGRWTHUS Index
+Momentum,Equity,US,Styles,PMOMENUS Index
+Size,Equity,US,Styles,PSIZEUS Index
+Leverage,Equity,US,Styles,PLEVERUS Index
+Profitability,Equity,US,Styles,PPROFTUS Index
+ESG,Equity,US,ESG,SUSA US Equity
+HF,Hedge Funds,Global,Alternatives,HFRI Fund Weighted Composite Index
+Diversified PE,Private Assets,Global,Private Assets,AlTi International - PE Composite
+Diversified Debt,Private Assets,Global,Private Assets,AlTi International - Private Credit Composite
