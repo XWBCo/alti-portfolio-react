@@ -93,35 +93,6 @@ export default function LoginPage() {
         />
       </div>
 
-      {/* Animated Teal Sweep Overlay */}
-      <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
-        {/* Sweep 1 - slower, wider, more visible */}
-        <div
-          className="absolute inset-0 animate-sweep-slow"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,240,219,0.4) 50%, transparent 70%, transparent 100%)',
-            backgroundSize: '200% 100%',
-          }}
-        />
-        {/* Sweep 2 - faster, narrower */}
-        <div
-          className="absolute inset-0 animate-sweep-fast"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, transparent 40%, rgba(0,181,173,0.25) 50%, transparent 60%, transparent 100%)',
-            backgroundSize: '200% 100%',
-          }}
-        />
-        {/* Sweep 3 - bright accent */}
-        <div
-          className="absolute inset-0 animate-sweep-slow"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0,240,219,0.5) 50%, transparent 55%, transparent 100%)',
-            backgroundSize: '200% 100%',
-            animationDelay: '4s',
-          }}
-        />
-      </div>
-
       {/* Login Card with animation */}
       <AnimatePresence>
         {cardVisible && (
