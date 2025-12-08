@@ -317,18 +317,21 @@ export default function FinancialReportsPage() {
       name: 'Client Portfolio Report',
       description: 'Individual client holdings, performance, and allocation analysis',
       icon: '📊',
+      disabled: false,
     },
     {
       id: 'advisor' as ReportType,
       name: 'Advisor Book Report',
       description: 'Advisor-level AUM, client list, and performance metrics',
       icon: '👤',
+      disabled: false,
     },
     {
       id: 'firm' as ReportType,
       name: 'Firm Analytics Report',
       description: 'Firm-wide AUM trends, advisor rankings, and client segmentation',
       icon: '🏢',
+      disabled: false,
     },
   ];
 

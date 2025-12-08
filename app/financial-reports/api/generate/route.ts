@@ -219,7 +219,7 @@ export async function GET(request: NextRequest) {
 
         if (format === 'excel') {
           const excel = generateClientReportExcel(data as ClientReportData);
-          return new NextResponse(excel, {
+          return new NextResponse(Buffer.from(excel), {
             headers: {
               'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
               'Content-Disposition': 'attachment; filename="client-portfolio-report.xlsx"',
@@ -260,7 +260,7 @@ export async function GET(request: NextRequest) {
 
         if (format === 'excel') {
           const excel = generateAdvisorReportExcel(data as AdvisorReportData);
-          return new NextResponse(excel, {
+          return new NextResponse(Buffer.from(excel), {
             headers: {
               'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
               'Content-Disposition': 'attachment; filename="advisor-book-report.xlsx"',
@@ -301,7 +301,7 @@ export async function GET(request: NextRequest) {
 
         if (format === 'excel') {
           const excel = generateFirmReportExcel(data as FirmReportData);
-          return new NextResponse(excel, {
+          return new NextResponse(Buffer.from(excel), {
             headers: {
               'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
               'Content-Disposition': 'attachment; filename="firm-analytics-report.xlsx"',
