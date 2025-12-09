@@ -50,7 +50,7 @@ export default function Header({ user }: HeaderProps) {
         borderBottom: '2px solid #00f0db',
       }}
     >
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Left side: Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
