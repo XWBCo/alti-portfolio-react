@@ -56,7 +56,7 @@ export default function ToolCard({
         border border-solid
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
       `}
-      style={{ padding: '32px 28px' }}
+      style={{ padding: '24px 28px' }}
     >
       {/* Dev badge */}
       {devOnly && (
@@ -66,7 +66,7 @@ export default function ToolCard({
       )}
 
       {/* SVG Icon - color change only, no scale */}
-      <div className="mb-[38px] mx-auto" style={{ width: '120px', height: '120px' }}>
+      <div className="mb-[24px] mx-auto" style={{ width: '100px', height: '100px' }}>
         {CustomIcon ? (
           <motion.div
             initial={false}
@@ -135,7 +135,7 @@ export default function ToolCard({
       </div>
 
       {/* Description */}
-      <p className="text-[15px] text-[#757575] leading-relaxed mb-6 flex-grow">
+      <p className="text-[15px] text-[#757575] leading-relaxed mb-4 flex-grow">
         {description}
       </p>
 

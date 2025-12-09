@@ -118,7 +118,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#f8f9fa]">
       {/* Hero Section */}
       <section className="px-6 md:px-[60px]" style={{ paddingTop: '16px', paddingBottom: '8px' }}>
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           <div className="flex items-start justify-between">
             <div>
               <motion.h1
@@ -189,7 +189,7 @@ export default function HomePage() {
 
       {/* Tool Cards Grid */}
       <section className="px-6 md:px-[60px] pt-2 pb-4">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           {/* First Row - 4 cards */}
           <motion.div
             initial={{ opacity: 0, y: isTransitionEntrance ? 30 : 20 }}
