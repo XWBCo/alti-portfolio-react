@@ -2,11 +2,15 @@
  * Client Assessment Types
  */
 
+import type { RiskProfileId, PortfolioType } from './portfolio-models';
+
 export type ArchetypeId =
   | 'impact_100'
   | 'inclusive_innovation'
   | 'climate_sustainability'
   | 'integrated_best_ideas';
+
+export type ImpactInterest = 'significant' | 'moderate' | 'minimal' | 'none';
 
 export interface ClientInfo {
   family: string;
@@ -16,6 +20,14 @@ export interface ClientInfo {
   portfolioValue: string;
   location: string;
   entityStructure: string;
+}
+
+export interface RiskProfileData {
+  riskTolerance: RiskProfileId;
+  portfolioType: PortfolioType;
+  timeHorizon: string;
+  liquidityNeeds: string;
+  taxStatus: 'taxable' | 'tax-exempt';
 }
 
 export interface ArchetypeScore {
@@ -45,7 +57,10 @@ export interface SurveyQuestion {
 export interface ClientSurvey {
   id: string;
   clientInfo: ClientInfo;
-  archetypeScores: Record<ArchetypeId, ArchetypeScore>;
+  impactInterest: ImpactInterest;
+  isImpactClient: boolean;
+  archetypeScores?: Record<ArchetypeId, ArchetypeScore>;
+  riskProfile?: RiskProfileData;
   questions: SurveyQuestion[];
   submittedDate: string;
 }
@@ -100,7 +115,7 @@ export const ARCHETYPE_DETAILS: Record<ArchetypeId, ArchetypeDetail> = {
     id: 'climate_sustainability',
     name: 'Climate Sustainability',
     description: 'Environment-first investment approach',
-    color: '#0A598C',
+    color: '#10B981',
     whyMatch: [
       'Clear priority on environmental impact',
       'Net zero alignment and decarbonization goals',
@@ -122,7 +137,7 @@ export const ARCHETYPE_DETAILS: Record<ArchetypeId, ArchetypeDetail> = {
     id: 'integrated_best_ideas',
     name: 'Integrated Best Ideas',
     description: 'Strong returns with ESG screening',
-    color: '#4A4A4A',
+    color: '#2DD4BF',
     whyMatch: [
       'Return maximization as primary goal',
       'ESG as risk management tool',
@@ -150,3 +165,17 @@ export const QUESTION_CATEGORIES = [
 ] as const;
 
 export type QuestionCategory = (typeof QUESTION_CATEGORIES)[number];
+
+// Helper to determine if client is impact-focused based on interest level
+export function isImpactInterested(interest: ImpactInterest): boolean {
+  return interest === 'significant' || interest === 'moderate';
+}
+
+// Helper to parse impact interest from survey response
+export function parseImpactInterest(response: string): ImpactInterest {
+  const lower = response.toLowerCase();
+  if (lower.includes('significant')) return 'significant';
+  if (lower.includes('moderate')) return 'moderate';
+  if (lower.includes('minimal')) return 'minimal';
+  return 'none';
+}

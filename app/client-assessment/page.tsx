@@ -2,7 +2,8 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { motion } from 'motion/react';
-import { FileText, Loader2 } from 'lucide-react';
+import { FileText, Loader2, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 import ClientProfileCard from '@/components/client-assessment/ClientProfileCard';
 import ArchetypeRadar from '@/components/client-assessment/ArchetypeRadar';
 import ArchetypeCard from '@/components/client-assessment/ArchetypeCard';
@@ -68,12 +69,12 @@ export default function ClientAssessmentPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       <div className="flex h-[calc(100vh-122px)]">
-        {/* Left Sidebar - Client Selector */}
+        {/* Left Sidebar - Client Selector (Sticky) */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="w-[320px] bg-[#f8f9fa] p-6 h-full overflow-auto border-r border-[#e6e6e6]"
+          className="w-[320px] bg-[#f8f9fa] p-6 h-full overflow-auto border-r border-[#e6e6e6] flex flex-col"
         >
           <h2 className="text-[22px] font-normal text-[#4A4A4A] mb-6 mt-4">
             Client Surveys:
@@ -120,28 +121,43 @@ export default function ClientAssessmentPage() {
             </div>
           </div>
 
-          {/* Export IPS Button */}
-          <button
-            className={`w-full p-3 border rounded text-[14px] transition-colors flex items-center justify-center gap-2 ${
-              isExporting
-                ? 'bg-[#e1e1e1] text-[#757575] border-[#ccc] cursor-wait'
-                : 'bg-[#00F0DB] text-[#010203] border-[#00D4C1] hover:bg-[#00D4C1]'
-            }`}
-            onClick={handleExportIPS}
-            disabled={isExporting}
-          >
-            {isExporting ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" />
-                Generating...
-              </>
-            ) : (
-              <>
-                <FileText className="w-4 h-4" />
-                Export IPS Document
-              </>
-            )}
-          </button>
+          {/* Spacer to push buttons to bottom */}
+          <div className="flex-grow" />
+
+          {/* Action Buttons (sticky bottom) */}
+          <div className="space-y-3 pt-4 border-t border-[#e6e6e6]">
+            {/* Export IPS Button */}
+            <button
+              className={`w-full p-3 border rounded text-[14px] transition-colors flex items-center justify-center gap-2 ${
+                isExporting
+                  ? 'bg-[#e1e1e1] text-[#757575] border-[#ccc] cursor-wait'
+                  : 'bg-[#00F0DB] text-[#010203] border-[#00D4C1] hover:bg-[#00D4C1]'
+              }`}
+              onClick={handleExportIPS}
+              disabled={isExporting}
+            >
+              {isExporting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Generating...
+                </>
+              ) : (
+                <>
+                  <FileText className="w-4 h-4" />
+                  Export IPS Document
+                </>
+              )}
+            </button>
+
+            {/* Research in Prism CTA */}
+            <Link
+              href={`/impact-analytics/research?archetype=${topArchetype}&region=US&source=assessment`}
+              className="w-full p-3 border border-emerald-400 rounded text-[14px] transition-colors flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:border-emerald-500"
+            >
+              <Sparkles className="w-4 h-4" />
+              Research in Prism AI
+            </Link>
+          </div>
         </motion.div>
 
         {/* Main Content Area */}
@@ -168,14 +184,17 @@ export default function ClientAssessmentPage() {
           </motion.div>
 
           {/* Radar Chart and Top 2 Archetype Cards */}
-          <div className="grid grid-cols-3 gap-6 mb-6">
-            {/* Radar Chart */}
+          <div className="grid grid-cols-2 gap-6 mb-6">
+            {/* Radar Chart - Expanded */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <ArchetypeRadar scores={selectedClient.archetypeScores} />
+              <ArchetypeRadar
+                scores={selectedClient.archetypeScores}
+                topArchetype={topArchetype}
+              />
             </motion.div>
 
             {/* Top 2 Archetype Cards */}
@@ -183,7 +202,7 @@ export default function ClientAssessmentPage() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
-              className="col-span-2 space-y-4"
+              className="space-y-4"
             >
               {sortedArchetypes.slice(0, 2).map(([id, score]) => (
                 <ArchetypeCard
@@ -196,35 +215,12 @@ export default function ClientAssessmentPage() {
             </motion.div>
           </div>
 
-          {/* Bottom 2 Archetype Cards */}
+          {/* Survey Responses Section (Collapsible) */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className="grid grid-cols-2 gap-6 mb-6"
           >
-            {sortedArchetypes.slice(2, 4).map(([id, score]) => (
-              <ArchetypeCard
-                key={id}
-                archetype={ARCHETYPE_DETAILS[id]}
-                score={score}
-                isTopMatch={false}
-              />
-            ))}
-          </motion.div>
-
-          {/* Survey Responses Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
-          >
-            <h2
-              className="text-[20px] text-[#010203] mb-4"
-              style={{ fontFamily: 'Georgia, serif', fontWeight: 300 }}
-            >
-              Survey Responses
-            </h2>
             <SurveyTable questions={selectedClient.questions} />
           </motion.div>
 
@@ -232,7 +228,7 @@ export default function ClientAssessmentPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
             className="mt-6 p-4 bg-[#074269]/5 rounded-lg"
           >
             <p className="text-[12px] text-[#074269]">
