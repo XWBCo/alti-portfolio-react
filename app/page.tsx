@@ -117,7 +117,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       {/* Hero Section */}
-      <section className="py-12 px-6 md:px-[60px]" style={{ paddingTop: '24px', paddingBottom: '16px' }}>
+      <section className="px-6 md:px-[60px]" style={{ paddingTop: '16px', paddingBottom: '8px' }}>
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-start justify-between">
             <div>
@@ -188,15 +188,15 @@ export default function HomePage() {
       </section>
 
       {/* Tool Cards Grid */}
-      <section className="px-6 md:px-[60px] pt-4 pb-4">
+      <section className="px-6 md:px-[60px] pt-2 pb-4">
         <div className="max-w-[1400px] mx-auto">
           {/* First Row - 4 cards */}
           <motion.div
             initial={{ opacity: 0, y: isTransitionEntrance ? 30 : 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: baseDelay + staggerDelay * 2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
-            style={{ gap: '24px' }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-4"
+            style={{ gap: '20px' }}
           >
             {firstRowTools.map((tool, index) => (
               <motion.div
@@ -227,10 +227,10 @@ export default function HomePage() {
             initial={{ opacity: 0, y: isTransitionEntrance ? 30 : 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: baseDelay + staggerDelay * 6 }}
-            className={`grid grid-cols-1 gap-8 ${
+            className={`grid grid-cols-1 ${
               secondRowTools.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'
             }`}
-            style={{ gap: '24px' }}
+            style={{ gap: '20px' }}
           >
             {secondRowTools.map((tool, index) => (
               <motion.div

@@ -46,7 +46,7 @@ export default function Header({ user }: HeaderProps) {
     <header
       className="bg-white"
       style={{
-        padding: '35px 60px',
+        padding: '20px 60px',
         borderBottom: '2px solid #00f0db',
       }}
     >
@@ -56,8 +56,8 @@ export default function Header({ user }: HeaderProps) {
           <Image
             src="/alti-logo.jpg"
             alt="AlTi Global"
-            width={170}
-            height={74}
+            width={150}
+            height={65}
             priority
             style={{ objectFit: 'contain' }}
           />
