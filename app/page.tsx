@@ -117,7 +117,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       {/* Hero Section */}
-      <section className="py-12 px-6 md:px-[60px]" style={{ paddingTop: '50px', paddingBottom: '40px' }}>
+      <section className="py-12 px-6 md:px-[60px]" style={{ paddingTop: '24px', paddingBottom: '16px' }}>
         <div className="max-w-[1400px] mx-auto">
           <div className="flex items-start justify-between">
             <div>
@@ -188,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* Tool Cards Grid */}
-      <section className="px-6 md:px-[60px] pt-10 pb-4">
+      <section className="px-6 md:px-[60px] pt-4 pb-4">
         <div className="max-w-[1400px] mx-auto">
           {/* First Row - 4 cards */}
           <motion.div
@@ -260,7 +260,7 @@ export default function HomePage() {
 
       {/* CTA Section / Footer */}
       <section
-        className="mt-20"
+        className="mt-10"
         style={{
           background: 'linear-gradient(135deg, #0A2240 0%, #1a3a5a 100%)',
           borderTop: '3px solid #00f0db',
