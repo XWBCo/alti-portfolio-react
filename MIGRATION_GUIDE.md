@@ -235,13 +235,29 @@ app/api/
    - Select "Claude Console" when prompted
    - Complete OAuth in browser
 
+### Python Backend Setup (Required for Risk Contribution)
+
+```bash
+cd api-service
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start the API server (port 8001)
+python main.py
+```
+
 ### Running the Apps
 
 ```bash
-# Start Python API (required for Risk Contribution)
+# Terminal 1: Start Python API (required for Risk Contribution)
 cd api-service && python main.py
 
-# Start React app
+# Terminal 2: Start React app
 npm run dev
 
 # Build check
