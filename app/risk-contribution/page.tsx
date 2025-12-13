@@ -2,16 +2,24 @@
 
 import { useState, useCallback } from 'react';
 import { motion } from 'motion/react';
+import { FileDown } from 'lucide-react';
 import ParameterPanel from '@/components/risk-contribution/ParameterPanel';
 import RiskContributionChart from '@/components/risk-contribution/RiskContributionChart';
 import MetricsCards from '@/components/risk-contribution/MetricsCards';
 import StressScenariosTable from '@/components/risk-contribution/StressScenariosTable';
+import ReportBuilder from '@/components/risk-contribution/ReportBuilder';
+import FactorExposureChart from '@/components/risk-contribution/FactorExposureChart';
+import SegmentTrackingError from '@/components/risk-contribution/SegmentTrackingError';
+import SecurityRiskChart from '@/components/risk-contribution/SecurityRiskChart';
+import ActiveFactorExposureChart from '@/components/risk-contribution/ActiveFactorExposureChart';
+import FactorBetaHeatmap from '@/components/risk-contribution/FactorBetaHeatmap';
 import {
   PortfolioWeights,
   RiskContributionsResponse,
   DiversificationResponse,
   PerformanceStats,
   TrackingErrorResponse,
+  FactorDecompositionResponse,
   StressScenarioResult,
   SAMPLE_RISK_PORTFOLIOS,
   STRESS_SCENARIOS,
@@ -34,7 +42,20 @@ export default function RiskContributionPage() {
   const [diversification, setDiversification] = useState<DiversificationResponse | null>(null);
   const [perfStats, setPerfStats] = useState<PerformanceStats | null>(null);
   const [trackingError, setTrackingError] = useState<TrackingErrorResponse | null>(null);
+  const [factorDecomp, setFactorDecomp] = useState<FactorDecompositionResponse | null>(null);
+  const [segmentTE, setSegmentTE] = useState<{
+    growth_te: number;
+    stability_te: number;
+    total_te: number;
+    growth_contribution: number;
+    stability_contribution: number;
+    growth_allocation: number;
+    stability_allocation: number;
+  } | null>(null);
   const [stressResults, setStressResults] = useState<StressScenarioResult[]>([]);
+
+  // Report modal
+  const [isReportOpen, setIsReportOpen] = useState(false);
 
   const runAnalysis = useCallback(async () => {
     setIsLoading(true);
@@ -63,6 +84,44 @@ export default function RiskContributionPage() {
       setContributions(result.data.contributions);
       setDiversification(result.data.diversification);
       setPerfStats(result.data.performance);
+
+      // Fetch factor decomposition
+      try {
+        const factorResponse = await fetch('/api/risk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            endpoint: 'factor-decomposition',
+            portfolio,
+          }),
+        });
+        const factorResult = await factorResponse.json();
+        if (factorResult.success) {
+          setFactorDecomp(factorResult.data);
+        }
+      } catch {
+        // Factor decomposition service unavailable - non-critical
+      }
+
+      // Fetch segment tracking error
+      try {
+        const segmentResponse = await fetch('/api/risk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            endpoint: 'segment-tracking-error',
+            portfolio,
+            growth_allocation: 0.60,
+            stability_allocation: 0.40,
+          }),
+        });
+        const segmentResult = await segmentResponse.json();
+        if (segmentResult.success) {
+          setSegmentTE(segmentResult.data);
+        }
+      } catch {
+        // Segment TE service unavailable - non-critical
+      }
 
       // If benchmark is set, calculate tracking error
       if (benchmark) {
@@ -93,11 +152,10 @@ export default function RiskContributionPage() {
           end: s.end,
         }));
 
-        const stressResponse = await fetch('/api/risk', {
+        const stressResponse = await fetch('/api/stress?endpoint=apply', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            endpoint: 'stress-scenarios',
             portfolio,
             benchmark: benchmark || undefined,
             scenarios: scenariosPayload,
@@ -105,8 +163,8 @@ export default function RiskContributionPage() {
         });
 
         const stressResult = await stressResponse.json();
-        if (stressResult.success) {
-          setStressResults(stressResult.data);
+        if (stressResult.success && stressResult.data?.scenarios) {
+          setStressResults(stressResult.data.scenarios);
         }
       } else {
         setStressResults([]);
@@ -117,7 +175,6 @@ export default function RiskContributionPage() {
 
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Analysis failed');
-      console.error('Risk analysis error:', err);
     } finally {
       setIsLoading(false);
     }
@@ -181,11 +238,22 @@ export default function RiskContributionPage() {
                 </p>
               </div>
             </div>
-            {lastRunTime !== null && (
-              <p className="text-[11px] text-[#757575]">
-                Computed in {lastRunTime.toFixed(0)}ms
-              </p>
-            )}
+            <div className="flex items-center gap-4">
+              {lastRunTime !== null && (
+                <p className="text-[11px] text-[#757575]">
+                  Computed in {lastRunTime.toFixed(0)}ms
+                </p>
+              )}
+              {contributions && (
+                <button
+                  onClick={() => setIsReportOpen(true)}
+                  className="flex items-center gap-2 px-3 py-1.5 bg-[#074269] text-white text-sm font-medium rounded-lg hover:bg-[#053252] transition-colors"
+                >
+                  <FileDown size={14} />
+                  Export Report
+                </button>
+              )}
+            </div>
           </motion.div>
 
           {/* Error Message */}
@@ -240,6 +308,100 @@ export default function RiskContributionPage() {
             </div>
           </motion.div>
 
+          {/* Security Risk Contribution Chart */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.35 }}
+            className="bg-white rounded border border-[#e6e6e6] p-4 mb-6"
+            style={{ height: '450px' }}
+          >
+            <h3
+              className="text-[16px] font-light text-[#010203] mb-4"
+              style={{ fontFamily: 'Georgia, serif' }}
+            >
+              Security Risk Contribution
+            </h3>
+            <div style={{ height: 'calc(100% - 40px)' }}>
+              <SecurityRiskChart
+                contributions={contributions}
+                portfolio={portfolio}
+                topN={15}
+              />
+            </div>
+          </motion.div>
+
+          {/* Factor Exposure & Segment TE Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            {/* Factor Decomposition */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              className="bg-white rounded border border-[#e6e6e6] p-4"
+              style={{ minHeight: '380px' }}
+            >
+              <h3
+                className="text-[16px] font-light text-[#010203] mb-4"
+                style={{ fontFamily: 'Georgia, serif' }}
+              >
+                Factor Decomposition
+              </h3>
+              <FactorExposureChart data={factorDecomp} isLoading={isLoading && !factorDecomp} />
+            </motion.div>
+
+            {/* Active Factor Exposures */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              className="bg-white rounded border border-[#e6e6e6] p-4"
+              style={{ minHeight: '380px' }}
+            >
+              <h3
+                className="text-[16px] font-light text-[#010203] mb-4"
+                style={{ fontFamily: 'Georgia, serif' }}
+              >
+                Active Factor Exposures
+              </h3>
+              <ActiveFactorExposureChart data={factorDecomp} />
+            </motion.div>
+          </div>
+
+          {/* Factor Beta Heatmap */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.45 }}
+            className="bg-white rounded border border-[#e6e6e6] p-4 mb-6"
+            style={{ minHeight: '280px' }}
+          >
+            <h3
+              className="text-[16px] font-light text-[#010203] mb-4"
+              style={{ fontFamily: 'Georgia, serif' }}
+            >
+              Factor Beta Heatmap
+            </h3>
+            <FactorBetaHeatmap data={factorDecomp} isLoading={isLoading && !factorDecomp} />
+          </motion.div>
+
+          {/* Segment TE Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+            className="bg-white rounded border border-[#e6e6e6] p-4 mb-6"
+            style={{ minHeight: '320px' }}
+          >
+            <h3
+              className="text-[16px] font-light text-[#010203] mb-4"
+              style={{ fontFamily: 'Georgia, serif' }}
+            >
+              Segment Tracking Error
+            </h3>
+            <SegmentTrackingError data={segmentTE} isLoading={isLoading && !segmentTE} />
+          </motion.div>
+
           {/* Stress Scenarios Table */}
           {runStressScenarios && (
             <motion.div
@@ -271,6 +433,17 @@ export default function RiskContributionPage() {
           </motion.div>
         </div>
       </div>
+
+      {/* Report Builder Modal */}
+      <ReportBuilder
+        isOpen={isReportOpen}
+        onClose={() => setIsReportOpen(false)}
+        contributions={contributions}
+        diversification={diversification}
+        performance={perfStats}
+        stressResults={stressResults}
+        portfolioName="Balanced"
+      />
     </div>
   );
 }

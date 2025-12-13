@@ -12,6 +12,7 @@ export interface SimulationParams {
   durationYears: number;
   numSimulations: number;
   inflationRate: number;       // Decimal (e.g., 0.025 for 2.5%)
+  afterTaxRate?: number;       // Decimal (e.g., 0.03 for 3%) - subtracted from returns
   oneTimeSpend?: number;
   oneTimeQuarter?: number;
   customSpending?: Record<number, number>;  // quarter -> amount
@@ -104,7 +105,79 @@ export interface SimulationFormState {
 // Spending event for custom spending editor
 export interface SpendingEvent {
   id: string;
-  quarter: number;
+  type: 'one-time' | 'recurring' | 'percentage';
   amount: number;
   description: string;
+  quarter?: number;           // For one-time events
+  startQuarter?: number;      // For recurring events
+  endQuarter?: number;        // For recurring events
+  frequency?: number;         // For recurring: every N quarters
+  percentage?: number;        // For percentage-based (decimal, e.g., 0.05 for 5%)
+}
+
+// Computed spending schedule (for display table)
+export interface SpendingScheduleItem {
+  quarter: number;
+  year: number;
+  quarterInYear: number;
+  amount: number;
+  source: string;             // Which event(s) caused this spending
+  isRecurring: boolean;
+}
+
+// Multi-slot simulation support (legacy app_mcs.py parity)
+export interface SimulationSlotParams {
+  name: string;
+  durationQuarters: number;
+  // Piecewise parameters (always using piecewise mode)
+  returnInitial: number;       // Decimal (e.g., 0.07 for 7%)
+  returnUpdate1: number;
+  returnUpdate2: number;
+  volInitial: number;          // Decimal (e.g., 0.12 for 12%)
+  volUpdate1: number;
+  volUpdate2: number;
+  update1Year: number;         // Calendar year when period 2 starts
+  update2Year: number;         // Calendar year when period 3 starts
+  customSpending?: Record<number, number>;  // quarter -> spending amount
+}
+
+// Currency type for display
+export type Currency = 'USD' | 'GBP' | 'EUR';
+
+// Currency symbols mapping
+export const CURRENCY_SYMBOLS: Record<Currency, string> = {
+  USD: '$',
+  GBP: '£',
+  EUR: '€',
+};
+
+// Global parameters shared across all simulation slots
+export interface GlobalSimulationParams {
+  initialValue: number;
+  numSimulations: number;
+  inflationRate: number;       // Decimal (e.g., 0.025 for 2.5%)
+  afterTaxRate: number;        // Decimal (e.g., 0.03 for 3%)
+  currency: Currency;          // Display currency (USD, GBP, EUR)
+}
+
+// Chart sizing controls
+export interface ChartSizingParams {
+  lineChartWidth: number;      // px
+  lineChartHeight: number;     // px
+  barChartHeight: number;      // px
+  probChartHeight: number;     // px
+}
+
+// Multi-slot simulation state
+export interface MultiSlotSimulationState {
+  globalParams: GlobalSimulationParams;
+  slot1: SimulationSlotParams;
+  slot2: SimulationSlotParams;
+  slot3: SimulationSlotParams;
+  chartSizing: ChartSizingParams;
+  results: {
+    slot1: SimulationResult | null;
+    slot2: SimulationResult | null;
+    slot3: SimulationResult | null;
+  };
 }

@@ -124,13 +124,16 @@ export function runSimulation(params: SimulationParams): SimulationResult {
     durationYears,
     numSimulations,
     inflationRate,
+    afterTaxRate = 0,
     oneTimeSpend = 0,
     oneTimeQuarter = 1,
     customSpending = {},
   } = params;
 
   const numQuarters = durationYears * 4;
-  const quarterlyMean = Math.pow(1 + annualReturn, 0.25) - 1;
+  // Apply after-tax rate (subtract tax drag from gross return)
+  const netAnnualReturn = annualReturn - afterTaxRate;
+  const quarterlyMean = Math.pow(1 + netAnnualReturn, 0.25) - 1;
   const quarterlyVol = annualVolatility / Math.sqrt(4);
 
   // Initialize paths array
@@ -219,6 +222,7 @@ export function runSimulationPiecewise(
     durationYears,
     numSimulations,
     inflationRate,
+    afterTaxRate = 0,
     oneTimeSpend = 0,
     oneTimeQuarter = 1,
     customSpending = {},
@@ -247,18 +251,23 @@ export function runSimulationPiecewise(
   const u1Quarter = yearToQuarter(update1Year);
   const u2Quarter = Math.max(u1Quarter + 1, yearToQuarter(update2Year));
 
-  // Precompute quarterly parameters for each phase
+  // Apply after-tax rate to returns (subtract tax drag from gross returns)
+  const netReturnInitial = returnInitial - afterTaxRate;
+  const netReturnUpdate1 = (returnUpdate1 ?? returnInitial) - afterTaxRate;
+  const netReturnUpdate2 = (returnUpdate2 ?? returnUpdate1 ?? returnInitial) - afterTaxRate;
+
+  // Precompute quarterly parameters for each phase (using net returns)
   const phases = {
     initial: {
-      mean: Math.pow(1 + returnInitial, 0.25) - 1,
+      mean: Math.pow(1 + netReturnInitial, 0.25) - 1,
       vol: volInitial / Math.sqrt(4),
     },
     update1: {
-      mean: Math.pow(1 + (returnUpdate1 ?? returnInitial), 0.25) - 1,
+      mean: Math.pow(1 + netReturnUpdate1, 0.25) - 1,
       vol: (volUpdate1 ?? volInitial) / Math.sqrt(4),
     },
     update2: {
-      mean: Math.pow(1 + (returnUpdate2 ?? returnUpdate1 ?? returnInitial), 0.25) - 1,
+      mean: Math.pow(1 + netReturnUpdate2, 0.25) - 1,
       vol: (volUpdate2 ?? volUpdate1 ?? volInitial) / Math.sqrt(4),
     },
   };
@@ -356,6 +365,7 @@ export function runSimulationBootstrap(
     durationYears,
     numSimulations,
     inflationRate,
+    afterTaxRate = 0,
     oneTimeSpend = 0,
     oneTimeQuarter = 1,
     customSpending = {},
@@ -369,6 +379,8 @@ export function runSimulationBootstrap(
   }
 
   const numQuarters = durationYears * 4;
+  // Convert annual after-tax rate to quarterly for bootstrap
+  const quarterlyAfterTax = Math.pow(1 + afterTaxRate, 0.25) - 1;
 
   // Initialize paths
   const paths: number[][] = [];
@@ -389,7 +401,8 @@ export function runSimulationBootstrap(
       const m1 = monthlyReturns[sim * 3];
       const m2 = monthlyReturns[sim * 3 + 1];
       const m3 = monthlyReturns[sim * 3 + 2];
-      const quarterlyReturn = (1 + m1) * (1 + m2) * (1 + m3) - 1;
+      // Apply after-tax drag to the quarterly return
+      const quarterlyReturn = (1 + m1) * (1 + m2) * (1 + m3) - 1 - quarterlyAfterTax;
 
       // Calculate spending
       const baseSpending = quarterlyFixedSpending + (prevValue * quarterlyPercentSpending);

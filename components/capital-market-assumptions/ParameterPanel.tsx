@@ -88,13 +88,22 @@ export default function ParameterPanel({
         Download Return Series
       </button>
 
-      {/* Methodology Link */}
+      {/* Methodology Links */}
       <a
-        href="/downloads/AlTi CMA Update 2025.pdf"
-        download
-        className="block w-full p-3 bg-[#00f0db] text-[#010203] border border-[#00d6c3] rounded text-[14px] text-center font-medium hover:bg-[#00d6c3] transition-colors no-underline"
+        href="/assets/AlTi CMA Update 2025.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full p-3 mb-4 bg-[#00f0db] text-[#010203] border border-[#00d6c3] rounded text-[14px] text-center font-medium hover:bg-[#00d6c3] transition-colors no-underline"
       >
-        Download Methodology PDF
+        CMA Methodology PDF
+      </a>
+      <a
+        href="/assets/AlTi CMA 2025 Output.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full p-3 bg-[#074269] text-white border border-[#052C45] rounded text-[14px] text-center font-medium hover:bg-[#052C45] transition-colors no-underline"
+      >
+        CMA 2025 Output PDF
       </a>
 
       {/* Scenario Description */}

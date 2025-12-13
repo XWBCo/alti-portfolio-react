@@ -1,0 +1,3383 @@
+[
+  {
+    "cusip": "67092P300",
+    "governanceScore": 84,
+    "environmentalScore": 67,
+    "socialScore": 59,
+    "overallScore": 70
+  },
+  {
+    "cusip": "392768107",
+    "governanceScore": 79,
+    "environmentalScore": 69,
+    "socialScore": 60,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "701769408",
+    "governanceScore": 81,
+    "environmentalScore": 66,
+    "socialScore": 61,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "921908794",
+    "governanceScore": 82,
+    "environmentalScore": 72,
+    "socialScore": 66,
+    "overallScore": 73.33333333333333
+  },
+  {
+    "cusip": "392768305",
+    "governanceScore": 81,
+    "environmentalScore": 67,
+    "socialScore": 61,
+    "overallScore": 69.66666666666667
+  },
+  {
+    "cusip": "13161T401",
+    "governanceScore": 74,
+    "environmentalScore": 66,
+    "socialScore": 62,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "89154Q513",
+    "governanceScore": 79,
+    "environmentalScore": 68,
+    "socialScore": 65,
+    "overallScore": 70.66666666666667
+  },
+  {
+    "cusip": "131582330",
+    "governanceScore": 72,
+    "environmentalScore": 63,
+    "socialScore": 63,
+    "overallScore": 66
+  },
+  {
+    "cusip": "701765869",
+    "governanceScore": 81,
+    "environmentalScore": 69,
+    "socialScore": 60,
+    "overallScore": 70
+  },
+  {
+    "cusip": "131618100",
+    "governanceScore": 77,
+    "environmentalScore": 67,
+    "socialScore": 59,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "89154X302",
+    "governanceScore": 79,
+    "environmentalScore": 68,
+    "socialScore": 65,
+    "overallScore": 70.66666666666667
+  },
+  {
+    "cusip": "20368N202",
+    "governanceScore": 71,
+    "environmentalScore": 68,
+    "socialScore": 63,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "131582348",
+    "governanceScore": 76,
+    "environmentalScore": 67,
+    "socialScore": 61,
+    "overallScore": 68
+  },
+  {
+    "cusip": "131618829",
+    "governanceScore": 77,
+    "environmentalScore": 67,
+    "socialScore": 59,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "131582751",
+    "governanceScore": 81,
+    "environmentalScore": 68,
+    "socialScore": 59,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "101156107",
+    "governanceScore": 80,
+    "environmentalScore": 68,
+    "socialScore": 60,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "860324854",
+    "governanceScore": 83,
+    "environmentalScore": 68,
+    "socialScore": 63,
+    "overallScore": 71.33333333333333
+  },
+  {
+    "cusip": "46435G516",
+    "governanceScore": 78,
+    "environmentalScore": 71,
+    "socialScore": 69,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "704223106",
+    "governanceScore": 80,
+    "environmentalScore": 66,
+    "socialScore": 61,
+    "overallScore": 69
+  },
+  {
+    "cusip": "577130719",
+    "governanceScore": 71,
+    "environmentalScore": 58,
+    "socialScore": 64,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "701769101",
+    "governanceScore": 81,
+    "environmentalScore": 66,
+    "socialScore": 61,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "115233405",
+    "governanceScore": 79,
+    "environmentalScore": 70,
+    "socialScore": 58,
+    "overallScore": 69
+  },
+  {
+    "cusip": "47103Y573",
+    "governanceScore": 81,
+    "environmentalScore": 67,
+    "socialScore": 62,
+    "overallScore": 70
+  },
+  {
+    "cusip": "11133T103",
+    "governanceScore": 84,
+    "environmentalScore": 53,
+    "socialScore": 42,
+    "overallScore": 59.666666666666664
+  },
+  {
+    "cusip": "31847R102",
+    "governanceScore": 78,
+    "environmentalScore": 46,
+    "socialScore": 39,
+    "overallScore": 54.333333333333336
+  },
+  {
+    "cusip": "29082K105",
+    "governanceScore": 80,
+    "environmentalScore": 42,
+    "socialScore": 34,
+    "overallScore": 52
+  },
+  {
+    "cusip": "00737L103",
+    "governanceScore": 81,
+    "environmentalScore": 88,
+    "socialScore": 71,
+    "overallScore": 80
+  },
+  {
+    "cusip": "02005N100",
+    "governanceScore": 83,
+    "environmentalScore": 82,
+    "socialScore": 50,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "649445400",
+    "governanceScore": 81,
+    "environmentalScore": 73,
+    "socialScore": 50,
+    "overallScore": 68
+  },
+  {
+    "cusip": "532746104",
+    "governanceScore": 83,
+    "environmentalScore": 68,
+    "socialScore": 64,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "98954M200",
+    "governanceScore": 77,
+    "environmentalScore": 53,
+    "socialScore": 51,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "44267T102",
+    "governanceScore": 77,
+    "environmentalScore": 39,
+    "socialScore": 38,
+    "overallScore": 51.333333333333336
+  },
+  {
+    "cusip": "75629V104",
+    "governanceScore": 70,
+    "environmentalScore": 54,
+    "socialScore": 59,
+    "overallScore": 61
+  },
+  {
+    "cusip": "929566107",
+    "governanceScore": 79,
+    "environmentalScore": 44,
+    "socialScore": 37,
+    "overallScore": 53.333333333333336
+  },
+  {
+    "cusip": "62944T105",
+    "governanceScore": 79,
+    "environmentalScore": 55,
+    "socialScore": 41,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "03214Q108",
+    "governanceScore": 49,
+    "environmentalScore": 43,
+    "socialScore": 31,
+    "overallScore": 41
+  },
+  {
+    "cusip": "591774104",
+    "governanceScore": 85,
+    "environmentalScore": 43,
+    "socialScore": 46,
+    "overallScore": 58
+  },
+  {
+    "cusip": "465254209",
+    "governanceScore": 63,
+    "environmentalScore": 58,
+    "socialScore": 65,
+    "overallScore": 62
+  },
+  {
+    "cusip": "573075108",
+    "governanceScore": 82,
+    "environmentalScore": 55,
+    "socialScore": 17,
+    "overallScore": 51.333333333333336
+  },
+  {
+    "cusip": "904678406",
+    "governanceScore": 89,
+    "environmentalScore": 77,
+    "socialScore": 81,
+    "overallScore": 82.33333333333333
+  },
+  {
+    "cusip": "784730103",
+    "governanceScore": 85,
+    "environmentalScore": 55,
+    "socialScore": 60,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "84857L101",
+    "governanceScore": 87,
+    "environmentalScore": 64,
+    "socialScore": 25,
+    "overallScore": 58.666666666666664
+  },
+  {
+    "cusip": "891092108",
+    "governanceScore": 82,
+    "environmentalScore": 44,
+    "socialScore": 69,
+    "overallScore": 65
+  },
+  {
+    "cusip": "178587101",
+    "governanceScore": 86,
+    "environmentalScore": 58,
+    "socialScore": 28,
+    "overallScore": 57.333333333333336
+  },
+  {
+    "cusip": "04010E109",
+    "governanceScore": 82,
+    "environmentalScore": 62,
+    "socialScore": 35,
+    "overallScore": 59.666666666666664
+  },
+  {
+    "cusip": "740367404",
+    "governanceScore": 83,
+    "environmentalScore": 57,
+    "socialScore": 56,
+    "overallScore": 65.33333333333333
+  },
+  {
+    "cusip": "457985208",
+    "governanceScore": 80,
+    "environmentalScore": 70,
+    "socialScore": 68,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "80007R105",
+    "governanceScore": 60,
+    "environmentalScore": 52,
+    "socialScore": 80,
+    "overallScore": 64
+  },
+  {
+    "cusip": "011311107",
+    "governanceScore": 88,
+    "environmentalScore": 51,
+    "socialScore": 48,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "93974EVV5",
+    "governanceScore": 68,
+    "environmentalScore": 55,
+    "socialScore": 66,
+    "overallScore": 63
+  },
+  {
+    "cusip": "237194105",
+    "governanceScore": 81,
+    "environmentalScore": 48,
+    "socialScore": 53,
+    "overallScore": 60.666666666666664
+  },
+  {
+    "cusip": "82489W107",
+    "governanceScore": 82,
+    "environmentalScore": 66,
+    "socialScore": 59,
+    "overallScore": 69
+  },
+  {
+    "cusip": "690732102",
+    "governanceScore": 84,
+    "environmentalScore": 44,
+    "socialScore": 67,
+    "overallScore": 65
+  },
+  {
+    "cusip": "92047W101",
+    "governanceScore": 86,
+    "environmentalScore": 41,
+    "socialScore": 41,
+    "overallScore": 56
+  },
+  {
+    "cusip": "108441205",
+    "governanceScore": 80,
+    "environmentalScore": 64,
+    "socialScore": 71,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "45781V101",
+    "governanceScore": 74,
+    "environmentalScore": 52,
+    "socialScore": 35,
+    "overallScore": 53.666666666666664
+  },
+  {
+    "cusip": "743606105",
+    "governanceScore": 78,
+    "environmentalScore": 50,
+    "socialScore": 53,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "42250PAB9",
+    "governanceScore": 80,
+    "environmentalScore": 74,
+    "socialScore": 36,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "H11356104",
+    "governanceScore": 90,
+    "environmentalScore": 70,
+    "socialScore": 88,
+    "overallScore": 82.66666666666667
+  },
+  {
+    "cusip": "92936U109",
+    "governanceScore": 84,
+    "environmentalScore": 75,
+    "socialScore": 56,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "042315705",
+    "governanceScore": 38,
+    "environmentalScore": 45,
+    "socialScore": 3,
+    "overallScore": 28.666666666666668
+  },
+  {
+    "cusip": "13063DS82",
+    "governanceScore": 64,
+    "environmentalScore": 48,
+    "socialScore": 63,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "256163106",
+    "governanceScore": 87,
+    "environmentalScore": 51,
+    "socialScore": 49,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "346232101",
+    "governanceScore": 79,
+    "environmentalScore": 60,
+    "socialScore": 37,
+    "overallScore": 58.666666666666664
+  },
+  {
+    "cusip": "05350V106",
+    "governanceScore": 84,
+    "environmentalScore": 59,
+    "socialScore": 39,
+    "overallScore": 60.666666666666664
+  },
+  {
+    "cusip": "57776J100",
+    "governanceScore": 78,
+    "environmentalScore": 62,
+    "socialScore": 61,
+    "overallScore": 67
+  },
+  {
+    "cusip": "200525103",
+    "governanceScore": 81,
+    "environmentalScore": 58,
+    "socialScore": 48,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "631512209",
+    "governanceScore": 72,
+    "environmentalScore": 67,
+    "socialScore": 52,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "500458401",
+    "governanceScore": 54,
+    "environmentalScore": 80,
+    "socialScore": 66,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "366651107",
+    "governanceScore": 80,
+    "environmentalScore": 61,
+    "socialScore": 66,
+    "overallScore": 69
+  },
+  {
+    "cusip": "25264R207",
+    "governanceScore": 78,
+    "environmentalScore": 56,
+    "socialScore": 33,
+    "overallScore": 55.666666666666664
+  },
+  {
+    "cusip": "60937P106",
+    "governanceScore": 85,
+    "environmentalScore": 71,
+    "socialScore": 47,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "29357K103",
+    "governanceScore": 83,
+    "environmentalScore": 61,
+    "socialScore": 57,
+    "overallScore": 67
+  },
+  {
+    "cusip": "535219109",
+    "governanceScore": 83,
+    "environmentalScore": 55,
+    "socialScore": 21,
+    "overallScore": 53
+  },
+  {
+    "cusip": "25960R105",
+    "governanceScore": 80,
+    "environmentalScore": 52,
+    "socialScore": 32,
+    "overallScore": 54.666666666666664
+  },
+  {
+    "cusip": "592688105",
+    "governanceScore": 89,
+    "environmentalScore": 91,
+    "socialScore": 89,
+    "overallScore": 89.66666666666667
+  },
+  {
+    "cusip": "G02602103",
+    "governanceScore": 78,
+    "environmentalScore": 62,
+    "socialScore": 62,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "17243V102",
+    "governanceScore": 75,
+    "environmentalScore": 53,
+    "socialScore": 24,
+    "overallScore": 50.666666666666664
+  },
+  {
+    "cusip": "452227SC6",
+    "governanceScore": 63,
+    "environmentalScore": 55,
+    "socialScore": 67,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "881575401",
+    "governanceScore": 88,
+    "environmentalScore": 85,
+    "socialScore": 71,
+    "overallScore": 81.33333333333333
+  },
+  {
+    "cusip": "531229722",
+    "governanceScore": 68,
+    "environmentalScore": 48,
+    "socialScore": 73,
+    "overallScore": 63
+  },
+  {
+    "cusip": "02263T104",
+    "governanceScore": 96,
+    "environmentalScore": 79,
+    "socialScore": 78,
+    "overallScore": 84.33333333333333
+  },
+  {
+    "cusip": "515098101",
+    "governanceScore": 75,
+    "environmentalScore": 61,
+    "socialScore": 78,
+    "overallScore": 71.33333333333333
+  },
+  {
+    "cusip": "G9460G101",
+    "governanceScore": 84,
+    "environmentalScore": 44,
+    "socialScore": 77,
+    "overallScore": 68.33333333333333
+  },
+  {
+    "cusip": "682151303",
+    "governanceScore": 57,
+    "environmentalScore": 78,
+    "socialScore": 69,
+    "overallScore": 68
+  },
+  {
+    "cusip": "707569109",
+    "governanceScore": 77,
+    "environmentalScore": 45,
+    "socialScore": 19,
+    "overallScore": 47
+  },
+  {
+    "cusip": "070830104",
+    "governanceScore": 82,
+    "environmentalScore": 51,
+    "socialScore": 48,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "75282U104",
+    "governanceScore": 73,
+    "environmentalScore": 59,
+    "socialScore": 43,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "G3198U102",
+    "governanceScore": 78,
+    "environmentalScore": 61,
+    "socialScore": 28,
+    "overallScore": 55.666666666666664
+  },
+  {
+    "cusip": "G0084W101",
+    "governanceScore": 88,
+    "environmentalScore": 82,
+    "socialScore": 50,
+    "overallScore": 73.33333333333333
+  },
+  {
+    "cusip": "405552100",
+    "governanceScore": 88,
+    "environmentalScore": 88,
+    "socialScore": 76,
+    "overallScore": 84
+  },
+  {
+    "cusip": "682736103",
+    "governanceScore": 62,
+    "environmentalScore": 92,
+    "socialScore": 93,
+    "overallScore": 82.33333333333333
+  },
+  {
+    "cusip": "974155103",
+    "governanceScore": 79,
+    "environmentalScore": 54,
+    "socialScore": 28,
+    "overallScore": 53.666666666666664
+  },
+  {
+    "cusip": "92552R406",
+    "governanceScore": 80,
+    "environmentalScore": 17,
+    "socialScore": 63,
+    "overallScore": 53.333333333333336
+  },
+  {
+    "cusip": "78410G104",
+    "governanceScore": 49,
+    "environmentalScore": 66,
+    "socialScore": 90,
+    "overallScore": 68.33333333333333
+  },
+  {
+    "cusip": "17888H103",
+    "governanceScore": 87,
+    "environmentalScore": 55,
+    "socialScore": 77,
+    "overallScore": 73
+  },
+  {
+    "cusip": "14808P109",
+    "governanceScore": 79,
+    "environmentalScore": 37,
+    "socialScore": 57,
+    "overallScore": 57.666666666666664
+  },
+  {
+    "cusip": "934550203",
+    "governanceScore": 73,
+    "environmentalScore": 83,
+    "socialScore": 35,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "35137L105",
+    "governanceScore": 75,
+    "environmentalScore": 77,
+    "socialScore": 28,
+    "overallScore": 60
+  },
+  {
+    "cusip": "77543R102",
+    "governanceScore": 80,
+    "environmentalScore": 71,
+    "socialScore": 22,
+    "overallScore": 57.666666666666664
+  },
+  {
+    "cusip": "G9087Q102",
+    "governanceScore": 86,
+    "environmentalScore": 45,
+    "socialScore": 66,
+    "overallScore": 65.66666666666667
+  },
+  {
+    "cusip": "45790H101",
+    "governanceScore": 49,
+    "environmentalScore": 72,
+    "socialScore": 78,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "18539C204",
+    "governanceScore": 74,
+    "environmentalScore": 52,
+    "socialScore": 54,
+    "overallScore": 60
+  },
+  {
+    "cusip": "G4863A108",
+    "governanceScore": 84,
+    "environmentalScore": 81,
+    "socialScore": 52,
+    "overallScore": 72.33333333333333
+  },
+  {
+    "cusip": "876030107",
+    "governanceScore": 86,
+    "environmentalScore": 88,
+    "socialScore": 61,
+    "overallScore": 78.33333333333333
+  },
+  {
+    "cusip": "016230104",
+    "governanceScore": 88,
+    "environmentalScore": 46,
+    "socialScore": 44,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "M2682V108",
+    "governanceScore": 73,
+    "environmentalScore": 68,
+    "socialScore": 60,
+    "overallScore": 67
+  },
+  {
+    "cusip": "78646V107",
+    "governanceScore": 86,
+    "environmentalScore": 67,
+    "socialScore": 1,
+    "overallScore": 51.333333333333336
+  },
+  {
+    "cusip": "790148100",
+    "governanceScore": 69,
+    "environmentalScore": 48,
+    "socialScore": 25,
+    "overallScore": 47.333333333333336
+  },
+  {
+    "cusip": "53815P108",
+    "governanceScore": 79,
+    "environmentalScore": 50,
+    "socialScore": 36,
+    "overallScore": 55
+  },
+  {
+    "cusip": "91680M107",
+    "governanceScore": 75,
+    "environmentalScore": 54,
+    "socialScore": 41,
+    "overallScore": 56.666666666666664
+  },
+  {
+    "cusip": "88088L103",
+    "governanceScore": 66,
+    "environmentalScore": 63,
+    "socialScore": 76,
+    "overallScore": 68.33333333333333
+  },
+  {
+    "cusip": "11120U105",
+    "governanceScore": 88,
+    "environmentalScore": 66,
+    "socialScore": 18,
+    "overallScore": 57.333333333333336
+  },
+  {
+    "cusip": "81768T108",
+    "governanceScore": 85,
+    "environmentalScore": 61,
+    "socialScore": 43,
+    "overallScore": 63
+  },
+  {
+    "cusip": "74275K108",
+    "governanceScore": 77,
+    "environmentalScore": 59,
+    "socialScore": 46,
+    "overallScore": 60.666666666666664
+  },
+  {
+    "cusip": "H42097107",
+    "governanceScore": 78,
+    "environmentalScore": 89,
+    "socialScore": 56,
+    "overallScore": 74.33333333333333
+  },
+  {
+    "cusip": "894164102",
+    "governanceScore": 83,
+    "environmentalScore": 71,
+    "socialScore": 37,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "984627109",
+    "governanceScore": 66,
+    "environmentalScore": 65,
+    "socialScore": 84,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "91311E102",
+    "governanceScore": 84,
+    "environmentalScore": 72,
+    "socialScore": 71,
+    "overallScore": 75.66666666666667
+  },
+  {
+    "cusip": "45167R104",
+    "governanceScore": 81,
+    "environmentalScore": 64,
+    "socialScore": 66,
+    "overallScore": 70.33333333333333
+  },
+  {
+    "cusip": "29278D105",
+    "governanceScore": 82,
+    "environmentalScore": 73,
+    "socialScore": 78,
+    "overallScore": 77.66666666666667
+  },
+  {
+    "cusip": "030506109",
+    "governanceScore": 82,
+    "environmentalScore": 39,
+    "socialScore": 45,
+    "overallScore": 55.333333333333336
+  },
+  {
+    "cusip": "303075105",
+    "governanceScore": 91,
+    "environmentalScore": 46,
+    "socialScore": 63,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "407497106",
+    "governanceScore": 57,
+    "environmentalScore": 76,
+    "socialScore": 24,
+    "overallScore": 52.333333333333336
+  },
+  {
+    "cusip": "38741L107",
+    "governanceScore": 75,
+    "environmentalScore": 86,
+    "socialScore": 3,
+    "overallScore": 54.666666666666664
+  },
+  {
+    "cusip": "870195104",
+    "governanceScore": 91,
+    "environmentalScore": 75,
+    "socialScore": 82,
+    "overallScore": 82.66666666666667
+  },
+  {
+    "cusip": "010198208",
+    "governanceScore": 73,
+    "environmentalScore": 70,
+    "socialScore": 66,
+    "overallScore": 69.66666666666667
+  },
+  {
+    "cusip": "646025106",
+    "governanceScore": 82,
+    "environmentalScore": 56,
+    "socialScore": 70,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "989825104",
+    "governanceScore": 97,
+    "environmentalScore": 86,
+    "socialScore": 60,
+    "overallScore": 81
+  },
+  {
+    "cusip": "237545108",
+    "governanceScore": 85,
+    "environmentalScore": 71,
+    "socialScore": 81,
+    "overallScore": 79
+  },
+  {
+    "cusip": "171269103",
+    "governanceScore": 55,
+    "environmentalScore": 91,
+    "socialScore": 92,
+    "overallScore": 79.33333333333333
+  },
+  {
+    "cusip": "156431108",
+    "governanceScore": 81,
+    "environmentalScore": 58,
+    "socialScore": 60,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "886029206",
+    "governanceScore": 82,
+    "environmentalScore": 38,
+    "socialScore": 32,
+    "overallScore": 50.666666666666664
+  },
+  {
+    "cusip": "35958N107",
+    "governanceScore": 67,
+    "environmentalScore": 36,
+    "socialScore": 75,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "30052F100",
+    "governanceScore": 64,
+    "environmentalScore": 55,
+    "socialScore": 34,
+    "overallScore": 51
+  },
+  {
+    "cusip": "43858F109",
+    "governanceScore": 80,
+    "environmentalScore": 70,
+    "socialScore": 72,
+    "overallScore": 74
+  },
+  {
+    "cusip": "531229755",
+    "governanceScore": 68,
+    "environmentalScore": 48,
+    "socialScore": 73,
+    "overallScore": 63
+  },
+  {
+    "cusip": "642045108",
+    "governanceScore": 64,
+    "environmentalScore": 58,
+    "socialScore": 33,
+    "overallScore": 51.666666666666664
+  },
+  {
+    "cusip": "Y7388L103",
+    "governanceScore": 77,
+    "environmentalScore": 55,
+    "socialScore": 53,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "98311A105",
+    "governanceScore": 79,
+    "environmentalScore": 70,
+    "socialScore": 70,
+    "overallScore": 73
+  },
+  {
+    "cusip": "30034W106",
+    "governanceScore": 85,
+    "environmentalScore": 35,
+    "socialScore": 49,
+    "overallScore": 56.333333333333336
+  },
+  {
+    "cusip": "018820100",
+    "governanceScore": 90,
+    "environmentalScore": 78,
+    "socialScore": 55,
+    "overallScore": 74.33333333333333
+  },
+  {
+    "cusip": "452227SH5",
+    "governanceScore": 63,
+    "environmentalScore": 55,
+    "socialScore": 67,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "307305102",
+    "governanceScore": 56,
+    "environmentalScore": 72,
+    "socialScore": 72,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "346375108",
+    "governanceScore": 82,
+    "environmentalScore": 54,
+    "socialScore": 29,
+    "overallScore": 55
+  },
+  {
+    "cusip": "759351604",
+    "governanceScore": 79,
+    "environmentalScore": 67,
+    "socialScore": 60,
+    "overallScore": 68.66666666666667
+  },
+  {
+    "cusip": "53635B107",
+    "governanceScore": 81,
+    "environmentalScore": 69,
+    "socialScore": 38,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "668074305",
+    "governanceScore": 81,
+    "environmentalScore": 57,
+    "socialScore": 65,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "115236101",
+    "governanceScore": 79,
+    "environmentalScore": 39,
+    "socialScore": 22,
+    "overallScore": 46.666666666666664
+  },
+  {
+    "cusip": "50189K103",
+    "governanceScore": 82,
+    "environmentalScore": 53,
+    "socialScore": 41,
+    "overallScore": 58.666666666666664
+  },
+  {
+    "cusip": "126349109",
+    "governanceScore": 80,
+    "environmentalScore": 39,
+    "socialScore": 50,
+    "overallScore": 56.333333333333336
+  },
+  {
+    "cusip": "911271302",
+    "governanceScore": 85,
+    "environmentalScore": 92,
+    "socialScore": 76,
+    "overallScore": 84.33333333333333
+  },
+  {
+    "cusip": "92537N108",
+    "governanceScore": 75,
+    "environmentalScore": 57,
+    "socialScore": 56,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "606827202",
+    "governanceScore": 56,
+    "environmentalScore": 50,
+    "socialScore": 69,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "670108109",
+    "governanceScore": 68,
+    "environmentalScore": 69,
+    "socialScore": 63,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "03743Q108",
+    "governanceScore": 88,
+    "environmentalScore": 67,
+    "socialScore": 74,
+    "overallScore": 76.33333333333333
+  },
+  {
+    "cusip": "591520200",
+    "governanceScore": 80,
+    "environmentalScore": 48,
+    "socialScore": 37,
+    "overallScore": 55
+  },
+  {
+    "cusip": "084423102",
+    "governanceScore": 76,
+    "environmentalScore": 66,
+    "socialScore": 22,
+    "overallScore": 54.666666666666664
+  },
+  {
+    "cusip": "86676H302",
+    "governanceScore": 70,
+    "environmentalScore": 70,
+    "socialScore": 48,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "80810D103",
+    "governanceScore": 80,
+    "environmentalScore": 49,
+    "socialScore": 55,
+    "overallScore": 61.333333333333336
+  },
+  {
+    "cusip": "254423106",
+    "governanceScore": 82,
+    "environmentalScore": 56,
+    "socialScore": 36,
+    "overallScore": 58
+  },
+  {
+    "cusip": "78709Y105",
+    "governanceScore": 80,
+    "environmentalScore": 44,
+    "socialScore": 34,
+    "overallScore": 52.666666666666664
+  },
+  {
+    "cusip": "531229771",
+    "governanceScore": 68,
+    "environmentalScore": 48,
+    "socialScore": 73,
+    "overallScore": 63
+  },
+  {
+    "cusip": "626425102",
+    "governanceScore": 53,
+    "environmentalScore": 67,
+    "socialScore": 69,
+    "overallScore": 63
+  },
+  {
+    "cusip": "890880206",
+    "governanceScore": 50,
+    "environmentalScore": 71,
+    "socialScore": 80,
+    "overallScore": 67
+  },
+  {
+    "cusip": "204319107",
+    "governanceScore": 82,
+    "environmentalScore": 89,
+    "socialScore": 71,
+    "overallScore": 80.66666666666667
+  },
+  {
+    "cusip": "499049104",
+    "governanceScore": 81,
+    "environmentalScore": 52,
+    "socialScore": 45,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "G81276100",
+    "governanceScore": 87,
+    "environmentalScore": 58,
+    "socialScore": 70,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "M53213100",
+    "governanceScore": 82,
+    "environmentalScore": 66,
+    "socialScore": 62,
+    "overallScore": 70
+  },
+  {
+    "cusip": "84473L105",
+    "governanceScore": 92,
+    "environmentalScore": 44,
+    "socialScore": 69,
+    "overallScore": 68.33333333333333
+  },
+  {
+    "cusip": "92346J108",
+    "governanceScore": 77,
+    "environmentalScore": 73,
+    "socialScore": 44,
+    "overallScore": 64.66666666666667
+  },
+  {
+    "cusip": "78467K107",
+    "governanceScore": 88,
+    "environmentalScore": 54,
+    "socialScore": 76,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "83304A106",
+    "governanceScore": 78,
+    "environmentalScore": 79,
+    "socialScore": 42,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "29286D105",
+    "governanceScore": 70,
+    "environmentalScore": 72,
+    "socialScore": 65,
+    "overallScore": 69
+  },
+  {
+    "cusip": "74267C106",
+    "governanceScore": 80,
+    "environmentalScore": 55,
+    "socialScore": 8,
+    "overallScore": 47.666666666666664
+  },
+  {
+    "cusip": "062540109",
+    "governanceScore": 88,
+    "environmentalScore": 53,
+    "socialScore": 49,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "00191U102",
+    "governanceScore": 89,
+    "environmentalScore": 60,
+    "socialScore": 56,
+    "overallScore": 68.33333333333333
+  },
+  {
+    "cusip": "76029L100",
+    "governanceScore": 74,
+    "environmentalScore": 54,
+    "socialScore": 59,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "686331109",
+    "governanceScore": 85,
+    "environmentalScore": 79,
+    "socialScore": 78,
+    "overallScore": 80.66666666666667
+  },
+  {
+    "cusip": "750491102",
+    "governanceScore": 75,
+    "environmentalScore": 60,
+    "socialScore": 42,
+    "overallScore": 59
+  },
+  {
+    "cusip": "03990B101",
+    "governanceScore": 70,
+    "environmentalScore": 56,
+    "socialScore": 37,
+    "overallScore": 54.333333333333336
+  },
+  {
+    "cusip": "80689H102",
+    "governanceScore": 64,
+    "environmentalScore": 67,
+    "socialScore": 56,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "038336103",
+    "governanceScore": 90,
+    "environmentalScore": 77,
+    "socialScore": 77,
+    "overallScore": 81.33333333333333
+  },
+  {
+    "cusip": "G037AX101",
+    "governanceScore": 80,
+    "environmentalScore": 45,
+    "socialScore": 52,
+    "overallScore": 59
+  },
+  {
+    "cusip": "513272104",
+    "governanceScore": 82,
+    "environmentalScore": 58,
+    "socialScore": 74,
+    "overallScore": 71.33333333333333
+  },
+  {
+    "cusip": "233825207",
+    "governanceScore": 75,
+    "environmentalScore": 80,
+    "socialScore": 57,
+    "overallScore": 70.66666666666667
+  },
+  {
+    "cusip": "22266M104",
+    "governanceScore": 74,
+    "environmentalScore": 91,
+    "socialScore": 50,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "171077407",
+    "governanceScore": 81,
+    "environmentalScore": 50,
+    "socialScore": 27,
+    "overallScore": 52.666666666666664
+  },
+  {
+    "cusip": "754907103",
+    "governanceScore": 84,
+    "environmentalScore": 83,
+    "socialScore": 100,
+    "overallScore": 89
+  },
+  {
+    "cusip": "31188V100",
+    "governanceScore": 81,
+    "environmentalScore": 24,
+    "socialScore": 36,
+    "overallScore": 47
+  },
+  {
+    "cusip": "87944W105",
+    "governanceScore": 75,
+    "environmentalScore": 46,
+    "socialScore": 62,
+    "overallScore": 61
+  },
+  {
+    "cusip": "410867105",
+    "governanceScore": 85,
+    "environmentalScore": 51,
+    "socialScore": 26,
+    "overallScore": 54
+  },
+  {
+    "cusip": "86722A103",
+    "governanceScore": 82,
+    "environmentalScore": 46,
+    "socialScore": 73,
+    "overallScore": 67
+  },
+  {
+    "cusip": "69318G106",
+    "governanceScore": 81,
+    "environmentalScore": 44,
+    "socialScore": 63,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "706915105",
+    "governanceScore": 87,
+    "environmentalScore": 58,
+    "socialScore": 65,
+    "overallScore": 70
+  },
+  {
+    "cusip": "023586506",
+    "governanceScore": 67,
+    "environmentalScore": 42,
+    "socialScore": 16,
+    "overallScore": 41.666666666666664
+  },
+  {
+    "cusip": "63001N106",
+    "governanceScore": 77,
+    "environmentalScore": 45,
+    "socialScore": 28,
+    "overallScore": 50
+  },
+  {
+    "cusip": "127190304",
+    "governanceScore": 88,
+    "environmentalScore": 69,
+    "socialScore": 32,
+    "overallScore": 63
+  },
+  {
+    "cusip": "947890109",
+    "governanceScore": 85,
+    "environmentalScore": 65,
+    "socialScore": 58,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "875465106",
+    "governanceScore": 87,
+    "environmentalScore": 58,
+    "socialScore": 54,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "09739D100",
+    "governanceScore": 79,
+    "environmentalScore": 32,
+    "socialScore": 31,
+    "overallScore": 47.333333333333336
+  },
+  {
+    "cusip": "925458101",
+    "governanceScore": 91,
+    "environmentalScore": 79,
+    "socialScore": 62,
+    "overallScore": 77.33333333333333
+  },
+  {
+    "cusip": "984851204",
+    "governanceScore": 100,
+    "environmentalScore": 50,
+    "socialScore": 60,
+    "overallScore": 70
+  },
+  {
+    "cusip": "099502106",
+    "governanceScore": 89,
+    "environmentalScore": 73,
+    "socialScore": 49,
+    "overallScore": 70.33333333333333
+  },
+  {
+    "cusip": "656531605",
+    "governanceScore": 86,
+    "environmentalScore": 78,
+    "socialScore": 60,
+    "overallScore": 74.66666666666667
+  },
+  {
+    "cusip": "898349204",
+    "governanceScore": 84,
+    "environmentalScore": 53,
+    "socialScore": 49,
+    "overallScore": 62
+  },
+  {
+    "cusip": "N14506104",
+    "governanceScore": 83,
+    "environmentalScore": 69,
+    "socialScore": 61,
+    "overallScore": 71
+  },
+  {
+    "cusip": "36828A101",
+    "governanceScore": 92,
+    "environmentalScore": 50,
+    "socialScore": 62,
+    "overallScore": 68
+  },
+  {
+    "cusip": "34986A104",
+    "governanceScore": 77,
+    "environmentalScore": 57,
+    "socialScore": 31,
+    "overallScore": 55
+  },
+  {
+    "cusip": "219798105",
+    "governanceScore": 74,
+    "environmentalScore": 56,
+    "socialScore": 44,
+    "overallScore": 58
+  },
+  {
+    "cusip": "553491101",
+    "governanceScore": 56,
+    "environmentalScore": 73,
+    "socialScore": 72,
+    "overallScore": 67
+  },
+  {
+    "cusip": "471105205",
+    "governanceScore": 47,
+    "environmentalScore": 41,
+    "socialScore": 33,
+    "overallScore": 40.333333333333336
+  },
+  {
+    "cusip": "124765108",
+    "governanceScore": 86,
+    "environmentalScore": 75,
+    "socialScore": 85,
+    "overallScore": 82
+  },
+  {
+    "cusip": "126128107",
+    "governanceScore": 78,
+    "environmentalScore": 61,
+    "socialScore": 51,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "29261A100",
+    "governanceScore": 76,
+    "environmentalScore": 59,
+    "socialScore": 49,
+    "overallScore": 61.333333333333336
+  },
+  {
+    "cusip": "977874205",
+    "governanceScore": 97,
+    "environmentalScore": 70,
+    "socialScore": 80,
+    "overallScore": 82.33333333333333
+  },
+  {
+    "cusip": "67098H104",
+    "governanceScore": 85,
+    "environmentalScore": 42,
+    "socialScore": 52,
+    "overallScore": 59.666666666666664
+  },
+  {
+    "cusip": "10949T109",
+    "governanceScore": 78,
+    "environmentalScore": 56,
+    "socialScore": 3,
+    "overallScore": 45.666666666666664
+  },
+  {
+    "cusip": "783754104",
+    "governanceScore": 85,
+    "environmentalScore": 60,
+    "socialScore": 41,
+    "overallScore": 62
+  },
+  {
+    "cusip": "G39387108",
+    "governanceScore": 78,
+    "environmentalScore": 56,
+    "socialScore": 68,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "00770C101",
+    "governanceScore": 71,
+    "environmentalScore": 43,
+    "socialScore": 35,
+    "overallScore": 49.666666666666664
+  },
+  {
+    "cusip": "78351F107",
+    "governanceScore": 78,
+    "environmentalScore": 72,
+    "socialScore": 23,
+    "overallScore": 57.666666666666664
+  },
+  {
+    "cusip": "98138H101",
+    "governanceScore": 77,
+    "environmentalScore": 57,
+    "socialScore": 56,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "48667L106",
+    "governanceScore": 60,
+    "environmentalScore": 81,
+    "socialScore": 85,
+    "overallScore": 75.33333333333333
+  },
+  {
+    "cusip": "98954M101",
+    "governanceScore": 77,
+    "environmentalScore": 53,
+    "socialScore": 51,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "29355A107",
+    "governanceScore": 83,
+    "environmentalScore": 74,
+    "socialScore": 58,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "74967X103",
+    "governanceScore": 81,
+    "environmentalScore": 63,
+    "socialScore": 48,
+    "overallScore": 64
+  },
+  {
+    "cusip": "30049A107",
+    "governanceScore": 76,
+    "environmentalScore": 60,
+    "socialScore": 70,
+    "overallScore": 68.66666666666667
+  },
+  {
+    "cusip": "87484T108",
+    "governanceScore": 90,
+    "environmentalScore": 53,
+    "socialScore": 74,
+    "overallScore": 72.33333333333333
+  },
+  {
+    "cusip": "78573L106",
+    "governanceScore": 81,
+    "environmentalScore": 62,
+    "socialScore": 57,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "70509V100",
+    "governanceScore": 81,
+    "environmentalScore": 73,
+    "socialScore": 92,
+    "overallScore": 82
+  },
+  {
+    "cusip": "83404D109",
+    "governanceScore": 57,
+    "environmentalScore": 75,
+    "socialScore": 88,
+    "overallScore": 73.33333333333333
+  },
+  {
+    "cusip": "11135F101",
+    "governanceScore": 76,
+    "environmentalScore": 75,
+    "socialScore": 77,
+    "overallScore": 76
+  },
+  {
+    "cusip": "88337F105",
+    "governanceScore": 85,
+    "environmentalScore": 50,
+    "socialScore": 46,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "379378201",
+    "governanceScore": 81,
+    "environmentalScore": 65,
+    "socialScore": 3,
+    "overallScore": 49.666666666666664
+  },
+  {
+    "cusip": "20451N101",
+    "governanceScore": 87,
+    "environmentalScore": 52,
+    "socialScore": 67,
+    "overallScore": 68.66666666666667
+  },
+  {
+    "cusip": "185899101",
+    "governanceScore": 84,
+    "environmentalScore": 41,
+    "socialScore": 57,
+    "overallScore": 60.666666666666664
+  },
+  {
+    "cusip": "92839U206",
+    "governanceScore": 86,
+    "environmentalScore": 94,
+    "socialScore": 83,
+    "overallScore": 87.66666666666667
+  },
+  {
+    "cusip": "384747101",
+    "governanceScore": 68,
+    "environmentalScore": 61,
+    "socialScore": 35,
+    "overallScore": 54.666666666666664
+  },
+  {
+    "cusip": "G5509L101",
+    "governanceScore": 77,
+    "environmentalScore": 52,
+    "socialScore": 37,
+    "overallScore": 55.333333333333336
+  },
+  {
+    "cusip": "149568107",
+    "governanceScore": 81,
+    "environmentalScore": 44,
+    "socialScore": 33,
+    "overallScore": 52.666666666666664
+  },
+  {
+    "cusip": "989207105",
+    "governanceScore": 83,
+    "environmentalScore": 63,
+    "socialScore": 37,
+    "overallScore": 61
+  },
+  {
+    "cusip": "829214105",
+    "governanceScore": 89,
+    "environmentalScore": 43,
+    "socialScore": 66,
+    "overallScore": 66
+  },
+  {
+    "cusip": "518415104",
+    "governanceScore": 89,
+    "environmentalScore": 76,
+    "socialScore": 39,
+    "overallScore": 68
+  },
+  {
+    "cusip": "82900L102",
+    "governanceScore": 84,
+    "environmentalScore": 57,
+    "socialScore": 56,
+    "overallScore": 65.66666666666667
+  },
+  {
+    "cusip": "90364P105",
+    "governanceScore": 82,
+    "environmentalScore": 67,
+    "socialScore": 54,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "12740C103",
+    "governanceScore": 83,
+    "environmentalScore": 36,
+    "socialScore": 51,
+    "overallScore": 56.666666666666664
+  },
+  {
+    "cusip": "731068102",
+    "governanceScore": 78,
+    "environmentalScore": 71,
+    "socialScore": 69,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "871332102",
+    "governanceScore": 80,
+    "environmentalScore": 67,
+    "socialScore": 19,
+    "overallScore": 55.333333333333336
+  },
+  {
+    "cusip": "90385V107",
+    "governanceScore": 78,
+    "environmentalScore": 46,
+    "socialScore": 26,
+    "overallScore": 50
+  },
+  {
+    "cusip": "46115H107",
+    "governanceScore": 87,
+    "environmentalScore": 81,
+    "socialScore": 77,
+    "overallScore": 81.66666666666667
+  },
+  {
+    "cusip": "23204G100",
+    "governanceScore": 86,
+    "environmentalScore": 62,
+    "socialScore": 56,
+    "overallScore": 68
+  },
+  {
+    "cusip": "32055Y201",
+    "governanceScore": 88,
+    "environmentalScore": 57,
+    "socialScore": 51,
+    "overallScore": 65.33333333333333
+  },
+  {
+    "cusip": "573874104",
+    "governanceScore": 88,
+    "environmentalScore": 72,
+    "socialScore": 61,
+    "overallScore": 73.66666666666667
+  },
+  {
+    "cusip": "15687V109",
+    "governanceScore": 81,
+    "environmentalScore": 56,
+    "socialScore": 67,
+    "overallScore": 68
+  },
+  {
+    "cusip": "609027107",
+    "governanceScore": 69,
+    "environmentalScore": 37,
+    "socialScore": 11,
+    "overallScore": 39
+  },
+  {
+    "cusip": "23381D102",
+    "governanceScore": 65,
+    "environmentalScore": 77,
+    "socialScore": 83,
+    "overallScore": 75
+  },
+  {
+    "cusip": "629445206",
+    "governanceScore": 73,
+    "environmentalScore": 55,
+    "socialScore": 48,
+    "overallScore": 58.666666666666664
+  },
+  {
+    "cusip": "11285B108",
+    "governanceScore": 79,
+    "environmentalScore": 78,
+    "socialScore": 77,
+    "overallScore": 78
+  },
+  {
+    "cusip": "43940T109",
+    "governanceScore": 86,
+    "environmentalScore": 50,
+    "socialScore": 55,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "09290D101",
+    "governanceScore": 76,
+    "environmentalScore": 79,
+    "socialScore": 33,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "292765104",
+    "governanceScore": 83,
+    "environmentalScore": 55,
+    "socialScore": 52,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "441593100",
+    "governanceScore": 75,
+    "environmentalScore": 78,
+    "socialScore": 11,
+    "overallScore": 54.666666666666664
+  },
+  {
+    "cusip": "75700L108",
+    "governanceScore": 72,
+    "environmentalScore": 42,
+    "socialScore": 2,
+    "overallScore": 38.666666666666664
+  },
+  {
+    "cusip": "126327105",
+    "governanceScore": 76,
+    "environmentalScore": 54,
+    "socialScore": 38,
+    "overallScore": 56
+  },
+  {
+    "cusip": "69924R108",
+    "governanceScore": 80,
+    "environmentalScore": 76,
+    "socialScore": 39,
+    "overallScore": 65
+  },
+  {
+    "cusip": "89400J107",
+    "governanceScore": 81,
+    "environmentalScore": 76,
+    "socialScore": 43,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "G3643J108",
+    "governanceScore": 80,
+    "environmentalScore": 90,
+    "socialScore": 37,
+    "overallScore": 69
+  },
+  {
+    "cusip": "680033107",
+    "governanceScore": 84,
+    "environmentalScore": 64,
+    "socialScore": 51,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "827048109",
+    "governanceScore": 67,
+    "environmentalScore": 39,
+    "socialScore": 16,
+    "overallScore": 40.666666666666664
+  },
+  {
+    "cusip": "096813209",
+    "governanceScore": 88,
+    "environmentalScore": 80,
+    "socialScore": 70,
+    "overallScore": 79.33333333333333
+  },
+  {
+    "cusip": "253798102",
+    "governanceScore": 85,
+    "environmentalScore": 74,
+    "socialScore": 25,
+    "overallScore": 61.333333333333336
+  },
+  {
+    "cusip": "39813G109",
+    "governanceScore": 72,
+    "environmentalScore": 48,
+    "socialScore": 47,
+    "overallScore": 55.666666666666664
+  },
+  {
+    "cusip": "009279100",
+    "governanceScore": 84,
+    "environmentalScore": 65,
+    "socialScore": 74,
+    "overallScore": 74.33333333333333
+  },
+  {
+    "cusip": "92556V106",
+    "governanceScore": 78,
+    "environmentalScore": 78,
+    "socialScore": 53,
+    "overallScore": 69.66666666666667
+  },
+  {
+    "cusip": "74874Q100",
+    "governanceScore": 73,
+    "environmentalScore": 59,
+    "socialScore": 43,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "105105209",
+    "governanceScore": 86,
+    "environmentalScore": 73,
+    "socialScore": 53,
+    "overallScore": 70.66666666666667
+  },
+  {
+    "cusip": "054540208",
+    "governanceScore": 83,
+    "environmentalScore": 64,
+    "socialScore": 52,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "120738406",
+    "governanceScore": 84,
+    "environmentalScore": 57,
+    "socialScore": 61,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "655663102",
+    "governanceScore": 83,
+    "environmentalScore": 67,
+    "socialScore": 50,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "049255706",
+    "governanceScore": 79,
+    "environmentalScore": 70,
+    "socialScore": 61,
+    "overallScore": 70
+  },
+  {
+    "cusip": "25659T107",
+    "governanceScore": 83,
+    "environmentalScore": 82,
+    "socialScore": 60,
+    "overallScore": 75
+  },
+  {
+    "cusip": "045387107",
+    "governanceScore": 80,
+    "environmentalScore": 76,
+    "socialScore": 67,
+    "overallScore": 74.33333333333333
+  },
+  {
+    "cusip": "12082W204",
+    "governanceScore": 95,
+    "environmentalScore": 90,
+    "socialScore": 78,
+    "overallScore": 87.66666666666667
+  },
+  {
+    "cusip": "G8060N102",
+    "governanceScore": 81,
+    "environmentalScore": 55,
+    "socialScore": 74,
+    "overallScore": 70
+  },
+  {
+    "cusip": "928854108",
+    "governanceScore": 80,
+    "environmentalScore": 77,
+    "socialScore": 65,
+    "overallScore": 74
+  },
+  {
+    "cusip": "48238T109",
+    "governanceScore": 80,
+    "environmentalScore": 68,
+    "socialScore": 22,
+    "overallScore": 56.666666666666664
+  },
+  {
+    "cusip": "350060109",
+    "governanceScore": 80,
+    "environmentalScore": 54,
+    "socialScore": 49,
+    "overallScore": 61
+  },
+  {
+    "cusip": "83418M103",
+    "governanceScore": 81,
+    "environmentalScore": 61,
+    "socialScore": 46,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "633707104",
+    "governanceScore": 88,
+    "environmentalScore": 53,
+    "socialScore": 50,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "205768302",
+    "governanceScore": 65,
+    "environmentalScore": 38,
+    "socialScore": 54,
+    "overallScore": 52.333333333333336
+  },
+  {
+    "cusip": "318672706",
+    "governanceScore": 86,
+    "environmentalScore": 52,
+    "socialScore": 72,
+    "overallScore": 70
+  },
+  {
+    "cusip": "21867A105",
+    "governanceScore": 79,
+    "environmentalScore": 62,
+    "socialScore": 43,
+    "overallScore": 61.333333333333336
+  },
+  {
+    "cusip": "353514102",
+    "governanceScore": 74,
+    "environmentalScore": 66,
+    "socialScore": 56,
+    "overallScore": 65.33333333333333
+  },
+  {
+    "cusip": "00108J109",
+    "governanceScore": 80,
+    "environmentalScore": 42,
+    "socialScore": 26,
+    "overallScore": 49.333333333333336
+  },
+  {
+    "cusip": "917047102",
+    "governanceScore": 79,
+    "environmentalScore": 51,
+    "socialScore": 51,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "250565108",
+    "governanceScore": 74,
+    "environmentalScore": 60,
+    "socialScore": 34,
+    "overallScore": 56
+  },
+  {
+    "cusip": "00206RJY9",
+    "governanceScore": 82,
+    "environmentalScore": 46,
+    "socialScore": 50,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "26817Q886",
+    "governanceScore": 58,
+    "environmentalScore": 89,
+    "socialScore": 84,
+    "overallScore": 77
+  },
+  {
+    "cusip": "03676B102",
+    "governanceScore": 83,
+    "environmentalScore": 64,
+    "socialScore": 69,
+    "overallScore": 72
+  },
+  {
+    "cusip": "45662N103",
+    "governanceScore": 81,
+    "environmentalScore": 64,
+    "socialScore": 71,
+    "overallScore": 72
+  },
+  {
+    "cusip": "82929R304",
+    "governanceScore": 83,
+    "environmentalScore": 52,
+    "socialScore": 69,
+    "overallScore": 68
+  },
+  {
+    "cusip": "980228308",
+    "governanceScore": 86,
+    "environmentalScore": 66,
+    "socialScore": 59,
+    "overallScore": 70.33333333333333
+  },
+  {
+    "cusip": "37636P108",
+    "governanceScore": 87,
+    "environmentalScore": 66,
+    "socialScore": 41,
+    "overallScore": 64.66666666666667
+  },
+  {
+    "cusip": "824551105",
+    "governanceScore": 48,
+    "environmentalScore": 66,
+    "socialScore": 79,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "485537401",
+    "governanceScore": 62,
+    "environmentalScore": 39,
+    "socialScore": 85,
+    "overallScore": 62
+  },
+  {
+    "cusip": "191459205",
+    "governanceScore": 88,
+    "environmentalScore": 81,
+    "socialScore": 76,
+    "overallScore": 81.66666666666667
+  },
+  {
+    "cusip": "50101L106",
+    "governanceScore": 66,
+    "environmentalScore": 46,
+    "socialScore": 32,
+    "overallScore": 48
+  },
+  {
+    "cusip": "32051X108",
+    "governanceScore": 87,
+    "environmentalScore": 63,
+    "socialScore": 49,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "13063C5W6",
+    "governanceScore": 64,
+    "environmentalScore": 48,
+    "socialScore": 63,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "H01301128",
+    "governanceScore": 82,
+    "environmentalScore": 82,
+    "socialScore": 72,
+    "overallScore": 78.66666666666667
+  },
+  {
+    "cusip": "30063P105",
+    "governanceScore": 78,
+    "environmentalScore": 67,
+    "socialScore": 80,
+    "overallScore": 75
+  },
+  {
+    "cusip": "009707100",
+    "governanceScore": 61,
+    "environmentalScore": 62,
+    "socialScore": 88,
+    "overallScore": 70.33333333333333
+  },
+  {
+    "cusip": "556269108",
+    "governanceScore": 83,
+    "environmentalScore": 75,
+    "socialScore": 78,
+    "overallScore": 78.66666666666667
+  },
+  {
+    "cusip": "13063D3V8",
+    "governanceScore": 64,
+    "environmentalScore": 48,
+    "socialScore": 63,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "89679E300",
+    "governanceScore": 87,
+    "environmentalScore": 53,
+    "socialScore": 49,
+    "overallScore": 63
+  },
+  {
+    "cusip": "12685J105",
+    "governanceScore": 84,
+    "environmentalScore": 49,
+    "socialScore": 52,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "320817109",
+    "governanceScore": 71,
+    "environmentalScore": 63,
+    "socialScore": 43,
+    "overallScore": 59
+  },
+  {
+    "cusip": "398438408",
+    "governanceScore": 73,
+    "environmentalScore": 48,
+    "socialScore": 69,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "N82405106",
+    "governanceScore": 79,
+    "environmentalScore": 69,
+    "socialScore": 65,
+    "overallScore": 71
+  },
+  {
+    "cusip": "65341D102",
+    "governanceScore": 77,
+    "environmentalScore": 50,
+    "socialScore": 8,
+    "overallScore": 45
+  },
+  {
+    "cusip": "01741R102",
+    "governanceScore": 89,
+    "environmentalScore": 78,
+    "socialScore": 49,
+    "overallScore": 72
+  },
+  {
+    "cusip": "606776201",
+    "governanceScore": 57,
+    "environmentalScore": 56,
+    "socialScore": 60,
+    "overallScore": 57.666666666666664
+  },
+  {
+    "cusip": "889110102",
+    "governanceScore": 62,
+    "environmentalScore": 81,
+    "socialScore": 69,
+    "overallScore": 70.66666666666667
+  },
+  {
+    "cusip": "42226K105",
+    "governanceScore": 80,
+    "environmentalScore": 45,
+    "socialScore": 25,
+    "overallScore": 50
+  },
+  {
+    "cusip": "05523R107",
+    "governanceScore": 81,
+    "environmentalScore": 78,
+    "socialScore": 73,
+    "overallScore": 77.33333333333333
+  },
+  {
+    "cusip": "80687P106",
+    "governanceScore": 80,
+    "environmentalScore": 82,
+    "socialScore": 76,
+    "overallScore": 79.33333333333333
+  },
+  {
+    "cusip": "398905109",
+    "governanceScore": 84,
+    "environmentalScore": 56,
+    "socialScore": 46,
+    "overallScore": 62
+  },
+  {
+    "cusip": "81783H105",
+    "governanceScore": 60,
+    "environmentalScore": 64,
+    "socialScore": 88,
+    "overallScore": 70.66666666666667
+  },
+  {
+    "cusip": "47580P103",
+    "governanceScore": 89,
+    "environmentalScore": 55,
+    "socialScore": 49,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "053604104",
+    "governanceScore": 77,
+    "environmentalScore": 48,
+    "socialScore": 43,
+    "overallScore": 56
+  },
+  {
+    "cusip": "384802104",
+    "governanceScore": 87,
+    "environmentalScore": 49,
+    "socialScore": 51,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "68628V308",
+    "governanceScore": 73,
+    "environmentalScore": 46,
+    "socialScore": 31,
+    "overallScore": 50
+  },
+  {
+    "cusip": "74365P108",
+    "governanceScore": 75,
+    "environmentalScore": 57,
+    "socialScore": 54,
+    "overallScore": 62
+  },
+  {
+    "cusip": "23304Y100",
+    "governanceScore": 83,
+    "environmentalScore": 77,
+    "socialScore": 81,
+    "overallScore": 80.33333333333333
+  },
+  {
+    "cusip": "372460105",
+    "governanceScore": 83,
+    "environmentalScore": 67,
+    "socialScore": 52,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "004225108",
+    "governanceScore": 70,
+    "environmentalScore": 77,
+    "socialScore": 25,
+    "overallScore": 57.333333333333336
+  },
+  {
+    "cusip": "704551100",
+    "governanceScore": 86,
+    "environmentalScore": 49,
+    "socialScore": 63,
+    "overallScore": 66
+  },
+  {
+    "cusip": "950810101",
+    "governanceScore": 88,
+    "environmentalScore": 60,
+    "socialScore": 70,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "452227KD2",
+    "governanceScore": 63,
+    "environmentalScore": 55,
+    "socialScore": 67,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "58844R108",
+    "governanceScore": 65,
+    "environmentalScore": 58,
+    "socialScore": 37,
+    "overallScore": 53.333333333333336
+  },
+  {
+    "cusip": "G3922B107",
+    "governanceScore": 86,
+    "environmentalScore": 71,
+    "socialScore": 66,
+    "overallScore": 74.33333333333333
+  },
+  {
+    "cusip": "826919102",
+    "governanceScore": 94,
+    "environmentalScore": 76,
+    "socialScore": 73,
+    "overallScore": 81
+  },
+  {
+    "cusip": "127537207",
+    "governanceScore": 79,
+    "environmentalScore": 58,
+    "socialScore": 24,
+    "overallScore": 53.666666666666664
+  },
+  {
+    "cusip": "81603X108",
+    "governanceScore": 63,
+    "environmentalScore": 60,
+    "socialScore": 74,
+    "overallScore": 65.66666666666667
+  },
+  {
+    "cusip": "G65773106",
+    "governanceScore": 66,
+    "environmentalScore": 55,
+    "socialScore": 49,
+    "overallScore": 56.666666666666664
+  },
+  {
+    "cusip": "49338L103",
+    "governanceScore": 91,
+    "environmentalScore": 62,
+    "socialScore": 86,
+    "overallScore": 79.66666666666667
+  },
+  {
+    "cusip": "537008104",
+    "governanceScore": 88,
+    "environmentalScore": 75,
+    "socialScore": 62,
+    "overallScore": 75
+  },
+  {
+    "cusip": "00653Q102",
+    "governanceScore": 75,
+    "environmentalScore": 38,
+    "socialScore": 13,
+    "overallScore": 42
+  },
+  {
+    "cusip": "24872B100",
+    "governanceScore": 53,
+    "environmentalScore": 73,
+    "socialScore": 73,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "874060205",
+    "governanceScore": 74,
+    "environmentalScore": 85,
+    "socialScore": 76,
+    "overallScore": 78.33333333333333
+  },
+  {
+    "cusip": "07831C103",
+    "governanceScore": 82,
+    "environmentalScore": 65,
+    "socialScore": 57,
+    "overallScore": 68
+  },
+  {
+    "cusip": "24665A103",
+    "governanceScore": 81,
+    "environmentalScore": 63,
+    "socialScore": 63,
+    "overallScore": 69
+  },
+  {
+    "cusip": "97717P104",
+    "governanceScore": 82,
+    "environmentalScore": 50,
+    "socialScore": 28,
+    "overallScore": 53.333333333333336
+  },
+  {
+    "cusip": "254687FV3",
+    "governanceScore": 82,
+    "environmentalScore": 51,
+    "socialScore": 43,
+    "overallScore": 58.666666666666664
+  },
+  {
+    "cusip": "309627107",
+    "governanceScore": 84,
+    "environmentalScore": 48,
+    "socialScore": 43,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "920253101",
+    "governanceScore": 87,
+    "environmentalScore": 54,
+    "socialScore": 43,
+    "overallScore": 61.333333333333336
+  },
+  {
+    "cusip": "G7496G103",
+    "governanceScore": 88,
+    "environmentalScore": 55,
+    "socialScore": 17,
+    "overallScore": 53.333333333333336
+  },
+  {
+    "cusip": "044186104",
+    "governanceScore": 87,
+    "environmentalScore": 56,
+    "socialScore": 59,
+    "overallScore": 67.33333333333333
+  },
+  {
+    "cusip": "81762P102",
+    "governanceScore": 87,
+    "environmentalScore": 72,
+    "socialScore": 69,
+    "overallScore": 76
+  },
+  {
+    "cusip": "934423104",
+    "governanceScore": 75,
+    "environmentalScore": 64,
+    "socialScore": 50,
+    "overallScore": 63
+  },
+  {
+    "cusip": "78377T107",
+    "governanceScore": 79,
+    "environmentalScore": 69,
+    "socialScore": 53,
+    "overallScore": 67
+  },
+  {
+    "cusip": "320209109",
+    "governanceScore": 85,
+    "environmentalScore": 64,
+    "socialScore": 56,
+    "overallScore": 68.33333333333333
+  },
+  {
+    "cusip": "689164101",
+    "governanceScore": 43,
+    "environmentalScore": 63,
+    "socialScore": 90,
+    "overallScore": 65.33333333333333
+  },
+  {
+    "cusip": "819047101",
+    "governanceScore": 84,
+    "environmentalScore": 55,
+    "socialScore": 40,
+    "overallScore": 59.666666666666664
+  },
+  {
+    "cusip": "G4253H101",
+    "governanceScore": 86,
+    "environmentalScore": 65,
+    "socialScore": 29,
+    "overallScore": 60
+  },
+  {
+    "cusip": "45262P102",
+    "governanceScore": 84,
+    "environmentalScore": 90,
+    "socialScore": 51,
+    "overallScore": 75
+  },
+  {
+    "cusip": "693282105",
+    "governanceScore": 83,
+    "environmentalScore": 48,
+    "socialScore": 26,
+    "overallScore": 52.333333333333336
+  },
+  {
+    "cusip": "871607107",
+    "governanceScore": 79,
+    "environmentalScore": 53,
+    "socialScore": 69,
+    "overallScore": 67
+  },
+  {
+    "cusip": "48241F104",
+    "governanceScore": 76,
+    "environmentalScore": 78,
+    "socialScore": 78,
+    "overallScore": 77.33333333333333
+  },
+  {
+    "cusip": "74347M108",
+    "governanceScore": 83,
+    "environmentalScore": 51,
+    "socialScore": 44,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "047649108",
+    "governanceScore": 80,
+    "environmentalScore": 44,
+    "socialScore": 55,
+    "overallScore": 59.666666666666664
+  },
+  {
+    "cusip": "912828ZB9",
+    "governanceScore": 66,
+    "environmentalScore": 56,
+    "socialScore": 66,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "257651109",
+    "governanceScore": 79,
+    "environmentalScore": 59,
+    "socialScore": 68,
+    "overallScore": 68.66666666666667
+  },
+  {
+    "cusip": "60786M105",
+    "governanceScore": 84,
+    "environmentalScore": 79,
+    "socialScore": 18,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "649604840",
+    "governanceScore": 76,
+    "environmentalScore": 73,
+    "socialScore": 9,
+    "overallScore": 52.666666666666664
+  },
+  {
+    "cusip": "00857U107",
+    "governanceScore": 79,
+    "environmentalScore": 62,
+    "socialScore": 49,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "00090Q103",
+    "governanceScore": 82,
+    "environmentalScore": 55,
+    "socialScore": 38,
+    "overallScore": 58.333333333333336
+  },
+  {
+    "cusip": "750236101",
+    "governanceScore": 83,
+    "environmentalScore": 82,
+    "socialScore": 79,
+    "overallScore": 81.33333333333333
+  },
+  {
+    "cusip": "450056106",
+    "governanceScore": 81,
+    "environmentalScore": 81,
+    "socialScore": 66,
+    "overallScore": 76
+  },
+  {
+    "cusip": "824841407",
+    "governanceScore": 81,
+    "environmentalScore": 80,
+    "socialScore": 85,
+    "overallScore": 82
+  },
+  {
+    "cusip": "431571108",
+    "governanceScore": 91,
+    "environmentalScore": 58,
+    "socialScore": 50,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "833792104",
+    "governanceScore": 66,
+    "environmentalScore": 78,
+    "socialScore": 75,
+    "overallScore": 73
+  },
+  {
+    "cusip": "09073M104",
+    "governanceScore": 82,
+    "environmentalScore": 86,
+    "socialScore": 68,
+    "overallScore": 78.66666666666667
+  },
+  {
+    "cusip": "811707801",
+    "governanceScore": 79,
+    "environmentalScore": 55,
+    "socialScore": 43,
+    "overallScore": 59
+  },
+  {
+    "cusip": "83364L109",
+    "governanceScore": 81,
+    "environmentalScore": 68,
+    "socialScore": 79,
+    "overallScore": 76
+  },
+  {
+    "cusip": "81814P209",
+    "governanceScore": 91,
+    "environmentalScore": 70,
+    "socialScore": 32,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "816078307",
+    "governanceScore": 52,
+    "environmentalScore": 68,
+    "socialScore": 71,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "72919P202",
+    "governanceScore": 79,
+    "environmentalScore": 44,
+    "socialScore": 58,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "861025104",
+    "governanceScore": 83,
+    "environmentalScore": 49,
+    "socialScore": 50,
+    "overallScore": 60.666666666666664
+  },
+  {
+    "cusip": "49271V100",
+    "governanceScore": 84,
+    "environmentalScore": 62,
+    "socialScore": 69,
+    "overallScore": 71.66666666666667
+  },
+  {
+    "cusip": "23636T100",
+    "governanceScore": 81,
+    "environmentalScore": 80,
+    "socialScore": 77,
+    "overallScore": 79.33333333333333
+  },
+  {
+    "cusip": "G6700G107",
+    "governanceScore": 86,
+    "environmentalScore": 63,
+    "socialScore": 57,
+    "overallScore": 68.66666666666667
+  },
+  {
+    "cusip": "74935Q107",
+    "governanceScore": 80,
+    "environmentalScore": 52,
+    "socialScore": 38,
+    "overallScore": 56.666666666666664
+  },
+  {
+    "cusip": "743312100",
+    "governanceScore": 81,
+    "environmentalScore": 54,
+    "socialScore": 47,
+    "overallScore": 60.666666666666664
+  },
+  {
+    "cusip": "06417N103",
+    "governanceScore": 81,
+    "environmentalScore": 59,
+    "socialScore": 50,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "25402D102",
+    "governanceScore": 78,
+    "environmentalScore": 23,
+    "socialScore": 36,
+    "overallScore": 45.666666666666664
+  },
+  {
+    "cusip": "69366J200",
+    "governanceScore": 76,
+    "environmentalScore": 67,
+    "socialScore": 45,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "G8267P108",
+    "governanceScore": 94,
+    "environmentalScore": 65,
+    "socialScore": 61,
+    "overallScore": 73.33333333333333
+  },
+  {
+    "cusip": "359590304",
+    "governanceScore": 58,
+    "environmentalScore": 33,
+    "socialScore": 64,
+    "overallScore": 51.666666666666664
+  },
+  {
+    "cusip": "032724106",
+    "governanceScore": 66,
+    "environmentalScore": 69,
+    "socialScore": 43,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "G39108108",
+    "governanceScore": 90,
+    "environmentalScore": 51,
+    "socialScore": 59,
+    "overallScore": 66.66666666666667
+  },
+  {
+    "cusip": "445658107",
+    "governanceScore": 86,
+    "environmentalScore": 69,
+    "socialScore": 63,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "540424108",
+    "governanceScore": 71,
+    "environmentalScore": 63,
+    "socialScore": 19,
+    "overallScore": 51
+  },
+  {
+    "cusip": "966084204",
+    "governanceScore": 80,
+    "environmentalScore": 52,
+    "socialScore": 30,
+    "overallScore": 54
+  },
+  {
+    "cusip": "533900106",
+    "governanceScore": 88,
+    "environmentalScore": 63,
+    "socialScore": 58,
+    "overallScore": 69.66666666666667
+  },
+  {
+    "cusip": "98887L105",
+    "governanceScore": 73,
+    "environmentalScore": 81,
+    "socialScore": 85,
+    "overallScore": 79.66666666666667
+  },
+  {
+    "cusip": "85472N109",
+    "governanceScore": 91,
+    "environmentalScore": 83,
+    "socialScore": 64,
+    "overallScore": 79.33333333333333
+  },
+  {
+    "cusip": "041232109",
+    "governanceScore": 83,
+    "environmentalScore": 63,
+    "socialScore": 61,
+    "overallScore": 69
+  },
+  {
+    "cusip": "339382103",
+    "governanceScore": 80,
+    "environmentalScore": 43,
+    "socialScore": 42,
+    "overallScore": 55
+  },
+  {
+    "cusip": "786584102",
+    "governanceScore": 77,
+    "environmentalScore": 64,
+    "socialScore": 77,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "70438V106",
+    "governanceScore": 83,
+    "environmentalScore": 43,
+    "socialScore": 43,
+    "overallScore": 56.333333333333336
+  },
+  {
+    "cusip": "57582R2F2",
+    "governanceScore": 69,
+    "environmentalScore": 45,
+    "socialScore": 73,
+    "overallScore": 62.333333333333336
+  },
+  {
+    "cusip": "21900C308",
+    "governanceScore": 72,
+    "environmentalScore": 34,
+    "socialScore": 39,
+    "overallScore": 48.333333333333336
+  },
+  {
+    "cusip": "001317205",
+    "governanceScore": 89,
+    "environmentalScore": 65,
+    "socialScore": 36,
+    "overallScore": 63.333333333333336
+  },
+  {
+    "cusip": "55272X607",
+    "governanceScore": 44,
+    "environmentalScore": 75,
+    "socialScore": 3,
+    "overallScore": 40.666666666666664
+  },
+  {
+    "cusip": "202712600",
+    "governanceScore": 92,
+    "environmentalScore": 94,
+    "socialScore": 71,
+    "overallScore": 85.66666666666667
+  },
+  {
+    "cusip": "637372202",
+    "governanceScore": 84,
+    "environmentalScore": 58,
+    "socialScore": 34,
+    "overallScore": 58.666666666666664
+  },
+  {
+    "cusip": "426281101",
+    "governanceScore": 81,
+    "environmentalScore": 27,
+    "socialScore": 44,
+    "overallScore": 50.666666666666664
+  },
+  {
+    "cusip": "29270J100",
+    "governanceScore": 81,
+    "environmentalScore": 67,
+    "socialScore": 38,
+    "overallScore": 62
+  },
+  {
+    "cusip": "52660W101",
+    "governanceScore": 85,
+    "environmentalScore": 70,
+    "socialScore": 81,
+    "overallScore": 78.66666666666667
+  },
+  {
+    "cusip": "047726302",
+    "governanceScore": 82,
+    "environmentalScore": 63,
+    "socialScore": 28,
+    "overallScore": 57.666666666666664
+  },
+  {
+    "cusip": "251542106",
+    "governanceScore": 75,
+    "environmentalScore": 73,
+    "socialScore": 73,
+    "overallScore": 73.66666666666667
+  },
+  {
+    "cusip": "35243J101",
+    "governanceScore": 48,
+    "environmentalScore": 76,
+    "socialScore": 11,
+    "overallScore": 45
+  },
+  {
+    "cusip": "126117100",
+    "governanceScore": 58,
+    "environmentalScore": 50,
+    "socialScore": 8,
+    "overallScore": 38.666666666666664
+  },
+  {
+    "cusip": "679580100",
+    "governanceScore": 75,
+    "environmentalScore": 53,
+    "socialScore": 57,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "767292105",
+    "governanceScore": 68,
+    "environmentalScore": 53,
+    "socialScore": 41,
+    "overallScore": 54
+  },
+  {
+    "cusip": "05722G100",
+    "governanceScore": 87,
+    "environmentalScore": 76,
+    "socialScore": 77,
+    "overallScore": 80
+  },
+  {
+    "cusip": "197641103",
+    "governanceScore": 85,
+    "environmentalScore": 50,
+    "socialScore": 57,
+    "overallScore": 64
+  },
+  {
+    "cusip": "68571X301",
+    "governanceScore": 38,
+    "environmentalScore": 54,
+    "socialScore": 3,
+    "overallScore": 31.666666666666668
+  },
+  {
+    "cusip": "71844V201",
+    "governanceScore": 76,
+    "environmentalScore": 66,
+    "socialScore": 66,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "169905106",
+    "governanceScore": 84,
+    "environmentalScore": 67,
+    "socialScore": 57,
+    "overallScore": 69.33333333333333
+  },
+  {
+    "cusip": "749527107",
+    "governanceScore": 81,
+    "environmentalScore": 74,
+    "socialScore": 48,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "25401T603",
+    "governanceScore": 74,
+    "environmentalScore": 36,
+    "socialScore": 15,
+    "overallScore": 41.666666666666664
+  },
+  {
+    "cusip": "25787G100",
+    "governanceScore": 85,
+    "environmentalScore": 55,
+    "socialScore": 55,
+    "overallScore": 65
+  },
+  {
+    "cusip": "570912105",
+    "governanceScore": 89,
+    "environmentalScore": 69,
+    "socialScore": 74,
+    "overallScore": 77.33333333333333
+  },
+  {
+    "cusip": "775711104",
+    "governanceScore": 78,
+    "environmentalScore": 63,
+    "socialScore": 22,
+    "overallScore": 54.333333333333336
+  },
+  {
+    "cusip": "53931R103",
+    "governanceScore": 88,
+    "environmentalScore": 61,
+    "socialScore": 78,
+    "overallScore": 75.66666666666667
+  },
+  {
+    "cusip": "775133101",
+    "governanceScore": 81,
+    "environmentalScore": 51,
+    "socialScore": 36,
+    "overallScore": 56
+  },
+  {
+    "cusip": "34959E109",
+    "governanceScore": 86,
+    "environmentalScore": 71,
+    "socialScore": 61,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "59410T106",
+    "governanceScore": 82,
+    "environmentalScore": 70,
+    "socialScore": 74,
+    "overallScore": 75.33333333333333
+  },
+  {
+    "cusip": "376536108",
+    "governanceScore": 78,
+    "environmentalScore": 61,
+    "socialScore": 3,
+    "overallScore": 47.333333333333336
+  },
+  {
+    "cusip": "26622P107",
+    "governanceScore": 78,
+    "environmentalScore": 68,
+    "socialScore": 39,
+    "overallScore": 61.666666666666664
+  },
+  {
+    "cusip": "79588J102",
+    "governanceScore": 84,
+    "environmentalScore": 52,
+    "socialScore": 65,
+    "overallScore": 67
+  },
+  {
+    "cusip": "86563T104",
+    "governanceScore": 55,
+    "environmentalScore": 61,
+    "socialScore": 73,
+    "overallScore": 63
+  },
+  {
+    "cusip": "G7997W102",
+    "governanceScore": 77,
+    "environmentalScore": 49,
+    "socialScore": 77,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "446150104",
+    "governanceScore": 88,
+    "environmentalScore": 47,
+    "socialScore": 84,
+    "overallScore": 73
+  },
+  {
+    "cusip": "22002T108",
+    "governanceScore": 83,
+    "environmentalScore": 68,
+    "socialScore": 48,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "826197501",
+    "governanceScore": 80,
+    "environmentalScore": 82,
+    "socialScore": 60,
+    "overallScore": 74
+  },
+  {
+    "cusip": "G2891G204",
+    "governanceScore": 80,
+    "environmentalScore": 51,
+    "socialScore": 67,
+    "overallScore": 66
+  },
+  {
+    "cusip": "465717106",
+    "governanceScore": 57,
+    "environmentalScore": 61,
+    "socialScore": 75,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "46266C105",
+    "governanceScore": 85,
+    "environmentalScore": 69,
+    "socialScore": 89,
+    "overallScore": 81
+  },
+  {
+    "cusip": "202597605",
+    "governanceScore": 81,
+    "environmentalScore": 68,
+    "socialScore": 80,
+    "overallScore": 76.33333333333333
+  },
+  {
+    "cusip": "302130109",
+    "governanceScore": 77,
+    "environmentalScore": 72,
+    "socialScore": 69,
+    "overallScore": 72.66666666666667
+  },
+  {
+    "cusip": "390607109",
+    "governanceScore": 82,
+    "environmentalScore": 59,
+    "socialScore": 37,
+    "overallScore": 59.333333333333336
+  },
+  {
+    "cusip": "58502B106",
+    "governanceScore": 82,
+    "environmentalScore": 60,
+    "socialScore": 39,
+    "overallScore": 60.333333333333336
+  },
+  {
+    "cusip": "009126202",
+    "governanceScore": 91,
+    "environmentalScore": 65,
+    "socialScore": 37,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "397624206",
+    "governanceScore": 88,
+    "environmentalScore": 56,
+    "socialScore": 53,
+    "overallScore": 65.66666666666667
+  },
+  {
+    "cusip": "G54950103",
+    "governanceScore": 76,
+    "environmentalScore": 54,
+    "socialScore": 61,
+    "overallScore": 63.666666666666664
+  },
+  {
+    "cusip": "G9456A100",
+    "governanceScore": 79,
+    "environmentalScore": 52,
+    "socialScore": 72,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "31188H101",
+    "governanceScore": 52,
+    "environmentalScore": 80,
+    "socialScore": 72,
+    "overallScore": 68
+  },
+  {
+    "cusip": "44925C103",
+    "governanceScore": 89,
+    "environmentalScore": 86,
+    "socialScore": 64,
+    "overallScore": 79.66666666666667
+  },
+  {
+    "cusip": "872351408",
+    "governanceScore": 58,
+    "environmentalScore": 73,
+    "socialScore": 72,
+    "overallScore": 67.66666666666667
+  },
+  {
+    "cusip": "45471ATZ5",
+    "governanceScore": 64,
+    "environmentalScore": 67,
+    "socialScore": 68,
+    "overallScore": 66.33333333333333
+  },
+  {
+    "cusip": "833034101",
+    "governanceScore": 82,
+    "environmentalScore": 56,
+    "socialScore": 55,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "775781206",
+    "governanceScore": 89,
+    "environmentalScore": 59,
+    "socialScore": 73,
+    "overallScore": 73.66666666666667
+  },
+  {
+    "cusip": "216648501",
+    "governanceScore": 90,
+    "environmentalScore": 88,
+    "socialScore": 73,
+    "overallScore": 83.66666666666667
+  },
+  {
+    "cusip": "224441105",
+    "governanceScore": 67,
+    "environmentalScore": 41,
+    "socialScore": 34,
+    "overallScore": 47.333333333333336
+  },
+  {
+    "cusip": "146869102",
+    "governanceScore": 74,
+    "environmentalScore": 47,
+    "socialScore": 37,
+    "overallScore": 52.666666666666664
+  },
+  {
+    "cusip": "86800U302",
+    "governanceScore": 75,
+    "environmentalScore": 75,
+    "socialScore": 42,
+    "overallScore": 64
+  },
+  {
+    "cusip": "861896108",
+    "governanceScore": 84,
+    "environmentalScore": 51,
+    "socialScore": 10,
+    "overallScore": 48.333333333333336
+  },
+  {
+    "cusip": "54211N101",
+    "governanceScore": 86,
+    "environmentalScore": 63,
+    "socialScore": 48,
+    "overallScore": 65.66666666666667
+  },
+  {
+    "cusip": "393657101",
+    "governanceScore": 81,
+    "environmentalScore": 64,
+    "socialScore": 41,
+    "overallScore": 62
+  },
+  {
+    "cusip": "03168L105",
+    "governanceScore": 71,
+    "environmentalScore": 69,
+    "socialScore": 48,
+    "overallScore": 62.666666666666664
+  },
+  {
+    "cusip": "570535104",
+    "governanceScore": 76,
+    "environmentalScore": 69,
+    "socialScore": 8,
+    "overallScore": 51
+  },
+  {
+    "cusip": "12653C108",
+    "governanceScore": 84,
+    "environmentalScore": 57,
+    "socialScore": 65,
+    "overallScore": 68.66666666666667
+  },
+  {
+    "cusip": "53115L104",
+    "governanceScore": 80,
+    "environmentalScore": 38,
+    "socialScore": 47,
+    "overallScore": 55
+  },
+  {
+    "cusip": "225310101",
+    "governanceScore": 79,
+    "environmentalScore": 60,
+    "socialScore": 54,
+    "overallScore": 64.33333333333333
+  },
+  {
+    "cusip": "86562X106",
+    "governanceScore": 76,
+    "environmentalScore": 77,
+    "socialScore": 83,
+    "overallScore": 78.66666666666667
+  },
+  {
+    "cusip": "759509102",
+    "governanceScore": 77,
+    "environmentalScore": 56,
+    "socialScore": 24,
+    "overallScore": 52.333333333333336
+  },
+  {
+    "cusip": "883219206",
+    "governanceScore": 64,
+    "environmentalScore": 80,
+    "socialScore": 70,
+    "overallScore": 71.33333333333333
+  },
+  {
+    "cusip": "531229748",
+    "governanceScore": 68,
+    "environmentalScore": 48,
+    "socialScore": 73,
+    "overallScore": 63
+  },
+  {
+    "cusip": "46187W107",
+    "governanceScore": 67,
+    "environmentalScore": 83,
+    "socialScore": 33,
+    "overallScore": 61
+  }
+]

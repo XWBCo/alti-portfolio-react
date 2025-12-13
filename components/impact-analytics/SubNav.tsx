@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 const navItems = [
   { href: '/impact-analytics', label: 'Impact Dashboard', exact: true },
-  { href: '/impact-analytics/research', label: 'Prism (AI)' },
+  { href: '/impact-analytics/research', label: 'AI Research' },
   { href: '/impact-analytics/analyze', label: 'Analyze Portfolio' },
   { href: '/impact-analytics/compare', label: 'Compare Portfolios' },
 ];

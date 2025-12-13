@@ -93,7 +93,7 @@ export const ARCHETYPE_DETAILS: Record<ArchetypeId, ArchetypeDetail> = {
     id: 'inclusive_innovation',
     name: 'Inclusive Innovation',
     description: 'Social equity and inclusive economic growth',
-    color: '#D351DE',
+    color: '#0891B2',
     whyMatch: [
       'Strong focus on social equity and diversity',
       'Interest in financial inclusion themes',

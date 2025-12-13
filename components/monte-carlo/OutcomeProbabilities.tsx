@@ -71,7 +71,7 @@ export default function OutcomeProbabilities({
   };
 
   return (
-    <div className="h-full bg-white rounded border border-[#e6e6e6] p-6">
+    <div className="bg-white rounded border border-[#e6e6e6] p-6" style={{ minHeight: '420px' }}>
       <h3
         className="text-[#010203] mb-4"
         style={{
@@ -83,7 +83,7 @@ export default function OutcomeProbabilities({
         Outcome Probabilities
       </h3>
 
-      <ResponsiveContainer width="100%" height="75%">
+      <ResponsiveContainer width="100%" height={220}>
         <BarChart
           data={data}
           layout="vertical"

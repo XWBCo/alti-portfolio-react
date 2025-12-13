@@ -48,6 +48,14 @@ export default function LoadingPage() {
     router.push('/impact-analytics/analyze');
   }, [router]);
 
+  // Helper to extract pillar score
+  function getScore(esgData: { scores?: Array<{ id: string; treeLevel: string; score: number }> }, pillar: string): number | string {
+    const score = esgData.scores?.find(
+      (s) => s.treeLevel === 'PILLAR' && s.id === pillar
+    )?.score;
+    return score ?? '-';
+  }
+
   useEffect(() => {
     // Get pending analysis from sessionStorage
     const stored = sessionStorage.getItem('pendingAnalysis');
@@ -183,14 +191,6 @@ export default function LoadingPage() {
       eventSource.close();
     };
   }, [router, updateStageStatus, positionCount]);
-
-  // Helper to extract pillar score
-  function getScore(esgData: { scores?: Array<{ id: string; treeLevel: string; score: number }> }, pillar: string): number | string {
-    const score = esgData.scores?.find(
-      (s) => s.treeLevel === 'PILLAR' && s.id === pillar
-    )?.score;
-    return score ?? '-';
-  }
 
   return (
     <div className="min-h-screen bg-[#FAFAFA]">

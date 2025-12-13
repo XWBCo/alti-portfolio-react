@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import {
   RadarChart,
   PolarGrid,
@@ -16,16 +17,18 @@ interface ArchetypeRadarProps {
   scores: Record<ArchetypeId, ArchetypeScore>;
 }
 
-// AlTi brand colors for radar
-const RADAR_COLORS = {
-  fill: '#0B6D7B',
-  stroke: '#0A2240',
-  grid: '#E5E5E5',
-  axis: '#737373',
-  accent: '#00F0DB',
-};
-
 export default function ArchetypeRadar({ scores }: ArchetypeRadarProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  // Find top archetype to use its color
+  const topArchetypeEntry = (Object.entries(scores) as [ArchetypeId, ArchetypeScore][])
+    .find(([, data]) => data.rank === 1);
+  const topArchetypeId = topArchetypeEntry ? topArchetypeEntry[0] : 'impact_100';
+  const topArchetypeColor = ARCHETYPE_DETAILS[topArchetypeId].color;
+
   // Transform data for radar chart - use shorter names for better fit
   const shortNames: Record<ArchetypeId, string> = {
     impact_100: '100% Impact',
@@ -60,12 +63,16 @@ export default function ArchetypeRadar({ scores }: ArchetypeRadarProps) {
     return null;
   };
 
+  if (!isMounted) {
+    return <div className="h-[280px] min-w-[280px] flex items-center justify-center text-[#737373]">Loading chart...</div>;
+  }
+
   return (
-    <div className="h-[280px]">
+    <div className="h-[280px] min-w-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart data={radarData} margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
           <PolarGrid
-            stroke={RADAR_COLORS.grid}
+            stroke="#E5E5E5"
             strokeWidth={1}
             gridType="polygon"
           />
@@ -73,7 +80,7 @@ export default function ArchetypeRadar({ scores }: ArchetypeRadarProps) {
             dataKey="archetype"
             tick={{
               fontSize: 12,
-              fill: RADAR_COLORS.axis,
+              fill: '#737373',
               fontWeight: 500,
             }}
             tickLine={false}
@@ -91,19 +98,19 @@ export default function ArchetypeRadar({ scores }: ArchetypeRadarProps) {
           <Radar
             name="Match %"
             dataKey="percentage"
-            stroke={RADAR_COLORS.stroke}
-            fill={RADAR_COLORS.fill}
-            fillOpacity={0.25}
-            strokeWidth={2}
+            stroke={topArchetypeColor}
+            fill={topArchetypeColor}
+            fillOpacity={0.2}
+            strokeWidth={2.5}
             dot={{
               r: 4,
-              fill: RADAR_COLORS.stroke,
+              fill: topArchetypeColor,
               strokeWidth: 0,
             }}
             activeDot={{
               r: 6,
-              fill: RADAR_COLORS.accent,
-              stroke: RADAR_COLORS.stroke,
+              fill: '#FFFFFF',
+              stroke: topArchetypeColor,
               strokeWidth: 2,
             }}
           />

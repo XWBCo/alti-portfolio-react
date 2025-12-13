@@ -1,0 +1,63 @@
+{
+  "relationships": {
+    "5581": {
+      "id": "5581",
+      "name": "Burton Family Relationship",
+      "totalValue": 0,
+      "esgScore": null,
+      "environmentalScore": null,
+      "socialScore": null,
+      "governanceScore": null,
+      "coverage": 0,
+      "lastUpdated": "2025-12-11T03:09:56.822Z"
+    },
+    "5582": {
+      "id": "5582",
+      "name": "Benenson Family Relationship",
+      "totalValue": 10000,
+      "esgScore": null,
+      "environmentalScore": null,
+      "socialScore": null,
+      "governanceScore": null,
+      "coverage": 0,
+      "lastUpdated": "2025-12-11T03:09:59.903Z"
+    },
+    "6010": {
+      "id": "6010",
+      "name": "Tiedemann Family Relationship",
+      "totalValue": 101106.94,
+      "esgScore": null,
+      "environmentalScore": null,
+      "socialScore": null,
+      "governanceScore": null,
+      "coverage": 0,
+      "lastUpdated": "2025-12-11T03:09:58.935Z"
+    },
+    "6029": {
+      "id": "6029",
+      "name": "Foster Family Relationship",
+      "totalValue": 852998.29,
+      "esgScore": null,
+      "environmentalScore": null,
+      "socialScore": null,
+      "governanceScore": null,
+      "coverage": 0,
+      "lastUpdated": "2025-12-11T03:10:00.611Z"
+    },
+    "6035": {
+      "id": "6035",
+      "name": "Bob Taylor Family Relationship",
+      "totalValue": 976976.86,
+      "esgScore": null,
+      "environmentalScore": null,
+      "socialScore": null,
+      "governanceScore": null,
+      "coverage": 0,
+      "lastUpdated": "2025-12-11T03:09:56.274Z"
+    }
+  },
+  "entities": {},
+  "holdings": [],
+  "esgScores": [],
+  "lastUpdated": "2025-12-11T03:10:00.612Z"
+}

@@ -212,7 +212,7 @@ function ResearchPageContent() {
             exit={{ opacity: 0, y: -20 }}
             className="flex-1 flex flex-col items-center pt-[10vh] px-10"
           >
-            {/* Animated Prism Icon */}
+            {/* Animated AI Icon */}
             <motion.div
               animate={{
                 filter: [
@@ -227,7 +227,7 @@ function ResearchPageContent() {
               <IconPrism className="w-20 h-20 text-emerald-500" />
             </motion.div>
 
-            <h2 className="font-serif text-2xl text-gray-900 mb-2">Prism AI</h2>
+            <h2 className="font-serif text-2xl text-gray-900 mb-2">AI Research</h2>
             <p className="text-gray-500 mb-8 text-center">
               Your Impact investment research assistant
             </p>

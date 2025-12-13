@@ -37,7 +37,7 @@ export default function ImpactAnalyticsHub() {
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       <main className="max-w-5xl mx-auto px-8 py-12">
-        {/* Featured Card - Prism AI */}
+        {/* Featured Card - AI Research */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function ImpactAnalyticsHub() {
           className="mb-8"
         >
           <FeatureCard
-            name="Prism (AI)"
+            name="AI Research"
             description="Query ESG data, impact metrics, and sustainability research across platform holdings. Get instant answers on climate risk, portfolio alignment, and impact analysis."
             href="/impact-analytics/research"
             icon={IconPrism}

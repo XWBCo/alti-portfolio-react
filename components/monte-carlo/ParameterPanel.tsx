@@ -1,9 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, Settings } from 'lucide-react';
 import { PORTFOLIO_PRESETS } from '@/lib/mock-data';
-import type { SimulationParams } from '@/lib/types';
+import type { SimulationParams, SpendingEvent } from '@/lib/types';
+import SpendingImpactSummary from './SpendingImpactSummary';
+import CustomSpendingModal from './CustomSpendingModal';
+import { convertEventsToCustomSpending } from '@/lib/custom-spending';
 
 interface ParameterPanelProps {
   params: SimulationParams;
@@ -19,6 +22,9 @@ export default function ParameterPanel({
   isRunning,
 }: ParameterPanelProps) {
   const [advancedOpen, setAdvancedOpen] = useState(false);
+  const [customSpendingOpen, setCustomSpendingOpen] = useState(false);
+  const [spendingModalOpen, setSpendingModalOpen] = useState(false);
+  const [spendingEvents, setSpendingEvents] = useState<SpendingEvent[]>([]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -34,6 +40,16 @@ export default function ParameterPanel({
     value: SimulationParams[K]
   ) => {
     onParamsChange({ ...params, [key]: value });
+  };
+
+  const handleSpendingEventsChange = (events: SpendingEvent[]) => {
+    setSpendingEvents(events);
+
+    // Convert events to customSpending format for simulation
+    const totalQuarters = params.durationYears * 4;
+    const customSpending = convertEventsToCustomSpending(events, totalQuarters);
+
+    updateParam('customSpending', customSpending);
   };
 
   return (
@@ -261,6 +277,58 @@ export default function ParameterPanel({
           </div>
         </div>
       </div>
+
+      {/* Custom Spending */}
+      <div className="mb-6 pb-6 border-b border-[#e6e6e6]">
+        <button
+          onClick={() => setCustomSpendingOpen(!customSpendingOpen)}
+          className="flex items-center gap-2 text-[15px] font-medium text-[#010203] mb-4 w-full text-left hover:text-[#00B5AD] transition-colors"
+        >
+          {customSpendingOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+          Custom Spending
+          {spendingEvents.length > 0 && (
+            <span className="ml-auto px-2 py-1 text-[11px] bg-[#00f0db] text-[#010203] rounded font-medium">
+              {spendingEvents.length}
+            </span>
+          )}
+        </button>
+
+        {customSpendingOpen && (
+          <div className="space-y-3">
+            {spendingEvents.length > 0 && (
+              <SpendingImpactSummary
+                events={spendingEvents}
+                durationYears={params.durationYears}
+                initialValue={params.initialValue}
+              />
+            )}
+
+            <button
+              onClick={() => setSpendingModalOpen(true)}
+              className="w-full flex items-center justify-center gap-2 py-3 border-2 border-dashed border-[#00f0db] text-[#00B5AD] rounded hover:bg-[#00f0db]/10 transition-colors font-medium text-[13px]"
+            >
+              <Settings size={16} />
+              {spendingEvents.length === 0 ? 'Add Spending Events' : 'Manage Events'}
+            </button>
+
+            {spendingEvents.length === 0 && (
+              <p className="text-[11px] text-[#757575] text-center italic">
+                Add custom withdrawals beyond regular spending
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Custom Spending Modal */}
+      <CustomSpendingModal
+        isOpen={spendingModalOpen}
+        onClose={() => setSpendingModalOpen(false)}
+        events={spendingEvents}
+        durationYears={params.durationYears}
+        initialValue={params.initialValue}
+        onEventsChange={handleSpendingEventsChange}
+      />
 
       {/* Advanced: Regime Changes */}
       <div className="mb-6 pb-6 border-b border-[#e6e6e6]">

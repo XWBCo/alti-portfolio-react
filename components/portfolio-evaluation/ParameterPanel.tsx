@@ -1,18 +1,24 @@
 'use client';
 
-import { useCallback, useRef, useState, useEffect } from 'react';
-import { Upload, Play, FileSpreadsheet, Database, ChevronDown, Loader2 } from 'lucide-react';
-import Papa from 'papaparse';
+import { useCallback, useState } from 'react';
+import { Play, FileSpreadsheet, Database, ChevronDown, Loader2, Settings2, RefreshCw } from 'lucide-react';
 import { OptimizationParams, PortfolioHoldings } from '@/lib/portfolio-types';
+import { ExtendedOptimizationParams } from '@/lib/optimization';
 import { usePortfolioNames, usePortfolio, useSecurityMetadata } from '@/lib/hooks/usePortfolioData';
 import { mapPortfolioToAllocations } from '@/lib/portfolio-mapper';
+import { getAssetsByMode } from '@/lib/cma-data';
+import FileUpload from './FileUpload';
+import CustomAssetSelector from './CustomAssetSelector';
 
 interface ParameterPanelProps {
-  params: OptimizationParams;
-  onParamsChange: (params: OptimizationParams) => void;
+  params: ExtendedOptimizationParams;
+  onParamsChange: (params: ExtendedOptimizationParams) => void;
   onRunOptimization: () => void;
+  onResample?: () => void;
   onPortfoliosLoaded: (portfolios: PortfolioHoldings[]) => void;
   isRunning: boolean;
+  isResampling?: boolean;
+  hasFrontier?: boolean;
   uploadedPortfolios: PortfolioHoldings[];
 }
 
@@ -20,12 +26,13 @@ export default function ParameterPanel({
   params,
   onParamsChange,
   onRunOptimization,
+  onResample,
   onPortfoliosLoaded,
   isRunning,
+  isResampling = false,
+  hasFrontier = false,
   uploadedPortfolios,
 }: ParameterPanelProps) {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
   // Portfolio universe data
   const { names: portfolioNames, loading: loadingNames } = usePortfolioNames();
   const { metadata } = useSecurityMetadata();
@@ -49,122 +56,10 @@ export default function ParameterPanel({
     setSelectedPortfolioName(''); // Reset selection after adding
   }, [selectedPortfolio, metadata, uploadedPortfolios, onPortfoliosLoaded]);
 
-  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    Papa.parse(file, {
-      complete: (results) => {
-        try {
-          const data = results.data as string[][];
-          if (data.length < 2) {
-            alert('CSV must have at least a header row and one data row');
-            return;
-          }
-
-          // Parse header to find portfolio columns
-          const header = data[0];
-          const assetClassCol = header.findIndex(h =>
-            h?.toUpperCase().includes('ASSET') || h?.toUpperCase().includes('CLASS')
-          );
-
-          if (assetClassCol === -1) {
-            alert('Could not find ASSET CLASS column in CSV');
-            return;
-          }
-
-          // Find portfolio columns (numeric columns after asset class)
-          const portfolioIndices: number[] = [];
-          const portfolioNames: string[] = [];
-          for (let i = 0; i < header.length; i++) {
-            if (i !== assetClassCol && header[i] && !header[i].toUpperCase().includes('RISK') && !header[i].toUpperCase().includes('ALLOCATION')) {
-              // Check if first data row has a number in this column
-              const firstValue = parseFloat(data[1]?.[i]);
-              if (!isNaN(firstValue)) {
-                portfolioIndices.push(i);
-                portfolioNames.push(header[i] || `Portfolio ${portfolioIndices.length}`);
-              }
-            }
-          }
-
-          if (portfolioIndices.length === 0) {
-            alert('Could not find portfolio allocation columns in CSV');
-            return;
-          }
-
-          // Build portfolio objects
-          const portfolios: PortfolioHoldings[] = portfolioNames.map((name, idx) => ({
-            name,
-            allocations: {},
-          }));
-
-          // Parse data rows
-          for (let row = 1; row < data.length; row++) {
-            const rowData = data[row];
-            if (!rowData || !rowData[assetClassCol]) continue;
-
-            const assetClass = rowData[assetClassCol].trim().toUpperCase();
-
-            portfolioIndices.forEach((colIdx, portIdx) => {
-              const value = parseFloat(rowData[colIdx] || '0');
-              if (!isNaN(value)) {
-                portfolios[portIdx].allocations[assetClass] = value;
-              }
-            });
-          }
-
-          // Normalize allocations if they don't sum to ~1
-          portfolios.forEach(portfolio => {
-            const sum = Object.values(portfolio.allocations).reduce((a, b) => a + b, 0);
-            if (sum > 1.5) {
-              // Assume percentages, convert to decimals
-              Object.keys(portfolio.allocations).forEach(key => {
-                portfolio.allocations[key] /= 100;
-              });
-            } else if (sum < 0.5 && sum > 0) {
-              // Very low sum, might be wrong but leave as-is
-            }
-          });
-
-          onPortfoliosLoaded(portfolios);
-        } catch (error) {
-          console.error('Error parsing CSV:', error);
-          alert('Error parsing CSV file. Please check the format.');
-        }
-      },
-      error: (error) => {
-        console.error('Papa Parse error:', error);
-        alert('Error reading CSV file');
-      },
-    });
-
-    // Reset input
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
-  }, [onPortfoliosLoaded]);
-
-  const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files?.[0];
-    if (file && file.name.endsWith('.csv')) {
-      const dataTransfer = new DataTransfer();
-      dataTransfer.items.add(file);
-      if (fileInputRef.current) {
-        fileInputRef.current.files = dataTransfer.files;
-        const changeEvent = new Event('change', { bubbles: true });
-        fileInputRef.current.dispatchEvent(changeEvent);
-      }
-    }
-  }, []);
-
-  const handleDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  }, []);
 
   return (
     <div
-      className="w-[320px] bg-white border-r border-gray-200 p-5 overflow-y-auto"
+      className="w-[360px] min-w-[360px] bg-white border-r border-gray-200 p-5 overflow-y-auto"
       style={{ height: 'calc(100vh - 122px)' }}
     >
       <h2 className="text-lg font-semibold text-gray-800 mb-4" style={{ fontFamily: 'Georgia, serif' }}>
@@ -228,15 +123,231 @@ export default function ParameterPanel({
         </div>
       </div>
 
+      {/* Custom Asset Selection */}
+      <div className="mb-5">
+        <CustomAssetSelector
+          assets={getAssetsByMode(params.mode)}
+          selectedAssets={params.customAssets || []}
+          onSelectionChange={(assets) => onParamsChange({ ...params, customAssets: assets })}
+          enabled={!!params.customAssets && params.customAssets.length > 0}
+          onEnabledChange={(enabled) => {
+            if (enabled) {
+              // Enable with all assets selected by default
+              onParamsChange({
+                ...params,
+                customAssets: getAssetsByMode(params.mode).map((a) => a.name),
+              });
+            } else {
+              // Disable by clearing custom assets
+              onParamsChange({ ...params, customAssets: undefined });
+            }
+          }}
+        />
+      </div>
+
+      {/* Bucket Constraints */}
+      <div className="mb-5">
+        <div className="border border-[#e6e6e6] rounded-lg bg-white">
+          <div className="p-3 border-b border-[#e6e6e6] bg-[#f8f9fa]">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={params.enableBucketConstraints || false}
+                onChange={(e) =>
+                  onParamsChange({
+                    ...params,
+                    enableBucketConstraints: e.target.checked,
+                    bucketConstraints: e.target.checked
+                      ? {
+                          stability: { min: 0, max: 1 },
+                          diversified: { min: 0, max: 1 },
+                          growth: { min: 0, max: 1 },
+                        }
+                      : undefined,
+                  })
+                }
+                className="w-4 h-4 rounded border-gray-300 text-[#00f0db] focus:ring-[#00f0db]"
+              />
+              <span className="text-[14px] font-medium text-[#010203] flex items-center gap-1">
+                <Settings2 size={14} />
+                Bucket Constraints
+              </span>
+            </label>
+          </div>
+
+          {params.enableBucketConstraints && (
+            <div className="p-3 space-y-3">
+              <p className="text-[11px] text-[#757575] mb-2">
+                Set min/max allocation limits for each risk bucket
+              </p>
+
+              {/* Stability */}
+              <div className="flex items-center gap-2">
+                <span className="text-[12px] text-[#010203] w-20">Stability</span>
+                <input
+                  type="number"
+                  min={0}
+                  max={100}
+                  value={(params.bucketConstraints?.stability?.min ?? 0) * 100}
+                  onChange={(e) =>
+                    onParamsChange({
+                      ...params,
+                      bucketConstraints: {
+                        ...params.bucketConstraints,
+                        stability: {
+                          ...params.bucketConstraints?.stability,
+                          min: parseFloat(e.target.value) / 100 || 0,
+                          max: params.bucketConstraints?.stability?.max ?? 1,
+                        },
+                      },
+                    })
+                  }
+                  className="w-16 px-2 py-1 border border-[#e6e6e6] rounded text-[12px] text-center"
+                />
+                <span className="text-[11px] text-[#757575]">% to</span>
+                <input
+                  type="number"
+                  min={0}
+                  max={100}
+                  value={(params.bucketConstraints?.stability?.max ?? 100) * 100}
+                  onChange={(e) =>
+                    onParamsChange({
+                      ...params,
+                      bucketConstraints: {
+                        ...params.bucketConstraints,
+                        stability: {
+                          ...params.bucketConstraints?.stability,
+                          min: params.bucketConstraints?.stability?.min ?? 0,
+                          max: parseFloat(e.target.value) / 100 || 1,
+                        },
+                      },
+                    })
+                  }
+                  className="w-16 px-2 py-1 border border-[#e6e6e6] rounded text-[12px] text-center"
+                />
+                <span className="text-[11px] text-[#757575]">%</span>
+              </div>
+
+              {/* Diversified */}
+              <div className="flex items-center gap-2">
+                <span className="text-[12px] text-[#010203] w-20">Diversified</span>
+                <input
+                  type="number"
+                  min={0}
+                  max={100}
+                  value={(params.bucketConstraints?.diversified?.min ?? 0) * 100}
+                  onChange={(e) =>
+                    onParamsChange({
+                      ...params,
+                      bucketConstraints: {
+                        ...params.bucketConstraints,
+                        diversified: {
+                          ...params.bucketConstraints?.diversified,
+                          min: parseFloat(e.target.value) / 100 || 0,
+                          max: params.bucketConstraints?.diversified?.max ?? 1,
+                        },
+                      },
+                    })
+                  }
+                  className="w-16 px-2 py-1 border border-[#e6e6e6] rounded text-[12px] text-center"
+                />
+                <span className="text-[11px] text-[#757575]">% to</span>
+                <input
+                  type="number"
+                  min={0}
+                  max={100}
+                  value={(params.bucketConstraints?.diversified?.max ?? 100) * 100}
+                  onChange={(e) =>
+                    onParamsChange({
+                      ...params,
+                      bucketConstraints: {
+                        ...params.bucketConstraints,
+                        diversified: {
+                          ...params.bucketConstraints?.diversified,
+                          min: params.bucketConstraints?.diversified?.min ?? 0,
+                          max: parseFloat(e.target.value) / 100 || 1,
+                        },
+                      },
+                    })
+                  }
+                  className="w-16 px-2 py-1 border border-[#e6e6e6] rounded text-[12px] text-center"
+                />
+                <span className="text-[11px] text-[#757575]">%</span>
+              </div>
+
+              {/* Growth */}
+              <div className="flex items-center gap-2">
+                <span className="text-[12px] text-[#010203] w-20">Growth</span>
+                <input
+                  type="number"
+                  min={0}
+                  max={100}
+                  value={(params.bucketConstraints?.growth?.min ?? 0) * 100}
+                  onChange={(e) =>
+                    onParamsChange({
+                      ...params,
+                      bucketConstraints: {
+                        ...params.bucketConstraints,
+                        growth: {
+                          ...params.bucketConstraints?.growth,
+                          min: parseFloat(e.target.value) / 100 || 0,
+                          max: params.bucketConstraints?.growth?.max ?? 1,
+                        },
+                      },
+                    })
+                  }
+                  className="w-16 px-2 py-1 border border-[#e6e6e6] rounded text-[12px] text-center"
+                />
+                <span className="text-[11px] text-[#757575]">% to</span>
+                <input
+                  type="number"
+                  min={0}
+                  max={100}
+                  value={(params.bucketConstraints?.growth?.max ?? 100) * 100}
+                  onChange={(e) =>
+                    onParamsChange({
+                      ...params,
+                      bucketConstraints: {
+                        ...params.bucketConstraints,
+                        growth: {
+                          ...params.bucketConstraints?.growth,
+                          min: params.bucketConstraints?.growth?.min ?? 0,
+                          max: parseFloat(e.target.value) / 100 || 1,
+                        },
+                      },
+                    })
+                  }
+                  className="w-16 px-2 py-1 border border-[#e6e6e6] rounded text-[12px] text-center"
+                />
+                <span className="text-[11px] text-[#757575]">%</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Run Button */}
       <button
         onClick={onRunOptimization}
         disabled={isRunning}
-        className="w-full py-3 px-4 bg-[#00f0db] text-[#010203] font-semibold rounded-lg hover:bg-[#00d4c1] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mb-6"
+        className="w-full py-3 px-4 bg-[#00f0db] text-[#010203] font-semibold rounded-lg hover:bg-[#00d4c1] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mb-3"
       >
         <Play size={18} />
         {isRunning ? 'Optimizing...' : 'Run Optimization'}
       </button>
+
+      {/* Resample Button */}
+      {onResample && (
+        <button
+          onClick={onResample}
+          disabled={isResampling || !hasFrontier}
+          className="w-full py-2.5 px-4 bg-[#621368] text-white text-sm font-medium rounded-lg hover:bg-[#4e0f53] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mb-6"
+          title={!hasFrontier ? 'Run optimization first to generate frontier' : 'Generate resampled portfolios'}
+        >
+          <RefreshCw size={16} className={isResampling ? 'animate-spin' : ''} />
+          {isResampling ? 'Resampling...' : 'Resample Portfolios'}
+        </button>
+      )}
 
       {/* Divider */}
       <div className="border-t border-gray-200 pt-5 mb-4">
@@ -324,29 +435,16 @@ export default function ParameterPanel({
         <div className="flex-1 border-t border-gray-200" />
       </div>
 
-      {/* CSV Upload Header */}
+      {/* File Upload Header */}
       <div className="mb-3">
-        <h3 className="text-sm font-semibold text-gray-700">Upload Custom CSV</h3>
+        <h3 className="text-sm font-semibold text-gray-700">Upload Custom Portfolio</h3>
       </div>
 
-      {/* CSV Upload */}
-      <div
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
-        onClick={() => fileInputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:border-[#00f0db] hover:bg-[#00f0db]/5 transition-colors"
-      >
-        <Upload className="mx-auto mb-2 text-gray-400" size={24} />
-        <p className="text-sm text-gray-600">Drop CSV or click to upload</p>
-        <p className="text-xs text-gray-400 mt-1">Format: ASSET CLASS, Portfolio1, Portfolio2...</p>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept=".csv"
-          onChange={handleFileUpload}
-          className="hidden"
-        />
-      </div>
+      {/* File Upload Component */}
+      <FileUpload
+        onPortfoliosLoaded={onPortfoliosLoaded}
+        existingPortfolios={uploadedPortfolios}
+      />
 
       {/* Uploaded Portfolios List */}
       {uploadedPortfolios.length > 0 && (

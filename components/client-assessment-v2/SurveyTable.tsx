@@ -8,14 +8,6 @@ interface SurveyTableProps {
   questions: SurveyQuestion[];
 }
 
-// Category colors for visual distinction
-const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Background: { bg: '#F5F5F5', text: '#525252', border: '#E5E5E5' },
-  'Risk & Suitability': { bg: '#EFF6FF', text: '#1D4ED8', border: '#BFDBFE' },
-  'Impact Preferences': { bg: '#ECFDF5', text: '#047857', border: '#A7F3D0' },
-  'Final Feedback': { bg: '#FEF3C7', text: '#B45309', border: '#FCD34D' },
-};
-
 function formatResponse(question: SurveyQuestion): React.ReactNode {
   if (question.responseType === 'text') {
     return <span>{question.response as string}</span>;
@@ -98,7 +90,7 @@ export default function SurveyTable({ questions }: SurveyTableProps) {
       {/* Responses Grid */}
       <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
         {selectedCategory === 'All' ? (
-          // Grouped view
+          // Grouped view - category shown as header, not on each row
           Object.entries(questionsByCategory).map(([category, qs]) => (
             <div key={category} className="space-y-3">
               <h4
@@ -119,17 +111,11 @@ export default function SurveyTable({ questions }: SurveyTableProps) {
         )}
       </div>
 
-      {/* Footer */}
-      <div className="mt-4 pt-3 border-t border-[#E5E5E5] text-[12px] text-[#737373]">
-        Showing {filteredQuestions.length} of {questions.length} responses
-      </div>
     </div>
   );
 }
 
 function QuestionRow({ question }: { question: SurveyQuestion }) {
-  const categoryStyle = CATEGORY_COLORS[question.category] || CATEGORY_COLORS.Background;
-
   return (
     <div className="p-4 rounded-lg border border-[#E5E5E5] hover:border-[#C3E6E3] transition-colors">
       <div className="flex items-start gap-4">
@@ -137,17 +123,6 @@ function QuestionRow({ question }: { question: SurveyQuestion }) {
           <span className="text-[12px] font-mono text-[#737373]">Q{question.qNumber}</span>
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-2">
-            <span
-              className="px-2 py-0.5 text-[11px] rounded"
-              style={{
-                backgroundColor: categoryStyle.bg,
-                color: categoryStyle.text,
-              }}
-            >
-              {question.category}
-            </span>
-          </div>
           <p className="text-[14px] text-[#0A2240] mb-3">{question.question}</p>
           <div className="text-[14px] text-[#525252]">
             {formatResponse(question)}

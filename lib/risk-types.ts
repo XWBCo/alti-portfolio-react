@@ -156,32 +156,112 @@ export interface RiskAnalysisState {
 }
 
 // Sample portfolios for demo
+// Sample portfolios using real asset names from CMA data
 export const SAMPLE_RISK_PORTFOLIOS: { name: string; weights: PortfolioWeights }[] = [
   {
-    name: 'Balanced',
+    name: 'Balanced 60/40',
     weights: {
-      'Asset_1': 0.15, 'Asset_2': 0.15, 'Asset_3': 0.10,
-      'Asset_4': 0.10, 'Asset_5': 0.10, 'Asset_6': 0.08,
-      'Asset_7': 0.08, 'Asset_8': 0.08, 'Asset_9': 0.08, 'Asset_10': 0.08,
+      'Global': 0.30,           // Global equity
+      'US': 0.15,               // US equity
+      'EM': 0.10,               // Emerging markets equity
+      'Pan Europe': 0.05,       // European equity
+      'Global Aggregate': 0.20, // Global bonds
+      'High Yield': 0.10,       // High yield bonds
+      'Global Cash': 0.05,      // Cash
+      'Gold': 0.05,             // Gold
     }
   },
   {
-    name: 'Concentrated',
+    name: 'Conservative Income',
     weights: {
-      'Asset_1': 0.30, 'Asset_2': 0.25, 'Asset_3': 0.20,
-      'Asset_4': 0.15, 'Asset_5': 0.10,
+      'Global Aggregate': 0.30,
+      'US Aggregate': 0.20,
+      'IG Corporate': 0.15,
+      'High Yield': 0.10,
+      'Global Government': 0.10,
+      'Global Cash': 0.10,
+      'Gold': 0.05,
     }
   },
   {
-    name: 'Equal Weight',
-    weights: Object.fromEntries(
-      Array.from({ length: 20 }, (_, i) => [`Asset_${i + 1}`, 0.05])
-    )
+    name: 'Growth Equity',
+    weights: {
+      'Global': 0.35,
+      'US': 0.25,
+      'EM': 0.15,
+      'Japan': 0.10,
+      'Pan Europe': 0.10,
+      'Global Cash': 0.05,
+    }
+  },
+  {
+    name: 'All Weather',
+    weights: {
+      'Global': 0.30,
+      'Global Aggregate': 0.20,
+      'US Government': 0.15,
+      'Gold': 0.10,
+      'General Commodities': 0.10,
+      'Global REITs': 0.10,
+      'Global Cash': 0.05,
+    }
+  },
+  {
+    name: 'High Yield Focus',
+    weights: {
+      'High Yield': 0.30,
+      'EM Debt': 0.20,
+      'Loans': 0.15,
+      'IG Corporate': 0.15,
+      'Global': 0.10,
+      'Global Cash': 0.10,
+    }
+  },
+  {
+    name: 'US Focused',
+    weights: {
+      'US': 0.40,
+      'US SMID': 0.15,
+      'US Aggregate': 0.20,
+      'US Government': 0.10,
+      'US REITs': 0.10,
+      'US Cash': 0.05,
+    }
+  },
+  {
+    name: 'Global Diversified',
+    weights: {
+      'Global': 0.20,
+      'US': 0.15,
+      'EM': 0.10,
+      'Pan Europe': 0.05,
+      'Japan': 0.05,
+      'Global Aggregate': 0.15,
+      'High Yield': 0.10,
+      'Gold': 0.05,
+      'Global REITs': 0.10,
+      'Global Cash': 0.05,
+    }
+  },
+  {
+    name: 'Minimum Volatility',
+    weights: {
+      'Global Cash': 0.20,
+      'US Cash': 0.10,
+      'Global Government': 0.25,
+      'US Government': 0.15,
+      'Global Aggregate': 0.20,
+      'Gold': 0.10,
+    }
   },
 ];
 
 export const SAMPLE_BENCHMARK: PortfolioWeights = {
-  'Asset_1': 0.10, 'Asset_2': 0.10, 'Asset_3': 0.10,
-  'Asset_4': 0.10, 'Asset_5': 0.10, 'Asset_6': 0.10,
-  'Asset_7': 0.10, 'Asset_8': 0.10, 'Asset_9': 0.10, 'Asset_10': 0.10,
+  'Global': 0.40,
+  'Global Aggregate': 0.30,
+  'US': 0.10,
+  'EM': 0.05,
+  'High Yield': 0.05,
+  'Gold': 0.05,
+  'Global Cash': 0.05,
 };

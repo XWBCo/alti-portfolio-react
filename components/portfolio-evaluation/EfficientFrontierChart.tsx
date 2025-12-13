@@ -15,9 +15,15 @@ import {
 import { FrontierPoint, PortfolioWithMetrics } from '@/lib/portfolio-types';
 import { formatPercent } from '@/lib/optimization';
 
+interface ResampledPoint {
+  risk: number;
+  return: number;
+}
+
 interface EfficientFrontierChartProps {
   frontier: FrontierPoint[];
   portfolios: PortfolioWithMetrics[];
+  resampledPortfolios?: ResampledPoint[];
 }
 
 const CHART_COLORS = {
@@ -91,6 +97,7 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Toolti
 export default function EfficientFrontierChart({
   frontier,
   portfolios,
+  resampledPortfolios = [],
 }: EfficientFrontierChartProps) {
   // Prepare frontier data
   const frontierData = frontier.map(point => ({
@@ -108,9 +115,23 @@ export default function EfficientFrontierChart({
     color: PORTFOLIO_COLORS[i % PORTFOLIO_COLORS.length],
   }));
 
+  // Prepare resampled data
+  const resampledData = resampledPortfolios.map(p => ({
+    risk: p.risk,
+    return: p.return,
+  }));
+
   // Calculate axis domains
-  const allRisks = [...frontierData.map(d => d.risk), ...portfolioData.map(d => d.risk)];
-  const allReturns = [...frontierData.map(d => d.return), ...portfolioData.map(d => d.return)];
+  const allRisks = [
+    ...frontierData.map(d => d.risk),
+    ...portfolioData.map(d => d.risk),
+    ...resampledData.map(d => d.risk),
+  ];
+  const allReturns = [
+    ...frontierData.map(d => d.return),
+    ...portfolioData.map(d => d.return),
+    ...resampledData.map(d => d.return),
+  ];
 
   const minRisk = Math.max(0, Math.min(...allRisks) - 0.01);
   const maxRisk = Math.max(...allRisks) + 0.01;
@@ -127,14 +148,14 @@ export default function EfficientFrontierChart({
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <ComposedChart margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+      <ComposedChart margin={{ top: 20, right: 30, left: 20, bottom: 40 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
         <XAxis
           type="number"
           dataKey="risk"
           domain={[minRisk, maxRisk]}
           tickFormatter={(v) => formatPercent(v)}
-          label={{ value: 'Risk (Std Dev)', position: 'bottom', offset: 0 }}
+          label={{ value: 'Risk (Std Dev)', position: 'insideBottom', offset: -5 }}
           tick={{ fontSize: 11 }}
         />
         <YAxis
@@ -146,7 +167,22 @@ export default function EfficientFrontierChart({
           tick={{ fontSize: 11 }}
         />
         <Tooltip content={<CustomTooltip />} />
-        <Legend />
+        <Legend
+          verticalAlign="bottom"
+          wrapperStyle={{ paddingTop: 10, fontSize: 11 }}
+        />
+
+        {/* Resampled Portfolios (render first so they appear behind) */}
+        {resampledData.length > 0 && (
+          <Scatter
+            name="Resampled"
+            data={resampledData}
+            fill="#D351DE"
+            fillOpacity={0.3}
+            shape="circle"
+            legendType="circle"
+          />
+        )}
 
         {/* Efficient Frontier Line */}
         {frontierData.length > 0 && (
@@ -163,7 +199,7 @@ export default function EfficientFrontierChart({
         )}
 
         {/* Portfolio Points */}
-        {portfolioData.map((portfolio, idx) => (
+        {portfolioData.map((portfolio) => (
           <Scatter
             key={portfolio.name}
             name={portfolio.name}

@@ -37,6 +37,7 @@ export default function Header({ user }: HeaderProps) {
     if (pathname === '/risk-contribution') return 'Risk Contribution Model';
     if (pathname === '/capital-market-assumptions') return 'Capital Market Assumptions';
     if (pathname === '/client-assessment') return 'Client Assessment';
+    if (pathname === '/client-assessment-v2') return 'Client Assessment';
     if (isImpactAnalytics) return 'Impact';
     if (pathname === '/analytics') return 'Analytics';
     return '';

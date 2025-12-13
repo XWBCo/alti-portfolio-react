@@ -12,8 +12,11 @@ import { MOCK_CLIENTS, getTopArchetype } from '@/lib/client-assessment-mock-data
 import { ARCHETYPE_DETAILS } from '@/lib/client-assessment-types';
 import type { ArchetypeId, ArchetypeScore } from '@/lib/client-assessment-types';
 
+// Filter to only impact clients for this legacy view
+const IMPACT_CLIENTS = MOCK_CLIENTS.filter((c) => c.isImpactClient && c.archetypeScores);
+
 export default function ClientAssessmentPage() {
-  const [selectedClientId, setSelectedClientId] = useState(MOCK_CLIENTS[0].id);
+  const [selectedClientId, setSelectedClientId] = useState(IMPACT_CLIENTS[0].id);
   const [isExporting, setIsExporting] = useState(false);
 
   const handleExportIPS = useCallback(async () => {
@@ -53,16 +56,16 @@ export default function ClientAssessmentPage() {
   }, [selectedClientId]);
 
   const selectedClient = useMemo(
-    () => MOCK_CLIENTS.find((c) => c.id === selectedClientId) || MOCK_CLIENTS[0],
+    () => IMPACT_CLIENTS.find((c) => c.id === selectedClientId) || IMPACT_CLIENTS[0],
     [selectedClientId]
   );
 
-  const topArchetype = getTopArchetype(selectedClient.archetypeScores);
+  const topArchetype = getTopArchetype(selectedClient.archetypeScores)!;
 
   // Sort archetypes by rank for display
   const sortedArchetypes = useMemo(() => {
     return (
-      Object.entries(selectedClient.archetypeScores) as [ArchetypeId, ArchetypeScore][]
+      Object.entries(selectedClient.archetypeScores!) as [ArchetypeId, ArchetypeScore][]
     ).sort((a, b) => a[1].rank - b[1].rank);
   }, [selectedClient.archetypeScores]);
 
@@ -90,7 +93,7 @@ export default function ClientAssessmentPage() {
               onChange={(e) => setSelectedClientId(e.target.value)}
               className="w-full p-2 border border-[#ccc] rounded bg-white text-[14px] text-[#4A4A4A]"
             >
-              {MOCK_CLIENTS.map((client) => (
+              {IMPACT_CLIENTS.map((client) => (
                 <option key={client.id} value={client.id}>
                   {client.clientInfo.client} ({client.clientInfo.family})
                 </option>
@@ -149,13 +152,13 @@ export default function ClientAssessmentPage() {
               )}
             </button>
 
-            {/* Research in Prism CTA */}
+            {/* Research with AI CTA */}
             <Link
               href={`/impact-analytics/research?archetype=${topArchetype}&region=US&source=assessment`}
               className="w-full p-3 border border-emerald-400 rounded text-[14px] transition-colors flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:border-emerald-500"
             >
               <Sparkles className="w-4 h-4" />
-              Research in Prism AI
+              Research with AI
             </Link>
           </div>
         </motion.div>
@@ -192,7 +195,7 @@ export default function ClientAssessmentPage() {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <ArchetypeRadar
-                scores={selectedClient.archetypeScores}
+                scores={selectedClient.archetypeScores!}
                 topArchetype={topArchetype}
               />
             </motion.div>

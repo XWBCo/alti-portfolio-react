@@ -2,7 +2,14 @@
  * Mock data and presets for the portfolio app
  */
 
-import type { PortfolioPreset, SimulationParams } from './types';
+import type {
+  PortfolioPreset,
+  SimulationParams,
+  GlobalSimulationParams,
+  SimulationSlotParams,
+  ChartSizingParams,
+  MultiSlotSimulationState,
+} from './types';
 
 // Portfolio presets
 export const PORTFOLIO_PRESETS: PortfolioPreset[] = [
@@ -106,3 +113,73 @@ export const PRESET_SCENARIOS = [
     },
   },
 ];
+
+// Multi-slot simulation defaults (matching legacy app_mcs.py)
+const currentYear = new Date().getFullYear();
+
+export const DEFAULT_GLOBAL_PARAMS: GlobalSimulationParams = {
+  initialValue: 10_000_000,
+  numSimulations: 1000,
+  inflationRate: 0.025,      // 2.5%
+  afterTaxRate: 0.03,        // 3%
+  currency: 'USD',           // Display currency
+};
+
+export const DEFAULT_SLOT_1: SimulationSlotParams = {
+  name: 'Simulation 1',
+  durationQuarters: 160,     // 40 years
+  returnInitial: 0.07,       // 7%
+  returnUpdate1: 0.06,       // 6%
+  returnUpdate2: 0.05,       // 5%
+  volInitial: 0.12,          // 12%
+  volUpdate1: 0.10,          // 10%
+  volUpdate2: 0.08,          // 8%
+  update1Year: currentYear + 10,
+  update2Year: currentYear + 20,
+};
+
+export const DEFAULT_SLOT_2: SimulationSlotParams = {
+  name: 'Simulation 2',
+  durationQuarters: 160,     // 40 years
+  returnInitial: 0.08,       // 8%
+  returnUpdate1: 0.07,       // 7%
+  returnUpdate2: 0.06,       // 6%
+  volInitial: 0.15,          // 15%
+  volUpdate1: 0.13,          // 13%
+  volUpdate2: 0.11,          // 11%
+  update1Year: currentYear + 10,
+  update2Year: currentYear + 20,
+};
+
+export const DEFAULT_SLOT_3: SimulationSlotParams = {
+  name: 'Simulation 3',
+  durationQuarters: 160,     // 40 years
+  returnInitial: 0.05,       // 5%
+  returnUpdate1: 0.04,       // 4%
+  returnUpdate2: 0.04,       // 4%
+  volInitial: 0.08,          // 8%
+  volUpdate1: 0.07,          // 7%
+  volUpdate2: 0.06,          // 6%
+  update1Year: currentYear + 10,
+  update2Year: currentYear + 20,
+};
+
+export const DEFAULT_CHART_SIZING: ChartSizingParams = {
+  lineChartWidth: 1200,
+  lineChartHeight: 600,
+  barChartHeight: 400,
+  probChartHeight: 400,
+};
+
+export const DEFAULT_MULTI_SLOT_STATE: MultiSlotSimulationState = {
+  globalParams: DEFAULT_GLOBAL_PARAMS,
+  slot1: DEFAULT_SLOT_1,
+  slot2: DEFAULT_SLOT_2,
+  slot3: DEFAULT_SLOT_3,
+  chartSizing: DEFAULT_CHART_SIZING,
+  results: {
+    slot1: null,
+    slot2: null,
+    slot3: null,
+  },
+};

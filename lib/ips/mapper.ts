@@ -100,11 +100,12 @@ function getESGInterest(questions: SurveyQuestion[]): 'significant' | 'moderate'
  * Get top archetype by rank
  */
 function getTopArchetype(
-  scores: Record<ArchetypeId, { score: number; percentage: number; rank: number }>
+  scores?: Record<ArchetypeId, { score: number; percentage: number; rank: number }>
 ): ArchetypeId {
+  if (!scores) return 'integrated_best_ideas';
   const entries = Object.entries(scores) as [ArchetypeId, { rank: number }][];
   const top = entries.find(([, data]) => data.rank === 1);
-  return top ? top[0] : 'impact_100';
+  return top ? top[0] : 'integrated_best_ideas';
 }
 
 /**

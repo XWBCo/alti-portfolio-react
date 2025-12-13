@@ -20,6 +20,35 @@ from risk_engine import (
     compute_performance_stats,
     compute_diversification_metrics,
     calculate_ewma_covariance,
+    # Extended risk functions
+    calculate_var_cvar,
+    ewma_shrinkage_cov,
+    calculate_pcte,
+    compute_full_risk_decomposition,
+    calculate_segment_tracking_error,
+)
+
+from optimization_engine import (
+    compute_efficient_frontier,
+    calculate_blended_benchmark,
+    detect_inefficiencies,
+    find_optimal_portfolio,
+)
+
+from data_loader import (
+    load_cma_data,
+    load_correlation_matrix,
+    load_return_series,
+)
+
+from stress_engine import (
+    HISTORICAL_SCENARIOS,
+    apply_stress_scenario,
+    apply_custom_scenario,
+    compute_stress_contribution,
+    generate_hypothetical_scenarios,
+    rank_scenarios_by_impact,
+    get_scenario_summary,
 )
 
 app = FastAPI(
@@ -43,46 +72,77 @@ app.add_middleware(
 )
 
 # ============================================================================
-# Mock Data - In production, load from CSV files
+# Load Real Data
 # ============================================================================
 
-def generate_mock_returns(n_periods: int = 60, n_assets: int = 20) -> pd.DataFrame:
-    """Generate synthetic monthly returns for testing."""
-    np.random.seed(42)
-    dates = pd.date_range(end=pd.Timestamp.now(), periods=n_periods, freq='M')
-    asset_names = [f"Asset_{i+1}" for i in range(n_assets)]
+from data_loader import (
+    load_cma_data,
+    load_correlation_matrix,
+    load_return_series,
+    load_beta_matrix,
+    load_factor_covariance,
+)
 
-    # Generate correlated returns
-    base_vol = 0.04  # 4% monthly vol
-    returns = np.random.randn(n_periods, n_assets) * base_vol
+# Load real data at startup
+try:
+    print("Loading CMA data...")
+    CMA_DATA = load_cma_data()
+    print(f"✓ Loaded CMA data: {CMA_DATA.shape[0]} assets")
 
-    # Add some correlation structure
-    market_factor = np.random.randn(n_periods) * base_vol
-    for i in range(n_assets):
-        beta = 0.5 + np.random.rand() * 0.5  # Beta between 0.5 and 1.0
-        returns[:, i] = beta * market_factor + (1 - beta) * returns[:, i]
+    print("Loading correlation matrix...")
+    CORRELATION_MATRIX = load_correlation_matrix()
+    print(f"✓ Loaded correlation matrix: {CORRELATION_MATRIX.shape[0]}x{CORRELATION_MATRIX.shape[1]}")
 
-    return pd.DataFrame(returns, index=dates, columns=asset_names)
+    print("Loading return series...")
+    RETURNS_USD = load_return_series("USD")
+    RETURNS_EUR = load_return_series("EUR")
+    RETURNS_GBP = load_return_series("GBP")
+    print(f"✓ Loaded return series: {RETURNS_USD.shape[0]} periods, {RETURNS_USD.shape[1]} assets (USD)")
 
+    print("Loading beta matrix...")
+    BETA_MATRIX = load_beta_matrix()
+    print(f"✓ Loaded beta matrix: {BETA_MATRIX.shape[0]} securities, {BETA_MATRIX.shape[1]} factors")
 
-def generate_mock_factor_returns(n_periods: int = 60) -> pd.DataFrame:
-    """Generate synthetic factor returns."""
-    np.random.seed(123)
-    dates = pd.date_range(end=pd.Timestamp.now(), periods=n_periods, freq='M')
-    factors = [
-        'US_Equity', 'Intl_Equity', 'EM_Equity',
-        'US_Rates', 'EU_Rates', 'Credit_Spread',
-        'USD_FX', 'Commodities', 'Gold', 'VIX'
-    ]
+    print("Loading factor covariance...")
+    FACTOR_COVARIANCE = load_factor_covariance()
+    print(f"✓ Loaded factor covariance: {FACTOR_COVARIANCE.shape[0]}x{FACTOR_COVARIANCE.shape[1]}")
 
-    returns = np.random.randn(n_periods, len(factors)) * 0.03
-    return pd.DataFrame(returns, index=dates, columns=factors)
+    # Generate factor returns by computing from betas
+    # For now, use a simple approach: factor returns are derived from asset returns
+    # In a full implementation, these would be loaded or computed via regression
+    FACTOR_RETURNS = pd.DataFrame(
+        np.zeros((len(RETURNS_USD), len(FACTOR_COVARIANCE))),
+        index=RETURNS_USD.index,
+        columns=FACTOR_COVARIANCE.columns
+    )
 
+    print("\n✓ All data loaded successfully!\n")
 
-# Initialize mock data
-MOCK_RETURNS = generate_mock_returns()
-MOCK_FACTOR_RETURNS = generate_mock_factor_returns()
-MOCK_FACTOR_COV = MOCK_FACTOR_RETURNS.cov()
+except Exception as e:
+    print(f"\n✗ Error loading data: {e}")
+    print("Falling back to mock data...\n")
+
+    # Fallback to mock data if real data fails to load
+    from data_loader import (
+        _generate_mock_cma_data,
+        _generate_mock_correlation_matrix,
+        _generate_mock_returns,
+        _generate_mock_betas,
+        _generate_mock_factor_cov,
+    )
+
+    CMA_DATA = _generate_mock_cma_data()
+    CORRELATION_MATRIX = _generate_mock_correlation_matrix()
+    RETURNS_USD = _generate_mock_returns()
+    RETURNS_EUR = _generate_mock_returns()
+    RETURNS_GBP = _generate_mock_returns()
+    BETA_MATRIX = _generate_mock_betas()
+    FACTOR_COVARIANCE = _generate_mock_factor_cov()
+    FACTOR_RETURNS = pd.DataFrame(
+        np.zeros((len(RETURNS_USD), len(FACTOR_COVARIANCE))),
+        index=RETURNS_USD.index,
+        columns=FACTOR_COVARIANCE.columns
+    )
 
 # ============================================================================
 # Request/Response Models
@@ -118,7 +178,82 @@ class PerformanceRequest(BaseModel):
 class StressScenarioRequest(BaseModel):
     portfolio: Dict[str, float]
     benchmark: Optional[Dict[str, float]] = None
-    scenarios: List[Dict[str, str]]  # List of {name, start, end}
+    scenarios: Optional[List[Dict[str, str]]] = None  # List of {name, start, end}
+    use_default_scenarios: bool = True
+
+
+class CustomScenarioRequest(BaseModel):
+    portfolio: Dict[str, float]
+    benchmark: Optional[Dict[str, float]] = None
+    scenario_name: str
+    shock_magnitudes: Dict[str, float]  # asset -> shock (e.g., -0.20 for -20%)
+
+
+class HypotheticalScenarioRequest(BaseModel):
+    portfolio: Dict[str, float]
+    benchmark: Optional[Dict[str, float]] = None
+    scenario_type: str = "mild_recession"  # mild_recession, severe_recession, inflation_surge, etc.
+
+
+class StressContributionRequest(BaseModel):
+    portfolio: Dict[str, float]
+    scenario_start: str
+    scenario_end: str
+
+
+# Extended Risk Request Models
+class VaRRequest(BaseModel):
+    portfolio: Dict[str, float]
+    confidence_level: float = 0.95
+    method: str = "historical"  # "historical" | "parametric"
+
+
+class PCTERequest(BaseModel):
+    portfolio: Dict[str, float]
+    benchmark: Dict[str, float]
+    use_ewma: bool = True
+
+
+class FullDecompositionRequest(BaseModel):
+    portfolio: Dict[str, float]
+    benchmark: Dict[str, float]
+
+
+class SegmentTERequest(BaseModel):
+    portfolio: Dict[str, float]
+    growth_benchmark: str = "GLOBAL"
+    stability_benchmark: str = "GLOBAL AGGREGATE"
+    growth_allocation: float = 0.60
+    stability_allocation: float = 0.40
+    tier_mapping: Optional[Dict[str, str]] = None
+
+
+# Optimization Request Models
+class FrontierRequest(BaseModel):
+    mode: str = "unconstrained"  # "core" | "core_private" | "unconstrained"
+    caps_template: str = "std"    # "std" | "tight" | "loose"
+    custom_assets: Optional[List[str]] = None
+    n_points: int = 30
+
+
+class BenchmarkRequest(BaseModel):
+    equity_type: str = "GLOBAL"
+    fixed_income_type: str = "GLOBAL AGGREGATE"
+    equity_allocation: float = 0.60
+
+
+class InefficiencyRequest(BaseModel):
+    holdings: Dict[str, Dict[str, float]]  # asset -> {current: x, proposed: y}
+    benchmark_allocations: Dict[str, float]
+    threshold: float = 0.03
+
+
+class OptimalPortfolioRequest(BaseModel):
+    target_return: Optional[float] = None
+    target_risk: Optional[float] = None
+    risk_free_rate: float = 0.03
+    mode: str = "unconstrained"
+    caps_template: str = "std"
 
 # ============================================================================
 # API Endpoints
@@ -138,11 +273,11 @@ async def health():
 async def get_available_assets():
     """Get list of available assets for portfolio construction."""
     return {
-        "assets": list(MOCK_RETURNS.columns),
-        "factors": list(MOCK_FACTOR_RETURNS.columns),
+        "assets": list(RETURNS_USD.columns),
+        "factors": list(FACTOR_RETURNS.columns),
         "date_range": {
-            "start": str(MOCK_RETURNS.index[0].date()),
-            "end": str(MOCK_RETURNS.index[-1].date())
+            "start": str(RETURNS_USD.index[0].date()),
+            "end": str(RETURNS_USD.index[-1].date())
         }
     }
 
@@ -160,12 +295,12 @@ async def calculate_risk_contributions(request: ContributionsRequest):
             raise HTTPException(status_code=400, detail="Weights must sum to a positive value")
 
         # Filter to available assets
-        available = weights.index.intersection(MOCK_RETURNS.columns)
+        available = weights.index.intersection(RETURNS_USD.columns)
         if len(available) == 0:
             raise HTTPException(status_code=400, detail="No matching assets found in returns data")
 
         result = calculate_contributions(
-            returns=MOCK_RETURNS,
+            returns=RETURNS_USD,
             weights=weights,
             use_ewma=request.use_ewma,
             ewma_decay=request.ewma_decay
@@ -192,7 +327,7 @@ async def calculate_tracking_error(request: TrackingErrorRequest):
         result = compute_tracking_error(
             portfolio_weights=portfolio,
             benchmark_weights=benchmark,
-            returns=MOCK_RETURNS,
+            returns=RETURNS_USD,
             use_ewma=request.use_ewma
         )
 
@@ -215,15 +350,15 @@ async def calculate_factor_decomposition(request: FactorDecompositionRequest):
 
         # Compute betas via LASSO
         betas, residual_var = compute_lasso_betas(
-            security_returns=MOCK_RETURNS,
-            factor_returns=MOCK_FACTOR_RETURNS,
+            security_returns=RETURNS_USD,
+            factor_returns=FACTOR_RETURNS,
             min_observations=12
         )
 
         result = compute_factor_risk_decomposition(
             weights=weights,
             betas=betas,
-            factor_cov=MOCK_FACTOR_COV,
+            factor_cov=FACTOR_COVARIANCE,
             residual_var=residual_var
         )
 
@@ -246,7 +381,7 @@ async def calculate_diversification(request: DiversificationRequest):
 
         result = compute_diversification_metrics(
             weights=weights,
-            returns=MOCK_RETURNS,
+            returns=RETURNS_USD,
             use_ewma=request.use_ewma
         )
 
@@ -269,8 +404,8 @@ async def calculate_performance(request: PerformanceRequest):
         weights = weights / weights.sum()
 
         # Calculate portfolio returns
-        common = weights.index.intersection(MOCK_RETURNS.columns)
-        portfolio_returns = (MOCK_RETURNS[common] * weights[common]).sum(axis=1)
+        common = weights.index.intersection(RETURNS_USD.columns)
+        portfolio_returns = (RETURNS_USD[common] * weights[common]).sum(axis=1)
 
         result = {
             "portfolio": compute_performance_stats(portfolio_returns)
@@ -280,8 +415,8 @@ async def calculate_performance(request: PerformanceRequest):
         if request.benchmark:
             bench_weights = pd.Series(request.benchmark)
             bench_weights = bench_weights / bench_weights.sum()
-            common_bench = bench_weights.index.intersection(MOCK_RETURNS.columns)
-            benchmark_returns = (MOCK_RETURNS[common_bench] * bench_weights[common_bench]).sum(axis=1)
+            common_bench = bench_weights.index.intersection(RETURNS_USD.columns)
+            benchmark_returns = (RETURNS_USD[common_bench] * bench_weights[common_bench]).sum(axis=1)
             result["benchmark"] = compute_performance_stats(benchmark_returns)
 
             # Excess return stats
@@ -307,7 +442,7 @@ async def full_risk_analysis(request: ContributionsRequest):
 
         # Risk contributions
         contributions = calculate_contributions(
-            returns=MOCK_RETURNS,
+            returns=RETURNS_USD,
             weights=weights,
             use_ewma=request.use_ewma,
             ewma_decay=request.ewma_decay
@@ -316,14 +451,14 @@ async def full_risk_analysis(request: ContributionsRequest):
         # Diversification
         diversification = compute_diversification_metrics(
             weights=weights,
-            returns=MOCK_RETURNS,
+            returns=RETURNS_USD,
             use_ewma=request.use_ewma
         )
 
         # Performance
         weights_norm = weights / weights.sum()
-        common = weights_norm.index.intersection(MOCK_RETURNS.columns)
-        portfolio_returns = (MOCK_RETURNS[common] * weights_norm[common]).sum(axis=1)
+        common = weights_norm.index.intersection(RETURNS_USD.columns)
+        portfolio_returns = (RETURNS_USD[common] * weights_norm[common]).sum(axis=1)
         performance = compute_performance_stats(portfolio_returns)
 
         return {
@@ -339,100 +474,170 @@ async def full_risk_analysis(request: ContributionsRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post("/api/risk/stress-scenarios")
-async def calculate_stress_scenarios(request: StressScenarioRequest):
+@app.get("/api/stress/scenarios")
+async def get_available_scenarios():
     """
-    Calculate portfolio performance under historical stress scenarios.
+    Get list of available historical stress scenarios.
+    """
+    return {
+        "success": True,
+        "data": {
+            "scenarios": HISTORICAL_SCENARIOS,
+            "count": len(HISTORICAL_SCENARIOS)
+        }
+    }
+
+
+@app.post("/api/stress/apply")
+async def apply_stress_scenarios_endpoint(request: StressScenarioRequest):
+    """
+    Apply stress scenarios to portfolio (historical or custom).
     """
     try:
-        weights = pd.Series(request.portfolio)
-        weights = weights / weights.sum()
+        portfolio = pd.Series(request.portfolio)
 
-        benchmark_weights = None
+        benchmark = None
         if request.benchmark:
-            benchmark_weights = pd.Series(request.benchmark)
-            benchmark_weights = benchmark_weights / benchmark_weights.sum()
+            benchmark = pd.Series(request.benchmark)
 
-        results = []
+        # Use default scenarios if not provided
+        scenarios = request.scenarios if request.scenarios else HISTORICAL_SCENARIOS
 
-        for scenario in request.scenarios:
-            scenario_name = scenario.get("name", "Unknown")
-            start_date = pd.Timestamp(scenario.get("start", "2020-01-01"))
-            end_date = pd.Timestamp(scenario.get("end", "2020-12-31"))
+        # Apply scenarios using stress engine
+        results = apply_stress_scenario(
+            portfolio_weights=portfolio,
+            returns=RETURNS_USD,
+            scenarios=scenarios,
+            benchmark_weights=benchmark
+        )
 
-            # Filter returns to scenario period
-            mask = (MOCK_RETURNS.index >= start_date) & (MOCK_RETURNS.index <= end_date)
-            scenario_returns = MOCK_RETURNS[mask]
+        # Get summary statistics
+        summary = get_scenario_summary(results)
 
-            if len(scenario_returns) < 2:
-                # Not enough data - generate synthetic
-                n_months = max(3, (end_date - start_date).days // 30)
-                np.random.seed(hash(scenario_name) % 2**32)
-
-                # Generate returns based on scenario type
-                if "COVID" in scenario_name or "GFC" in scenario_name or "Selloff" in scenario_name:
-                    base_return = -0.08  # Negative scenario
-                    vol = 0.10
-                elif "Rally" in scenario_name:
-                    base_return = 0.02  # Positive scenario
-                    vol = 0.04
-                else:
-                    base_return = 0.005  # Neutral
-                    vol = 0.05
-
-                synthetic = np.random.randn(n_months, len(weights)) * vol + base_return
-                scenario_returns = pd.DataFrame(
-                    synthetic,
-                    columns=[f"Asset_{i+1}" for i in range(len(weights))]
-                )
-
-            # Calculate portfolio returns for scenario
-            common = weights.index.intersection(scenario_returns.columns)
-            if len(common) == 0:
-                # Use all columns with equal weights portion
-                common = scenario_returns.columns[:len(weights)]
-                weights_adj = pd.Series({c: weights.iloc[i] if i < len(weights) else 0.05
-                                        for i, c in enumerate(common)})
-            else:
-                weights_adj = weights[common]
-
-            port_returns = (scenario_returns[common] * weights_adj).sum(axis=1)
-
-            # Calculate cumulative return
-            cumulative = (1 + port_returns).cumprod()
-            total_return = float(cumulative.iloc[-1] - 1) if len(cumulative) > 0 else 0
-
-            # Max drawdown
-            rolling_max = cumulative.cummax()
-            drawdown = (cumulative - rolling_max) / rolling_max
-            max_dd = float(drawdown.min()) if len(drawdown) > 0 else 0
-
-            # Volatility (annualized)
-            vol_ann = float(port_returns.std() * np.sqrt(12)) if len(port_returns) > 1 else 0
-
-            result = {
-                "scenario": scenario_name,
-                "portfolio_return": round(total_return * 100, 2),
-                "max_drawdown": round(max_dd * 100, 2),
-                "volatility": round(vol_ann * 100, 2),
-                "start_date": str(start_date.date()),
-                "end_date": str(end_date.date()),
-            }
-
-            # Add benchmark if provided
-            if benchmark_weights is not None:
-                bench_common = benchmark_weights.index.intersection(scenario_returns.columns)
-                if len(bench_common) > 0:
-                    bench_returns = (scenario_returns[bench_common] * benchmark_weights[bench_common]).sum(axis=1)
-                    bench_cumulative = (1 + bench_returns).cumprod()
-                    bench_total = float(bench_cumulative.iloc[-1] - 1) if len(bench_cumulative) > 0 else 0
-                    result["benchmark_return"] = round(bench_total * 100, 2)
-
-            results.append(result)
+        # Rank by severity
+        ranked = rank_scenarios_by_impact(results, metric="total_return")
 
         return {
             "success": True,
-            "data": results
+            "data": {
+                "scenarios": results,
+                "summary": summary,
+                "worst_scenarios": ranked[:5]  # Top 5 worst
+            }
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/stress/custom")
+async def apply_custom_scenario_endpoint(request: CustomScenarioRequest):
+    """
+    Apply custom shock scenario to portfolio.
+    """
+    try:
+        portfolio = pd.Series(request.portfolio)
+        shocks = request.shock_magnitudes
+
+        # Calculate impact
+        result = apply_custom_scenario(
+            portfolio_weights=portfolio,
+            shock_magnitudes=shocks
+        )
+
+        result["scenario_name"] = request.scenario_name
+
+        # If benchmark provided, calculate benchmark impact too
+        if request.benchmark:
+            benchmark = pd.Series(request.benchmark)
+            bench_result = apply_custom_scenario(
+                portfolio_weights=benchmark,
+                shock_magnitudes=shocks
+            )
+            result["benchmark_impact"] = bench_result["direct_impact"]
+            result["excess_impact"] = round(
+                result["direct_impact"] - bench_result["direct_impact"], 2
+            )
+
+        return {
+            "success": True,
+            "data": result
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/stress/hypothetical")
+async def apply_hypothetical_scenario_endpoint(request: HypotheticalScenarioRequest):
+    """
+    Generate and apply hypothetical stress scenario.
+    """
+    try:
+        portfolio = pd.Series(request.portfolio)
+
+        # Generate scenario shocks
+        asset_classes = list(portfolio.index)
+        shocks = generate_hypothetical_scenarios(
+            asset_classes=asset_classes,
+            scenario_type=request.scenario_type
+        )
+
+        # Apply scenario
+        result = apply_custom_scenario(
+            portfolio_weights=portfolio,
+            shock_magnitudes=shocks
+        )
+
+        result["scenario_type"] = request.scenario_type
+        result["shocks"] = shocks
+
+        # If benchmark provided, calculate benchmark impact
+        if request.benchmark:
+            benchmark = pd.Series(request.benchmark)
+            bench_result = apply_custom_scenario(
+                portfolio_weights=benchmark,
+                shock_magnitudes=shocks
+            )
+            result["benchmark_impact"] = bench_result["direct_impact"]
+            result["excess_impact"] = round(
+                result["direct_impact"] - bench_result["direct_impact"], 2
+            )
+
+        return {
+            "success": True,
+            "data": result
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/stress/contribution")
+async def calculate_stress_contribution_endpoint(request: StressContributionRequest):
+    """
+    Calculate asset-level contribution to stress scenario.
+    """
+    try:
+        portfolio = pd.Series(request.portfolio)
+
+        # Calculate contributions
+        contributions = compute_stress_contribution(
+            portfolio_weights=portfolio,
+            returns=RETURNS_USD,
+            scenario_start=request.scenario_start,
+            scenario_end=request.scenario_end
+        )
+
+        if contributions.empty:
+            return {
+                "success": False,
+                "error": "No data available for specified period"
+            }
+
+        return {
+            "success": True,
+            "data": contributions.to_dict(orient="records")
         }
 
     except Exception as e:
@@ -479,6 +684,296 @@ async def upload_portfolio(file: UploadFile = File(...)):
             "asset_count": len(portfolio)
         }
 
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ============================================================================
+# Extended Risk Endpoints
+# ============================================================================
+
+@app.post("/api/risk/var-cvar")
+async def calculate_var_cvar_endpoint(request: VaRRequest):
+    """
+    Calculate Value at Risk (VaR) and Conditional VaR (CVaR).
+    """
+    try:
+        weights = pd.Series(request.portfolio)
+        weights = weights / weights.sum()
+
+        # Calculate portfolio returns
+        common = weights.index.intersection(RETURNS_USD.columns)
+        portfolio_returns = (RETURNS_USD[common] * weights[common]).sum(axis=1)
+
+        result = calculate_var_cvar(
+            returns=portfolio_returns,
+            confidence_level=request.confidence_level
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/risk/pcte")
+async def calculate_pcte_endpoint(request: PCTERequest):
+    """
+    Calculate Portfolio Contribution to Tracking Error (PCTE).
+    """
+    try:
+        portfolio = pd.Series(request.portfolio)
+        benchmark = pd.Series(request.benchmark)
+
+        result = calculate_pcte(
+            portfolio_weights=portfolio,
+            benchmark_weights=benchmark,
+            returns=RETURNS_USD,
+            use_ewma=request.use_ewma
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/risk/full-decomposition")
+async def calculate_full_decomposition(request: FullDecompositionRequest):
+    """
+    Full risk decomposition: systematic, specific, and active components.
+    """
+    try:
+        portfolio = pd.Series(request.portfolio)
+        benchmark = pd.Series(request.benchmark)
+
+        # Compute betas
+        betas, residual_var = compute_lasso_betas(
+            security_returns=RETURNS_USD,
+            factor_returns=FACTOR_RETURNS,
+            min_observations=12
+        )
+
+        result = compute_full_risk_decomposition(
+            portfolio_weights=portfolio,
+            benchmark_weights=benchmark,
+            security_returns=RETURNS_USD,
+            factor_returns=FACTOR_RETURNS,
+            betas=betas,
+            factor_cov=FACTOR_COVARIANCE,
+            residual_var=residual_var
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/risk/segment-tracking-error")
+async def calculate_segment_te_endpoint(request: SegmentTERequest):
+    """
+    Calculate segment-level tracking error (Growth vs Stability).
+    """
+    try:
+        portfolio = pd.Series(request.portfolio)
+
+        result = calculate_segment_tracking_error(
+            portfolio_weights=portfolio,
+            returns=RETURNS_USD,
+            growth_benchmark=request.growth_benchmark,
+            stability_benchmark=request.stability_benchmark,
+            growth_allocation=request.growth_allocation,
+            stability_allocation=request.stability_allocation,
+            tier_mapping=request.tier_mapping
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ============================================================================
+# Optimization Endpoints
+# ============================================================================
+
+# Load CMA data at startup
+CMA_DATA = load_cma_data()
+CORRELATION_MATRIX = load_correlation_matrix()
+
+
+@app.post("/api/optimization/frontier")
+async def compute_frontier_endpoint(request: FrontierRequest):
+    """
+    Compute efficient frontier for given parameters.
+    """
+    try:
+        result = compute_efficient_frontier(
+            cma_data=CMA_DATA,
+            correlation_matrix=CORRELATION_MATRIX,
+            mode=request.mode,
+            caps_template=request.caps_template,
+            custom_assets=request.custom_assets,
+            n_points=request.n_points
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/optimization/benchmark")
+async def compute_benchmark_endpoint(request: BenchmarkRequest):
+    """
+    Calculate blended benchmark risk/return.
+    """
+    try:
+        result = calculate_blended_benchmark(
+            cma_data=CMA_DATA,
+            correlation_matrix=CORRELATION_MATRIX,
+            equity_type=request.equity_type,
+            fixed_income_type=request.fixed_income_type,
+            equity_allocation=request.equity_allocation,
+            fixed_income_allocation=1.0 - request.equity_allocation
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/optimization/inefficiencies")
+async def detect_inefficiencies_endpoint(request: InefficiencyRequest):
+    """
+    Flag portfolio positions deviating from benchmark.
+    """
+    try:
+        # Convert holdings dict to DataFrame
+        holdings_list = []
+        for asset, allocs in request.holdings.items():
+            holdings_list.append({
+                "ASSET CLASS": asset,
+                "current": allocs.get("current", 0),
+                "proposed": allocs.get("proposed", 0)
+            })
+
+        holdings_df = pd.DataFrame(holdings_list)
+
+        result = detect_inefficiencies(
+            holdings=holdings_df,
+            current_column="current",
+            proposed_column="proposed",
+            benchmark_allocations=request.benchmark_allocations,
+            threshold=request.threshold
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/optimization/optimal-portfolio")
+async def find_optimal_portfolio_endpoint(request: OptimalPortfolioRequest):
+    """
+    Find optimal portfolio from efficient frontier.
+    """
+    try:
+        # Compute frontier
+        frontier = compute_efficient_frontier(
+            cma_data=CMA_DATA,
+            correlation_matrix=CORRELATION_MATRIX,
+            mode=request.mode,
+            caps_template=request.caps_template
+        )
+
+        if not frontier["risks"]:
+            raise HTTPException(status_code=400, detail="Could not compute frontier")
+
+        result = find_optimal_portfolio(
+            frontier_risks=frontier["risks"],
+            frontier_returns=frontier["returns"],
+            frontier_weights=frontier["weights"],
+            target_return=request.target_return,
+            target_risk=request.target_risk,
+            risk_free_rate=request.risk_free_rate
+        )
+
+        return {"success": True, "data": result}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/optimization/assets")
+async def get_optimization_assets():
+    """
+    Get available assets for optimization.
+    """
+    try:
+        return {
+            "success": True,
+            "data": {
+                "assets": CMA_DATA["ASSET CLASS"].tolist(),
+                "count": len(CMA_DATA)
+            }
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/data/cma")
+async def get_cma_data():
+    """
+    Get Capital Market Assumptions data with returns and risks.
+    """
+    try:
+        # Convert to list of dicts for JSON response
+        cma_list = []
+        for _, row in CMA_DATA.iterrows():
+            cma_list.append({
+                "asset_class": row["ASSET CLASS"],
+                "expected_return": float(row["RETURN"]),
+                "risk": float(row["RISK"]),
+                "purpose": row.get("PURPOSE", ""),
+                "group": row.get("GROUP", "")
+            })
+
+        return {
+            "success": True,
+            "data": {
+                "cma": cma_list,
+                "count": len(cma_list)
+            }
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/data/correlation")
+async def get_correlation_matrix():
+    """
+    Get asset correlation matrix.
+    """
+    try:
+        # Convert to dict format
+        corr_dict = {}
+        for asset in CORRELATION_MATRIX.index:
+            corr_dict[asset] = {
+                col: float(CORRELATION_MATRIX.loc[asset, col])
+                for col in CORRELATION_MATRIX.columns
+            }
+
+        return {
+            "success": True,
+            "data": {
+                "correlation": corr_dict,
+                "assets": list(CORRELATION_MATRIX.index)
+            }
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

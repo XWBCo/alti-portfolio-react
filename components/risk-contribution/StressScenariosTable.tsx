@@ -91,19 +91,19 @@ export default function StressScenariosTable({ results, isLoading }: StressScena
                     <span className="font-medium text-gray-700">{result.scenario}</span>
                   </div>
                 </td>
-                <td className={`text-right py-3 px-2 font-mono font-semibold ${getReturnColor(result.portfolio_return)}`}>
-                  {result.portfolio_return > 0 ? '+' : ''}{result.portfolio_return.toFixed(1)}%
+                <td className={`text-right py-3 px-2 font-mono font-semibold ${getReturnColor(result.portfolio_return ?? 0)}`}>
+                  {(result.portfolio_return ?? 0) > 0 ? '+' : ''}{(result.portfolio_return ?? 0).toFixed(1)}%
                 </td>
-                {result.benchmark_return !== undefined && (
+                {result.benchmark_return !== undefined && result.benchmark_return !== null && (
                   <td className={`text-right py-3 px-2 font-mono ${getReturnColor(result.benchmark_return)}`}>
                     {result.benchmark_return > 0 ? '+' : ''}{result.benchmark_return.toFixed(1)}%
                   </td>
                 )}
                 <td className="text-right py-3 px-2 font-mono text-red-600">
-                  {result.max_drawdown.toFixed(1)}%
+                  {(result.max_drawdown ?? 0).toFixed(1)}%
                 </td>
                 <td className="text-right py-3 px-2 font-mono text-gray-600">
-                  {result.volatility.toFixed(1)}%
+                  {(result.volatility ?? 0).toFixed(1)}%
                 </td>
               </tr>
             ))}

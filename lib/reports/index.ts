@@ -58,3 +58,29 @@ export {
   validateReportData,
   closeBrowser,
 } from './pdf-generator';
+
+// ============================================================================
+// Impact Comparison Report - Public API
+// ============================================================================
+
+// Re-export from impact-comparison-template when it exists
+// These are placeholder exports that will be implemented in impact-comparison-template.ts
+export type {
+  ImpactComparisonData,
+} from './impact-comparison-template';
+
+export type {
+  ImpactReportConfig,
+} from './impact-comparison-types';
+
+export {
+  ImpactComparisonDataSchema,
+  SAMPLE_IMPACT_COMPARISON_DATA,
+} from './impact-comparison-template';
+
+export {
+  generateImpactComparisonHTML,
+  generateImpactComparisonPDF,
+  generateImpactComparisonPreview,
+  validateImpactComparisonData,
+} from './impact-comparison-template';

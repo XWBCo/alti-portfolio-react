@@ -2,7 +2,7 @@
 
 ## Summary
 
-Redesigned the Client Assessment app with AlTi branding and 2025 UX best practices. **Impact workflow is complete**, but **Non-impact workflow is NOT implemented**.
+Redesigned Client Assessment with **both Impact and Non-Impact client workflows**. Uses AlTi branding and 2025 portfolio models from Investment Objectives spreadsheet.
 
 ---
 
@@ -11,139 +11,146 @@ Redesigned the Client Assessment app with AlTi branding and 2025 UX best practic
 ### Location
 - **Working copy:** `/app/client-assessment-v2/`
 - **Components:** `/components/client-assessment-v2/`
-- **Original (untouched):** `/app/client-assessment/`
+- **Portfolio models:** `/lib/portfolio-models.ts`
+- **Types:** `/lib/client-assessment-types.ts`
+- **Mock data:** `/lib/client-assessment-mock-data.ts`
 
-### Completed Features
-1. **Hero section** - Large archetype verdict with animated confidence bar
-2. **Client info** - Integrated into hero card
-3. **Radar chart** - AlTi brand colors, polygon grid, custom tooltips
-4. **Archetype breakdown** - Sidebar with ranked progress bars
-5. **"Why This Archetype?"** - Alignment factors section
-6. **Survey responses** - Collapsible, card-based, grouped by category
-7. **Prism AI panel** - Placeholder for Impact bot integration
-8. **Header actions** - Export IPS + Research in Prism buttons
+### Impact Client Workflow (Complete)
+1. **Hero section** - Archetype verdict with animated confidence bar
+2. **Radar chart** - AlTi brand colors, polygon grid
+3. **Archetype breakdown** - Sidebar with ranked progress bars
+4. **"Why This Archetype?"** - Alignment factors
+5. **Prism AI panel** - Green themed, launches Impact research
+6. **Survey responses** - Collapsible, categorized
 
-### Brand Applied
-- Navy `#0A2240`, Teal `#0B6D7B`, Turquoise `#00F0DB`
-- Georgia serif headings, Inter body
-- "The AlTi Line" (left border accents)
-- Emerald `#10B981` for AI/sustainability elements
+### Non-Impact Client Workflow (NEW)
+1. **Hero section** - Risk profile (Conservative → Long-Term Growth)
+2. **Risk stats** - Growth %, Stability %, Tail Risk
+3. **Investment profile** - Time horizon, liquidity, tax status
+4. **Allocation summary** - Stability/Diversified/Growth bars
+5. **Portfolio model table** - Full allocation breakdown with funds & tickers
+6. **Prism Portfolio Advisor** - Blue themed, separate bot context
+7. **Survey responses** - Same collapsible view
 
----
+### Client Detection Logic
+```typescript
+// From client-assessment-types.ts
+export type ImpactInterest = 'significant' | 'moderate' | 'minimal' | 'none';
 
-## What's NOT Built (Non-Impact Workflow)
-
-### The Problem
-Not all clients are impact investors. Currently the app assumes everyone is an impact client with archetype scores. Non-impact clients need a different experience.
-
-### How Impact vs Non-Impact is Determined
-- **Explicit survey question** in Qualtrics asks "Are you interested in impact investing?"
-- If no/low interest → client is non-impact
-- This data should be in the survey response
-
-### Non-Impact Workflow Requirements
-
-1. **Detection Logic**
-   - Check survey responses for the impact interest question
-   - Route to appropriate view based on answer
-
-2. **Non-Impact UI Should Show**
-   - Risk profile (risk tolerance, time horizon, liquidity needs)
-   - Basic suitability information
-   - NO radar chart, NO archetype cards
-   - Different AI panel: "Non-impact bot" for portfolio recommendations
-
-3. **Non-Impact Bot (Prism AI)**
-   - Separate RAG service context from Impact bot
-   - Fed with standardized portfolio models (user will provide)
-   - Recommends portfolio based on risk profile, not impact preferences
-
-4. **In-App Questionnaire (Future)**
-   - For questions not in external Qualtrics survey
-   - Advisor completes within app during onboarding
-   - Outputs fully completed IPS with all info for portfolio selection
-
----
-
-## Prism AI Integration Points
-
-### Current Placeholder (Impact)
-```tsx
-// In page.tsx, the Prism AI panel passes:
-window.open(`/impact-analytics/research?archetype=${topArchetype}&client=${selectedClientId}`, '_blank')
+// Impact = significant OR moderate
+// Non-Impact = minimal OR none
 ```
 
-### What's Needed
-1. **Impact bot** - RAG with impact/ESG context, archetype alignment
-2. **Non-impact bot** - RAG with portfolio models, risk-based recommendations
-3. **API endpoint** or embedding for chat interface
-4. **Context passing** - Client profile, survey responses, archetype (if impact)
+### Portfolio Models (from Investment Objectives 12.2025)
+- **5 Risk Profiles:** Conservative, Balanced, Moderate Growth, Growth, Long-Term Growth
+- **2 Portfolio Types:** Traditional (taxable), Endowment (tax-exempt)
+- **Full allocations:** Cash, Fixed Income, Municipal, Credit, Equities, Alternatives
+- **SAA-TAA Bands:** Min/max ranges for each asset class
 
 ---
 
 ## Data Structures
 
-### Client Survey (existing)
+### ClientSurvey (updated)
 ```typescript
 interface ClientSurvey {
   id: string;
   clientInfo: ClientInfo;
-  archetypeScores: Record<ArchetypeId, ArchetypeScore>; // Only for impact clients
+  impactInterest: ImpactInterest;  // NEW
+  isImpactClient: boolean;          // NEW
+  archetypeScores?: Record<ArchetypeId, ArchetypeScore>;  // Now optional
+  riskProfile?: RiskProfileData;    // NEW - for non-impact clients
   questions: SurveyQuestion[];
   submittedDate: string;
 }
-```
 
-### Suggested Addition for Non-Impact
-```typescript
-interface ClientSurvey {
-  // ... existing fields
-  isImpactClient: boolean;  // Derived from survey question
-  riskProfile?: {
-    riskTolerance: 'conservative' | 'moderate' | 'aggressive';
-    timeHorizon: string;
-    liquidityNeeds: string;
-  };
+interface RiskProfileData {
+  riskTolerance: RiskProfileId;
+  portfolioType: PortfolioType;
+  timeHorizon: string;
+  liquidityNeeds: string;
+  taxStatus: 'taxable' | 'tax-exempt';
 }
 ```
 
+### Mock Clients
+- **3 Impact clients:** Daffy Duck (100% Impact), Teresa Wells (Climate), John Smith (Integrated)
+- **2 Non-Impact clients:** Robert Chen (Traditional Growth), Margaret Wilson (Endowment Moderate)
+
 ---
 
-## File Reference
+## Prism AI Integration
 
-| File | Purpose |
+### Impact Bot (existing)
+- Green theme (`#10B981`)
+- Opens `/impact-analytics/research?archetype={id}&client={id}`
+- Context: Impact archetypes, ESG themes, sustainable investments
+
+### Non-Impact Bot (NEW)
+- Blue theme (`#0369A1`)
+- Opens `/portfolio-advisor?profile={riskTolerance}&type={portfolioType}&client={id}`
+- Context: Portfolio models, risk allocation, fund selection
+
+**Note:** `/portfolio-advisor` route does not exist yet - placeholder for future implementation.
+
+---
+
+## Files Changed
+
+| File | Changes |
 |------|---------|
-| `app/client-assessment-v2/page.tsx` | Main page - add conditional rendering for non-impact |
-| `components/client-assessment-v2/ArchetypeRadar.tsx` | Radar chart - hide for non-impact |
-| `components/client-assessment-v2/SurveyTable.tsx` | Survey display - works for both |
-| `lib/client-assessment-types.ts` | Types - add `isImpactClient`, `riskProfile` |
-| `lib/client-assessment-mock-data.ts` | Mock data - add non-impact client example |
+| `app/client-assessment-v2/page.tsx` | Split into ImpactClientView and NonImpactClientView components |
+| `lib/client-assessment-types.ts` | Added ImpactInterest, RiskProfileData types |
+| `lib/client-assessment-mock-data.ts` | Added isImpactClient, riskProfile, 2 non-impact clients |
+| `lib/portfolio-models.ts` | NEW - Full portfolio model data from Excel |
+| `lib/ips/mapper.ts` | Fixed to handle optional archetypeScores |
+| `app/client-assessment/page.tsx` | Filtered to only show impact clients (legacy) |
 
 ---
 
-## Design References
+## Brand Colors
 
-- `/claude_code/ALTI-IMPACT-DESIGN-GUIDELINES.md` - Full brand guidelines
-- `/alti-risk-portfolio-app/docs/branding/AlTi-Brand-Design-System.md` - Brand system
-- `/alti-portfolio-react/lib/theme.ts` - Theme tokens
+### Impact Theme
+- Primary: Emerald `#10B981`
+- Background: `#ECFDF5`
+- Border: `#D1FAE5`
+
+### Non-Impact Theme
+- Primary: Sky Blue `#0369A1`
+- Background: `#F0F9FF`
+- Border: `#BAE6FD`
+
+### Shared AlTi Colors
+- Navy: `#0A2240`
+- Teal: `#0B6D7B`
+- Turquoise: `#00F0DB`
 
 ---
 
-## To Test Current Build
+## To Test
 
 ```bash
 cd /Users/xavi_court/claude_code/alti-portfolio-react
 npm run dev
 # Visit http://localhost:3000/client-assessment-v2
+# Use dropdown to switch between impact and non-impact clients
 ```
 
 ---
 
-## Next Steps for Agent
+## What's NOT Built
 
-1. Add `isImpactClient` detection logic based on survey responses
-2. Create conditional UI: Impact view (current) vs Non-impact view (new)
-3. Build Non-impact view with risk profile display
-4. Add Non-impact bot placeholder panel
-5. Coordinate with Prism RAG service for both bot integrations
-6. Get standardized portfolio models from user for Non-impact bot context
+1. **`/portfolio-advisor` route** - Non-impact bot landing page
+2. **Real Qualtrics integration** - Currently using mock data
+3. **Risk profile calculation** - Manual in mock data, needs algorithm
+4. **IPS export for non-impact** - May need different template
+5. **In-app questionnaire** - For questions not in Qualtrics survey
+
+---
+
+## Next Steps
+
+1. **Build `/portfolio-advisor` page** - Chat interface for portfolio recommendations
+2. **Integrate real Qualtrics data** - Parse impact interest from Q6
+3. **Build risk profiler** - Algorithm to determine risk tolerance from survey
+4. **Connect RAG services** - Separate contexts for impact vs non-impact bots

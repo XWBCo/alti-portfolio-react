@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Play, RefreshCw } from 'lucide-react';
+import { Play, RefreshCw, Upload } from 'lucide-react';
 import { PortfolioWeights, SAMPLE_RISK_PORTFOLIOS, SAMPLE_BENCHMARK } from '@/lib/risk-types';
+import EditablePortfolioTable from './EditablePortfolioTable';
+import PortfolioUpload from './PortfolioUpload';
 
 interface ParameterPanelProps {
   portfolio: PortfolioWeights;
@@ -30,6 +32,7 @@ export default function ParameterPanel({
   onRunStressScenariosChange,
 }: ParameterPanelProps) {
   const [selectedPreset, setSelectedPreset] = useState<string>('Balanced');
+  const [showUpload, setShowUpload] = useState(false);
 
   const handlePresetChange = (presetName: string) => {
     setSelectedPreset(presetName);
@@ -47,9 +50,6 @@ export default function ParameterPanel({
     }
   };
 
-  const totalWeight = Object.values(portfolio).reduce((sum, w) => sum + w, 0);
-  const assetCount = Object.keys(portfolio).length;
-
   return (
     <div
       className="w-[320px] bg-white border-r border-gray-200 p-5 overflow-y-auto"
@@ -59,35 +59,61 @@ export default function ParameterPanel({
         Risk Analysis Settings
       </h2>
 
-      {/* Portfolio Preset */}
-      <div className="mb-5">
-        <label className="block text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
-          Portfolio Preset
-        </label>
-        <select
-          value={selectedPreset}
-          onChange={(e) => handlePresetChange(e.target.value)}
-          className="w-full p-2.5 border border-gray-300 rounded-lg bg-white text-sm focus:ring-2 focus:ring-[#00f0db] focus:border-transparent"
+      {/* Portfolio Source Toggle */}
+      <div className="mb-4 flex gap-2">
+        <button
+          onClick={() => setShowUpload(false)}
+          className={`flex-1 py-2 px-3 text-xs font-medium rounded-lg transition-colors ${
+            !showUpload
+              ? 'bg-[#074269] text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
         >
-          {SAMPLE_RISK_PORTFOLIOS.map(p => (
-            <option key={p.name} value={p.name}>{p.name}</option>
-          ))}
-        </select>
+          Presets
+        </button>
+        <button
+          onClick={() => setShowUpload(true)}
+          className={`flex-1 py-2 px-3 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1 ${
+            showUpload
+              ? 'bg-[#074269] text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
+          <Upload size={12} />
+          Upload
+        </button>
       </div>
 
-      {/* Portfolio Summary */}
-      <div className="mb-5 p-3 bg-gray-50 rounded-lg">
-        <div className="flex justify-between text-sm mb-1">
-          <span className="text-gray-500">Assets:</span>
-          <span className="font-medium text-gray-700">{assetCount}</span>
+      {/* Portfolio Preset or Upload */}
+      {!showUpload ? (
+        <div className="mb-5">
+          <label className="block text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+            Portfolio Preset
+          </label>
+          <select
+            value={selectedPreset}
+            onChange={(e) => handlePresetChange(e.target.value)}
+            className="w-full p-2.5 border border-gray-300 rounded-lg bg-white text-sm focus:ring-2 focus:ring-[#00f0db] focus:border-transparent"
+          >
+            {SAMPLE_RISK_PORTFOLIOS.map(p => (
+              <option key={p.name} value={p.name}>{p.name}</option>
+            ))}
+          </select>
         </div>
-        <div className="flex justify-between text-sm">
-          <span className="text-gray-500">Total Weight:</span>
-          <span className={`font-medium ${Math.abs(totalWeight - 1) < 0.001 ? 'text-green-600' : 'text-amber-600'}`}>
-            {(totalWeight * 100).toFixed(1)}%
-          </span>
+      ) : (
+        <div className="mb-5">
+          <label className="block text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+            Upload Portfolio
+          </label>
+          <PortfolioUpload
+            onPortfolioLoaded={(weights, name) => {
+              onPortfolioChange(weights);
+              setSelectedPreset(name);
+              setShowUpload(false);
+            }}
+          />
         </div>
-      </div>
+      )}
 
       {/* Benchmark Toggle */}
       <div className="mb-5">
@@ -158,20 +184,13 @@ export default function ParameterPanel({
         )}
       </button>
 
-      {/* Holdings Preview */}
-      <div className="border-t border-gray-200 pt-4">
-        <h3 className="text-sm font-semibold text-gray-700 mb-3">Portfolio Holdings</h3>
-        <div className="max-h-[300px] overflow-y-auto space-y-1">
-          {Object.entries(portfolio)
-            .sort((a, b) => b[1] - a[1])
-            .map(([asset, weight]) => (
-              <div key={asset} className="flex justify-between text-xs py-1 border-b border-gray-100">
-                <span className="text-gray-600 truncate mr-2">{asset}</span>
-                <span className="font-mono text-gray-700">{(weight * 100).toFixed(1)}%</span>
-              </div>
-            ))}
-        </div>
-      </div>
+      {/* Editable Portfolio Table */}
+      <EditablePortfolioTable
+        portfolio={portfolio}
+        onPortfolioChange={onPortfolioChange}
+        title="Portfolio Holdings"
+        maxHeight="280px"
+      />
 
       {/* Info */}
       <div className="mt-6 p-3 bg-[#074269]/5 rounded-lg">
@@ -179,6 +198,7 @@ export default function ParameterPanel({
           Risk analysis uses LASSO regression for factor betas and EWMA for time-varying covariance estimation.
         </p>
       </div>
+
     </div>
   );
 }

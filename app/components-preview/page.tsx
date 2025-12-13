@@ -175,7 +175,7 @@ export default function ComponentsPreviewPage() {
               <h2 className="text-xl font-semibold text-[#010203] mb-4">Special Icons</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {[
-                  { name: 'Prism (AI Chat)', Icon: IconPrism, color: '#10B981' },
+                  { name: 'AI Chat', Icon: IconPrism, color: '#10B981' },
                   { name: 'Analyze Portfolio', Icon: IconAnalyzePortfolio, color: '#10B981' },
                   { name: 'Compare Portfolios', Icon: IconComparePortfolios, color: '#10B981' },
                 ].map(({ name, Icon, color }) => (

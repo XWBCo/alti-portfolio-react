@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import ParameterPanel from '@/components/capital-market-assumptions/ParameterPanel';
 import CMATable from '@/components/capital-market-assumptions/CMATable';
 import RiskReturnScatter from '@/components/capital-market-assumptions/RiskReturnScatter';
+import BetaMatrixHeatmap from '@/components/capital-market-assumptions/BetaMatrixHeatmap';
 import { CMA_ASSETS, countByPurpose } from '@/lib/cma-mock-data';
 import {
   SCENARIO_ADJUSTMENTS,
@@ -12,6 +13,9 @@ import {
   PURPOSE_COLORS,
 } from '@/lib/cma-types';
 import type { CMAParams, CMAAsset } from '@/lib/cma-types';
+import { getReturnSeriesCSV } from '@/lib/return-series-export';
+import CorrelationMatrixHeatmap from '@/components/shared/CorrelationMatrixHeatmap';
+import { CORRELATION_MATRIX, ASSET_CLASSES } from '@/lib/cma-data';
 
 const DEFAULT_PARAMS: CMAParams = {
   currency: 'USD',
@@ -61,23 +65,13 @@ export default function CapitalMarketAssumptionsPage() {
   }, [adjustedData, params]);
 
   const handleDownloadCSV = useCallback(() => {
-    // Download raw return series (placeholder - same format as CMA for now)
-    const headers = ['Asset Class', 'Forecast Return', 'Forecast Volatility'];
-    const rows = CMA_ASSETS.map((a) => [
-      a.assetClass,
-      a.forecastReturn.toFixed(4),
-      a.forecastVolatility.toFixed(4),
-    ]);
-
-    const csvContent = [headers, ...rows]
-      .map((row) => row.join(','))
-      .join('\n');
-
+    // Download historical return series data
+    const csvContent = getReturnSeriesCSV();
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'return_series.csv';
+    link.download = `return_series_${new Date().toISOString().slice(0, 10)}.csv`;
     link.click();
     URL.revokeObjectURL(url);
   }, []);
@@ -208,7 +202,7 @@ export default function CapitalMarketAssumptionsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
-            className="bg-white rounded border border-[#e6e6e6] p-4"
+            className="bg-white rounded border border-[#e6e6e6] p-4 mb-6"
             style={{ height: '500px' }}
           >
             <h3
@@ -222,11 +216,48 @@ export default function CapitalMarketAssumptionsPage() {
             </div>
           </motion.div>
 
+          {/* Beta Matrix Heatmap */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            className="bg-white rounded border border-[#e6e6e6] p-4 mb-6"
+          >
+            <h3
+              className="text-[16px] font-light text-[#010203] mb-3"
+              style={{ fontFamily: 'Georgia, serif' }}
+            >
+              Beta Matrix
+            </h3>
+            <BetaMatrixHeatmap />
+          </motion.div>
+
+          {/* Correlation Matrix Heatmap */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.45 }}
+            className="bg-white rounded border border-[#e6e6e6] p-4"
+            style={{ minHeight: '450px' }}
+          >
+            <h3
+              className="text-[16px] font-light text-[#010203] mb-3"
+              style={{ fontFamily: 'Georgia, serif' }}
+            >
+              Asset Correlation Matrix
+            </h3>
+            <CorrelationMatrixHeatmap
+              correlationMatrix={CORRELATION_MATRIX}
+              assetNames={ASSET_CLASSES.map(a => a.name)}
+              compactMode={true}
+            />
+          </motion.div>
+
           {/* Info Footer */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
             className="mt-6 p-4 bg-[#074269]/5 rounded-lg"
           >
             <p className="text-[12px] text-[#074269]">

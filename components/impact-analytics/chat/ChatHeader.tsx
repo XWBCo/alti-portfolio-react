@@ -23,7 +23,7 @@ export function ChatHeader({ reportsIndexed = 42 }: ChatHeaderProps) {
         </div>
         <div className="flex flex-col">
           <span className="font-serif text-xl font-medium text-emerald-500 tracking-tight">
-            Prism
+            AI
           </span>
           <span className="text-xs font-normal text-gray-500 uppercase tracking-widest mt-0.5">
             Impact Research
