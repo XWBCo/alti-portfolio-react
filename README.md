@@ -148,13 +148,13 @@ This is a complete rewrite of the Python Dash application at:
 | **Visualization** | Plotly | Recharts |
 | **Target** | Internal server | Azure Container Apps |
 
-## Outstanding Tasks
+## Migration Guide
 
-See `AGENT_HANDOFF.md` for prioritized remaining work:
-1. **Logo** - Replace placeholder in header
-2. **Headers** - Fix double header in Impact Analytics
-3. **Icons** - Replace generic icons with AlTi custom SVGs
-4. **Polish** - Design refinements
+See **[MIGRATION_GUIDE.md](MIGRATION_GUIDE.md)** for:
+- Feature-by-feature mapping from legacy Dash to React
+- Windows setup instructions for new developers
+- API integration details
+- Outstanding gaps and React-only enhancements
 
 ## License
 
